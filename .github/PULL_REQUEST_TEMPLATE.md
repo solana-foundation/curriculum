@@ -1,11 +1,3 @@
----
-name: Pull Request
-about: Propose changes to the curriculum.
-title: "UPDATE: [Brief description of changes]"
-labels: enhancement, content
-assignees: ""
----
-
 ## Description
 
 Please provide a clear and concise description of the changes you are proposing. Explain the "what" and "why" of your contribution.
