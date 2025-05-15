@@ -11,9 +11,7 @@ The main content is organized within the `courses` directory. Each subdirectory 
 - [`courses/solana-components-and-system-design`](courses/solana-components-and-system-design/): Solana Components and System Design
 - [`courses/spl-tokens-2022-and-extensions`](courses/spl-tokens-2022-and-extensions/): SPL Tokens, 2022 and Extensions
 - [`courses/web-for-solana-development-101`](courses/web-for-solana-development-101/): Web for Solana Development 101
-- [`courses/web-for-solana-development-102`](courses/web-for-solana-development-102/): Web for Solana Development 102
 - [`courses/solana-defi`](courses/solana-defi/): Solana DeFi: Token Swaps and AMMs
-- [`courses/solana-defi-advanced`](courses/solana-defi-advanced/): Solana DeFi Advanced: Protocols and Primitives
 
 The monorepo also includes standard Turborepo packages:
 
