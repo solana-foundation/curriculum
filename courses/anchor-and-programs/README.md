@@ -9,7 +9,7 @@ The course emphasizes a project-driven, hands-on approach. Learners will iterati
 ## Learning Objectives
 
 - Set up an Anchor workspace and define program state using `#[account]`.
-- Define instructions using `#[derive(Accounts)]` and utilize essential Anchor macros like `init`, `mut`, and `close`.
+- Define instruction accounts using `#[derive(Accounts)]` and utilize essential Anchor macros (e.g. `#[account]`, `#[program]`) and common arguments to `#[account(...)]` like `init`, `mut`, and `close`.
 - Develop and test basic and advanced Anchor instruction handlers.
 - Implement Cross-Program Invocations (CPIs) for interacting with other Solana programs, including the SPL Token program.
 - Securely pass accounts and data via CPIs and use the `Program` type effectively.
