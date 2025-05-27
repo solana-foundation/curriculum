@@ -35,16 +35,20 @@ The course will cover the following key areas, culminating in the final project:
     - Collections, Iterators, and Closures.
     - Basic generics and traits.
 2.  **Rust for Networked Applications and Blockchain Interaction (Client-Side):**
+
     - Introduction to asynchronous programming in Rust (e.g., `async/await` with `tokio`).
     - Using Rust for building Command-Line Interface (CLI) tools (e.g., with `clap`).
     - Interacting with JSON APIs and handling responses in Rust.
     - Overview of the Solana RPC API and how to interact with it.
     - Introduction to the `solana-sdk` for client-side interactions:
+      The `solana-sdk` has been modularized into smaller, independent crates. While this course will primarily utilize the main `solana-sdk` for foundational understanding, subsequent modules or advanced courses will explore using these more granular crates for optimized and specific use cases.
+
       - `solana-client` for making RPC requests.
       - Key data structures in `solana-sdk` (e.g., `Pubkey`, `Account`).
+
 3.  **Project: Building a Solana Account Inspector CLI in Rust:**
     - Setting up a Rust project with `solana-sdk`, `tokio`, and `clap` dependencies.
-    - Designing the CLI structure for commands like `get-balance <PUBKEY>`.
+    - Planning and designing the CLI command structure using the `clap` crate, considering commands such as `get-balance <PUBKEY>` and their respective arguments. This involves thinking ahead about user interaction and command organization.
     - Implementing asynchronous functions to connect to a Solana RPC endpoint and query account information.
     - Fetching and displaying the SOL balance for a given public key.
     - (Optional) Implementing other queries, such as fetching transaction history or token balances (if time permits and complexity is managed).
