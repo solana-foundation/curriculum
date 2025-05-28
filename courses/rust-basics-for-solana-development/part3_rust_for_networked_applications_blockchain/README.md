@@ -1,0 +1,3 @@
+# PART 3: RUST FOR NETWORKED APPLICATIONS AND BLOCKCHAIN INTERACTION (CLIENT-SIDE) (Lessons 11-12)
+
+This part of the course transitions to applying Rust skills for building networked applications, with a specific focus on client-side blockchain interaction. Students will learn to develop command-line interface (CLI) tools using `clap`, make HTTP requests to JSON APIs with `reqwest`, and handle JSON data using `serde`. The section culminates with an introduction to the Solana blockchain, covering basic concepts and how to interact with the Solana network from Rust using the `solana-sdk` and `solana-client` crates. This prepares students for the final project where they will build a Solana account inspector.
