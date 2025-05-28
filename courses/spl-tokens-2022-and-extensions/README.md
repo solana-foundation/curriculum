@@ -2,19 +2,21 @@
 
 ## Overview
 
-This course provides an in-depth exploration of the SPL Token program on Solana, with a strong emphasis on the modern Token-2022 standard (often referred to as Token Extensions) and its advanced functionalities. The primary goal is to equip learners with the knowledge and skills to create, manage, and interact with sophisticated token features beyond basic fungible and non-fungible tokens.
+This course provides an in-depth exploration of the SPL Token program on Solana, with a strong emphasis on the modern Token-2022 standard (often referred to as Token Extensions) and its advanced functionalities. The primary goal is to equip learners with the knowledge and skills to create, manage, and interact with sophisticated token features beyond basic fungible and non-fungible tokens, while also considering the practicalities of integrating these tokens with other programs, wallets, and exchanges.
 
-The course focuses on practical application, guiding students through the nuances of Token-2022 extensions such as transfer fees, interest-bearing tokens, non-transferable tokens, transfer hooks, metadata pointers, and confidential transfers. The final project involves building an NFT-Gated Content Access Program, applying these learned concepts.
+The course focuses on practical application, guiding students through the nuances of Token-2022 extensions such as transfer fees, scaled UI amount, non-transferable tokens, pausable tokens, transfer hooks, metadata pointers, and confidential transfers. It also touches upon the challenges and strategies for ensuring broader ecosystem compatibility for tokens utilizing these extensions. The final project involves building an NFT-Gated Content Access Program, applying these learned concepts.
 
 ## Learning Objectives
 
 - Understand the differences and advantages of SPL Token-2022 over the original SPL Token program.
 - Create and manage Token-2022 mints and associated token accounts.
+- Understand the considerations for integrating Token-2022 based assets with other on-chain programs and off-chain services like wallets and exchanges.
 - Implement and interact with various Token-2022 extensions, including:
   - Transfer Hooks for custom transfer logic.
   - Permanent Delegates for specific operational authority.
   - Transfer Fees for on-chain royalty or fee collection.
-  - Interest-Bearing Tokens for native yield.
+  - Scaled UI Amount for representing token values.
+  - Pausable Tokens for temporarily halting token activity.
   - Non-Transferable Tokens for soul-bound or identity use cases.
   - Metadata Pointers and On-chain Metadata.
   - Confidential Transfers for privacy-preserving transactions.
@@ -44,7 +46,8 @@ The course focuses on practical application, guiding students through the nuance
 3.  **Exploring Token-2022 Extensions (Selection):**
     - **Transfer Hooks:** Implementing custom logic on token transfers.
     - **Transfer Fees:** Configuring and collecting fees on transfers.
-    - **Interest-Bearing Tokens:** How tokens can accrue interest natively.
+    - **Scaled UI Amount:** Representing token values in a user-friendly way.
+    - **Pausable Tokens:** Implementing controls to pause token transfers.
     - **Non-Transferable Tokens:** Creating tokens that cannot be moved after issuance.
     - **Metadata:** Utilizing `MetadataPointer` and on-chain metadata with `TokenMetadata` interface.
     - **Confidential Transfers (Overview):** Understanding the principles of private transactions with ZK proofs.
