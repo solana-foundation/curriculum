@@ -1,3 +1,0 @@
-# PART 4: PROJECT: BUILDING A SOLANA ACCOUNT INSPECTOR CLI (Lessons 13-15)
-
-This final part of the course is dedicated to the capstone project: building a Solana Account Inspector CLI tool. Students will apply the Rust knowledge and skills acquired throughout the previous lessons to develop a practical application. This includes planning the project, setting up dependencies (`solana-sdk`, `solana-client`, `tokio`, `clap`, `serde`, `anyhow`), implementing the CLI command structure, connecting to the Solana network, fetching and displaying account information, handling errors robustly, and writing tests. The project culminates in refining the code and preparing for a demonstration.
