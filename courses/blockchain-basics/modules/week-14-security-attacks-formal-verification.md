@@ -190,7 +190,5 @@ ConsensusInvariant ==
 
 ## Additional Resources
 
-- [Blockchain Security Database](https://consensys.github.io/smart-contract-best-practices/known_attacks/)
 - [TLA+ Examples](https://github.com/tlaplus/Examples)
-- [Formal Verification Tools](https://github.com/trailofbits/awesome-formal-verification)
 - [Attack Cost Calculator](https://www.crypto51.app/)

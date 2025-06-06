@@ -178,7 +178,5 @@ Students present their distributed ledger system designs:
 
 ## Additional Resources
 
-- [Blockchain Research Network](https://www.blockchainresearchnetwork.org/)
 - [Zero Knowledge Podcast](https://zeroknowledge.fm/)
 - [a16z Crypto Startup School](https://a16z.com/crypto-startup-school/)
-- [Electric Coin Co. Research](https://electriccoin.co/blog/tag/research/)

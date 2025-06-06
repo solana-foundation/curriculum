@@ -54,14 +54,12 @@
 
 ## Case Studies
 
-- **Solana Performance**: 65,000 TPS claims vs reality
 - **Ethereum Gas Limits**: Economic throttling
 - **Bitcoin's Conservative Approach**: 1MB blocks
 - **BSC's Centralization Trade-off**: 21 validators
 
 ## Additional Resources
 
-- [Blockchain Scalability Studies](https://github.com/isi-vista/blockchain-scalability)
 - [Performance Benchmarking Tools](https://github.com/hyperledger/caliper)
 - [Network Simulation Frameworks](https://github.com/ethereum/hive)
 - [Hardware Acceleration Research](https://github.com/stanford-ppl/spatial)
