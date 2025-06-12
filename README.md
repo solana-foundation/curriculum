@@ -6,12 +6,11 @@ This repository contains a collection of courses and materials for learning Sola
 
 The main content is organized within the `courses` directory. Each subdirectory in `courses` represents a specific course:
 
-- [`courses/rust-basics-for-solana-development`](courses/rust-basics-for-solana-development/): Rust Basics for Solana Development
-- [`courses/anchor-and-programs`](courses/anchor-and-programs/): Anchor and Programs
-- [`courses/solana-components-and-system-design`](courses/solana-components-and-system-design/): Solana Components and System Design
-- [`courses/spl-tokens-2022-and-extensions`](courses/spl-tokens-2022-and-extensions/): SPL Tokens, 2022 and Extensions
-- [`courses/web-for-solana-development-101`](courses/web-for-solana-development-101/): Web for Solana Development 101
-- [`courses/solana-defi`](courses/solana-defi/): Solana DeFi: Token Swaps and AMMs
+- [`courses/blockchain-basics`](courses/blockchain-basics/course-plan.md): Blockchain Basics
+- [`courses/rust-basics-for-solana-development`](courses/rust-basics-for-solana-development/course-plan.md): Rust Basics for Solana Development
+- [`courses/anchor-and-programs`](courses/anchor-and-programs/course-plan.md): Anchor and Programs
+- [`courses/spl-tokens-2022-and-extensions`](courses/spl-tokens-2022-and-extensions/course-plan.md): SPL Tokens, 2022 and Extensions
+- [`courses/web-for-solana-development-101`](courses/web-for-solana-development-101/course-plan.md): Web for Solana Development 101
 
 The monorepo also includes standard Turborepo packages:
 
