@@ -37,7 +37,7 @@
 - Complete environment setup and verify all tools are working correctly
 - Build and deploy the counter program to localnet
 - Explore the Solana Playground and run through basic examples
-- Create a simple "Hello World" program that stores and retrieves a greeting message
+- Create a simple "Hello World" program that stores and retrieves a greeting message to your name
 - Document common setup issues encountered and their solutions
 - Read through the official Anchor examples repository to familiarize yourself with project structure
 

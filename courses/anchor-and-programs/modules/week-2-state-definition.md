@@ -6,13 +6,12 @@
 - Understand automatic discriminators and their role in account identification
 - Implement custom serialization and deserialization patterns
 - Design efficient data structures for on-chain storage
-- Handle account rent and space calculations
 
 ## Topics Covered
 
 - `#[account]` attribute deep dive and automatic trait implementations
 - Account discriminators: automatic generation and custom values
-- Space calculation for accounts and rent exemption requirements
+- Space calculation for accounts
 - Data structure design best practices for on-chain storage
 - Account initialization patterns and ownership
 - Zero-copy deserialization for large data structures
@@ -23,7 +22,6 @@
 2. **Data Structure Design**: Implement various data types (Vec, HashMap equivalents, nested structs)
 3. **Space Calculator**: Build a utility to calculate account space requirements
 4. **Discriminator Explorer**: Examine how Anchor generates and uses discriminators
-5. **Rent Calculation**: Practice calculating minimum balance for rent exemption
 
 ## Reading Assignment
 
@@ -35,7 +33,6 @@
 - Build a complete note-taking program with CRUD operations
 - Implement a user profile system with nested data structures
 - Create a library program that manages book records with different data types
-- Calculate and verify rent requirements for various account sizes
 
 ## Key Concepts to Master
 
