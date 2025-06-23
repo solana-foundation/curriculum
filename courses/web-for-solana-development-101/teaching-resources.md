@@ -12,6 +12,11 @@
 - https://github.com/solana-foundation/gill
 - Modern JavaScript/TypeScript client for Solana. Lightweight alternative to Web3.js with tree-shakable architecture. Includes comprehensive examples and API documentation.
 
+**Wallet UI Examples Repository**
+
+- https://github.com/solana-labs/wallet-ui
+- Production-ready examples of wallet integration using `gill` library. Includes Next.js, React, and Vite templates with TypeScript. Perfect for teaching modern Solana web development patterns.
+
 **Solana Cookbook**
 
 - https://solanacookbook.com/
@@ -67,6 +72,13 @@
 
 - https://github.com/luigiremor/solana-wallet-adapter-base-ui-shadcn
 - Modern UI components using shadcn/ui. Customizable wallet connection interface. Perfect for teaching modern UI patterns.
+
+**Wallet UI Example Projects**
+
+- wallet-ui/examples/next-shadcn - Production-ready Next.js + shadcn/ui example
+- wallet-ui/examples/next-tailwind - Minimal Next.js + Tailwind CSS setup  
+- wallet-ui/examples/react-vite-tailwind - Fast Vite-based React development
+- wallet-ui/examples/react-app - Traditional Create React App setup
 
 ## Security and Best Practices
 
@@ -128,6 +140,7 @@
 - https://dev.to/shivamsspirit/introducing-gill-the-modern-solana-javascript-client-library-325l
 - https://nick.af/articles/gill-solana-javascript-get-started
 - Migration guide from traditional approaches. Performance comparisons and bundle size analysis. Code examples for both libraries.
+- **Live Examples:** See wallet-ui repository for real-world `gill` implementations across different frameworks
 
 **Wallet Integration Patterns**
 
