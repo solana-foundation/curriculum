@@ -23,8 +23,8 @@
 
 ## Reading Assignment
 
-- Serde documentation
-- RESTful API design principles
+- [Serde documentation](https://docs.rs/serde/latest/serde/trait.Serialize.html)
+- [RESTful API design principles](https://restfulapi.net/)
 
 ## Homework
 

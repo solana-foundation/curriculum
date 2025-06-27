@@ -23,14 +23,14 @@
 
 ## Reading Assignment
 
-- Axum documentation
-- Web Programming with Rust guide
+- [Axum documentation](https://docs.rs/axum/latest/axum/)
+- [Web Programming with Rust guide](https://github.com/PacktPublishing/Rust-Web-Programming-2nd-Edition)
 
 ## Homework
 
 - Build a multi-endpoint API server with at least 5 routes
 - Add authentication middleware that checks API key in headers.
 - Study these [Axum examples](https://github.com/tokio-rs/axum/tree/main/examples):
-  - `hello-world`
-  - `todos` (CRUD operations)
-  - `jwt` (authentication patterns)
+  - [`hello-world`](https://github.com/tokio-rs/axum/tree/main/examples/hello-world)
+  - [`todos`](https://github.com/tokio-rs/axum/tree/main/examples/todos) (CRUD operations)
+  - [`jwt`](https://github.com/tokio-rs/axum/tree/main/examples/jwt) (authentication patterns)
