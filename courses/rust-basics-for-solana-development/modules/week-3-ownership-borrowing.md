@@ -23,12 +23,12 @@
 
 ## Reading Assignment
 
-- The Rust Book: Chapter 4.3-4.5
+- [The Rust Book: Chapter 4.1-4.3](https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html)
 - ["Understanding Ownership" video series](https://www.youtube.com/watch?v=VFIOSWy93H0)
 
 ## Homework
 
 - Complete these ownership exercises:
-  - [Rustlings](https://github.com/rust-lang/rustlings): `move_semantics1-6.rs` (all 6)
+  - [Rustlings](https://github.com/rust-lang/rustlings/tree/main/exercises/06_move_semantics): `move_semantics1-6.rs` (all 6)
   - [100 Exercises to Learn Rust](https://rust-exercises.com/100-exercises/): Exercises 20-25 (Ownership)
-  - [Interactive Rust Book](https://rust-book.cs.brown.edu/): Chapter 4 quizzes (all 5 quizzes)
+  - [Interactive Rust Book](https://rust-book.cs.brown.edu/ch04-01-what-is-ownership.html): Chapter 4 quizzes (all 5 quizzes)

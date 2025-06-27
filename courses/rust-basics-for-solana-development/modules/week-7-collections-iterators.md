@@ -23,8 +23,9 @@
 
 ## Reading Assignment
 
-- The Rust Book: Chapter 8, 13.2
-- Rust by Example: Collections
+- [The Rust Book: Chapter 8](https://rust-book.cs.brown.edu/ch08-00-common-collections.html)
+- [The Rust Book: Chapter 13.2](https://rust-book.cs.brown.edu/ch13-02-iterators.html)
+- [Rust by Example: Collections](https://doc.rust-lang.org/book/ch08-00-common-collections.html)
 
 ## Homework
 
@@ -33,8 +34,13 @@
   - Search functionality using iterators
   - Export/import to JSON
 - Complete these iterator exercises:
-  - [Rustlings](https://github.com/rust-lang/rustlings): `vec1-2.rs`, `hashmap1-3.rs`, `iterators1-5.rs` (10 exercises)
-  - [Exercism Rust Track](https://exercism.org/tracks/rust):
-    - "Accumulate" (iterator basics)
-    - "Series" (iterator windows)
-    - "Parallel Letter Frequency" (advanced iterators)
+  - **[Rustlings](https://github.com/rust-lang/rustlings)**
+  - [`vec1–vec2`](https://github.com/rust-lang/rustlings/tree/main/exercises/05_vecs)
+  - [`hashmap1–hashmap3`](https://github.com/rust-lang/rustlings/tree/main/exercises/11_hashmaps)
+  - [`iterators1–iterators5` (10 exercises)](https://github.com/rust-lang/rustlings/tree/main/exercises/18_iterators)
+
+- **[Exercism Rust Track](https://exercism.org/tracks/rust)**
+  - [“Accumulate” — iterator basics](https://exercism.org/tracks/rust/exercises/accumulate)
+  - [“Series” — iterator windows](https://exercism.org/tracks/rust/exercises/series)
+  - [“Parallel Letter Frequency” — advanced iterators](https://exercism.org/tracks/rust/exercises/parallel-letter-frequency)
+

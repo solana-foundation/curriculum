@@ -30,9 +30,9 @@
 ## Homework
 
 - Complete [Rustlings](https://github.com/rust-lang/rustlings) exercises:
-  - `intro/*` (2 exercises)
-  - `variables/*` (6 exercises)
-  - `functions/*` (5 exercises)
+  - [`intro/*`](https://github.com/rust-lang/rustlings/tree/main/exercises/00_intro) (2 exercises)
+  - [`variables/*`](https://github.com/rust-lang/rustlings/tree/main/exercises/01_variables) (6 exercises)
+  - [`functions/*`](https://github.com/rust-lang/rustlings/tree/main/exercises/02_functions) (5 exercises)
 - Build a transaction fee calculator CLI:
   - Accept transaction amount as argument
   - Calculate fee (1.5% of amount)

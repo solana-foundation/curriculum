@@ -23,8 +23,8 @@
 
 ## Reading Assignment
 
-- Solana documentation basics
-- RPC API reference
+- [Solana documentation basics](https://solana.com/docs/intro/quick-start)
+- [RPC API reference](https://developer.bitcoin.org/reference/rpc/)
 
 ## Homework
 

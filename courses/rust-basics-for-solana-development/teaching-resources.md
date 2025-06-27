@@ -4,270 +4,287 @@
 
 ### Primary Textbooks and References
 
-- **Interactive Rust Book** - https://rust-book.cs.brown.edu/
-  - Brown University's enhanced version with quizzes, visualizations, and learning analytics
-  - Used by over 62,000 students
-  - Includes interactive exercises and immediate feedback
-- **The Rust Programming Language** - https://doc.rust-lang.org/book/
+#### [**Interactive Rust Book**](https://rust-book.cs.brown.edu/)
 
-  - Official Rust book, updated February 2025
-  - Now includes async programming chapters
-  - Available free online with exercises
+- Brown University's enhanced version with quizzes, visualizations, and learning analytics
+- Used by over 62,000 students
+- Includes interactive exercises and immediate feedback
 
-- **Rust for Blockchain Application Development** by Akhil Sharma
+#### [**The Rust Programming Language**](https://doc.rust-lang.org/book/)
 
-  - Packt Publishing, 2024
-  - ISBN: 9781837634644
-  - Specifically bridges Rust to blockchain contexts
+- Official Rust book, updated February 2025
+- Now includes async programming chapters
+- Available free online with exercises
 
-- **Programming Rust** by Blandy, Orendorff, and Tindall
-  - O'Reilly Media
-  - Comprehensive systems programming reference
+#### [**Rust for Blockchain Application Development** by Akhil Sharma](https://www.packtpub.com/en-in/product/rust-for-blockchain-application-development-9781837634644)
+
+- Packt Publishing, April 2024
+- ISBN: 9781837634644
+- Specifically bridges Rust to blockchain contexts
+
+#### [**Programming Rust, 3rd Edition** by Blandy, Orendorff, and Tindall](https://www.oreilly.com/library/view/programming-rust-3rd/9781098176228/)
+
+- O'Reilly Media, June 2026
+- ISBN: 9781098176235
+- Comprehensive systems programming reference
 
 ### Online Courses
 
-- **Duke University's Rust Specialization** - Coursera
+#### [**Duke University's Rust Specialization** - Coursera](https://www.coursera.org/specializations/rust-programming)
 
-  - 5-course sequence for semester-long university courses
-  - Includes peer-reviewed projects
-  - Certificate available
+- 5-course sequence for semester-long university courses
+- Includes peer-reviewed projects
+- Certificate available
 
-- **Rust Programming for Smart Contract Development** - https://www.risein.com/courses/rust-programming
-  - Free course with blockchain focus
-  - Includes practical exercises
+#### [**Rust Programming for Smart Contract Development**](https://www.risein.com/courses/rust-programming)
+
+- Free course with blockchain focus
+- Includes practical exercises
 
 ## Academic Course Frameworks
 
 ### Open Source Curricula
 
-- **teach-rs** - https://github.com/trifectatechfoundation/teach-rs
-  - Modular university course framework
-  - Supported by Rust Foundation
-  - Includes slides, exercises, and assessments
-  - Tracks: systems, embedded, web, scientific
+#### [**teach-rs**](https://github.com/trifectatechfoundation/teach-rs)
+
+- Modular university course framework
+- Supported by Rust Foundation
+- Includes slides, exercises, and assessments
+- Tracks: systems, embedded, web, scientific
 
 ### University Course Examples
 
-- **Carnegie Mellon - Programming Language Pragmatics** (17-363/17-663)
+#### [**Carnegie Mellon - Programming Language Pragmatics** (17-363/17-663)](https://www.cs.cmu.edu/~aldrich/courses/17-363/)
 
-  - https://www.cs.cmu.edu/~aldrich/courses/17-363/
-  - 4 of 8 assignments in Rust
-  - Compiler implementation focus
+- 4 of 8 assignments in Rust
+- Compiler implementation focus
 
-- **University of Maryland - CMSC 388R**
-  - https://www.cs.umd.edu/class/fall2021/cmsc388Z/
-  - 5 homework assignments + final project
-  - Automated grading system
+[**University of Maryland - CMSC 388R**](https://www.cs.umd.edu/class/fall2021/cmsc388Z/)
+
+- 5 homework assignments + final project
+- Automated grading system
 
 ## Practice Platforms and Exercises
 
 ### Interactive Learning
 
-- **Rustlings** - https://github.com/rust-lang/rustlings
+#### [**Rustlings**](https://github.com/rust-lang/rustlings)
 
-  - 100+ small exercises
-  - Progressive difficulty
-  - Ideal for weekly labs
+- 100+ small exercises
+- Progressive difficulty
+- Ideal for weekly labs
 
-- **Exercism Rust Track** - https://exercism.org/tracks/rust
-  - 98 exercises with mentoring
-  - Free code review
-  - Community support
+#### [**Exercism Rust Track**](https://exercism.org/tracks/rust/exercises)
+
+- 98 exercises with mentoring
+- Free code review
+- Community support
 
 ### Structured Exercise Collections
 
-- **100 Exercises to Learn Rust** - https://rust-exercises.com/100-exercises/
+#### [**100 Exercises to Learn Rust**](https://rust-exercises.com/100-exercises/)
 
-  - Atomic lessons from Mainmatter
-  - Originally for 4-day workshops
-  - One concept per exercise
+- Atomic lessons from Mainmatter
+- Originally for 4-day workshops
+- One concept per exercise
 
-- **Rust Exercises by Mainmatter** - https://rust-exercises.com/
+#### [**100 Rust Exercises by Mainmatter**](https://rust-exercises.com/)
 
-  - Additional practice problems
-  - Real-world scenarios
-  - Solutions included
+- Additional practice problems
+- Real-world scenarios
+- Solutions included
 
-- **W3Resource Rust Exercises** - https://www.w3resource.com/rust/index.php
-  - Supplementary problems
-  - Various difficulty levels
+#### [**W3Resource Rust Exercises**](https://www.w3resource.com/rust/index.php)
+
+- Supplementary problems
+- Various difficulty levels
+- Rust Exercises, Practice, Solution and Explanation
 
 ## Solana Development Resources
 
 ### Development Environments
 
-- **Solana Playground** - https://beta.solpg.io
-  - Browser-based IDE
-  - No local setup required
-  - Built-in tutorials
-  - Perfect for classrooms
+#### [**Solana Playground**](https://beta.solpg.io)
+
+- Browser-based IDE
+- No local setup required
+- Built-in tutorials
+- Perfect for classrooms
 
 ### Official Documentation
 
-- **Solana Rust Programs** - https://solana.com/docs/programs/rust
+#### [**Solana Rust Programs - Developing Programs in Rust**](https://solana.com/docs/programs/rust)
 
-  - Official development guide
-  - Comprehensive examples
-  - Best practices
+- Official development guide
+- Comprehensive examples
+- Best practices
+- _**Certain geographies might need to use a VPN before webpage loads properly.**_
 
-- **Getting Started with Anchor** - https://solana.com/docs/programs/anchor
-  - Framework documentation
-  - Reduces boilerplate significantly
-  - Industry standard
+#### [**Getting Started with Anchor**](https://solana.com/docs/programs/anchor)
+
+- Framework documentation
+- Reduces boilerplate significantly
+- Industry standard
 
 ### Courses and Tutorials
 
-- **Build on Solana** - https://www.risein.com/courses/build-on-solana
+#### [**Build on Solana**](https://www.risein.com/courses/build-on-solana)
 
-  - Free project-based curriculum
-  - Counter to restaurant review dApp progression
-  - Blockchain-verified certificates
+- Free project-based curriculum
+- Counter to restaurant review dApp progression
+- Blockchain-verified certificates
 
-- **60 Days of Solana** - https://www.rareskills.io/solana-tutorial
+#### [**60 Days of Solana**](https://www.rareskills.io/solana-tutorial)
 
-  - Intensive curriculum
-  - Advanced concepts
-  - Project ideas
+- A Solana Course By Rareskills
+- Intensive curriculum
+- Advanced concepts
+- Project ideas
 
-- **Solana Development Course** - https://www.soldev.app/course
-  - SolDev platform
-  - Interactive lessons
-  - Hands-on projects
+#### [**Solana Development Courses**](https://www.soldev.app/course)
+
+- SolDev platform
+- Interactive lessons
+- Hands-on projects
 
 ### Project Resources
 
-- **Solana Program Examples** - https://github.com/solana-developers/program-examples
+#### [**Solana Program Examples**](https://github.com/solana-developers/program-examples)
 
-  - Official example repository
-  - Various program types
-  - Well-documented code
+- Official example repository
+- Various program types
+- Well-documented code
 
-- **Anchor Framework** - https://github.com/solana-foundation/anchor
-  - Standard Solana framework
-  - Extensive documentation
-  - Active community
+#### [**Anchor Framework**](https://github.com/solana-foundation/anchor)
+
+- Standard Solana framework
+- Extensive documentation
+- Active community
 
 ### Tutorial Sites
 
-- **QuickNode Guides** - https://www.quicknode.com/guides/solana-development/anchor/
+#### [**QuickNode Guides**](https://www.quicknode.com/guides/solana-development/anchor/how-to-write-your-first-anchor-program-in-solana-part-1)
 
-  - Step-by-step Anchor tutorials
-  - Beginner-friendly
-  - Practical examples
+- Step-by-step Anchor tutorials
+- Beginner-friendly
+- Practical examples
 
-- **101 Blockchains Solana Tutorial** - https://101blockchains.com/solana-anchor/
+#### [**101 Blockchains Solana Tutorial**](https://101blockchains.com/solana-anchor/)
 
-  - Introduction to Anchor
-  - Conceptual explanations
-  - Code examples
+- Introduction to Anchor
+- Conceptual explanations
+- Code examples
 
-- **Helius Blog** - https://www.helius.dev/blog/
-  - Beginner's guides
-  - Best practices
-  - Architecture patterns
+#### [**Helius Blog**](https://www.helius.dev/blog/)
+
+- Beginner's guides
+- Best practices
+- Architecture patterns
+- Real Life Applications
 
 ## Development Tools
 
 ### IDEs and Editors
 
-- **VS Code with Rust Analyzer**
+#### [**VS Code with Rust Analyzer**](https://code.visualstudio.com/docs/languages/rust)
 
-  - Real-time error checking
-  - Code completion
-  - Refactoring support
-  - CodeLLDB for debugging
+- Real-time error checking
+- Code completion
+- Refactoring support
+- CodeLLDB for debugging
 
-- **RustRover** (JetBrains)
-  - Professional IDE
-  - Advanced debugging
-  - Integrated tools
+#### [**RustRover** (JetBrains)](https://www.jetbrains.com/rust/)
+
+- Professional IDE
+- Advanced debugging
+- Integrated tools
 
 ### Assessment and Grading
 
-- **GitHub Classroom**
+#### [**GitHub Classroom**](https://classroom.github.com/)
 
-  - Assignment distribution
-  - Automated testing
-  - Code review workflows
-  - Progress tracking
+- Assignment distribution
+- Automated testing
+- Code review workflows
+- Progress tracking
 
-- **Codio**
+#### [**Codio**](https://www.codio.com/)
 
-  - Online platform
-  - Auto-grading for Rust
-  - Handles ~80% of assessments
-  - Cloud-based development
+- Online platform
+- Auto-grading for Rust
+- Handles ~80% of assessments
+- Cloud-based development
 
-- **Judge0**
-  - Code execution API
-  - Supports Rust
-  - Automated evaluation
-  - Integration options
+#### [**Judge0**](https://judge0.com/)
+
+- Code execution API
+- Supports Rust
+- Automated evaluation
+- Integration options
 
 ## Community Resources
 
 ### Forums and Chat
 
-- **Official Rust Discord**
+#### [**Official Rust Discord**](https://discord.com/invite/rust)
 
-  - Dedicated learner channels
-  - Real-time help
-  - Community events
-  - Code review
+- Dedicated learner channels
+- Real-time help
+- Community events
+- Code review
 
-- **Rust Users Forum** - https://users.rust-lang.org
+#### [**Rust Users Forum**](https://users.rust-lang.org)
 
-  - Long-form discussions
-  - Learning questions
-  - Project feedback
+- Long-form discussions
+- Learning questions
+- Project feedback
 
-- **Solana Stack Exchange** - https://solana.stackexchange.com
-  - Technical Q&A
-  - Blockchain-specific
-  - Expert answers
+[**Solana Stack Exchange**](https://solana.stackexchange.com)
+
+- Technical Q&A
+- Blockchain-specific
+- Expert answers
 
 ### News and Updates
 
-- **This Week in Rust**
+#### [**This Week in Rust**](https://this-week-in-rust.org/)
 
-  - Weekly newsletter
-  - Learning resources
-  - Community highlights
-  - Job opportunities
+- Weekly newsletter
+- Learning resources
+- Community highlights
+- Job opportunities
 
-- **Rust Blog** - https://blog.rust-lang.org
-  - Official announcements
-  - Feature updates
-  - Best practices
+#### [**Rust Blog**](https://blog.rust-lang.org)
+
+- Official announcements
+- Feature updates
+- Best practices
 
 ## Additional Learning Resources
 
 ### Blogs and Articles
 
-- **Learning Rust in 2024** - https://github.com/pretzelhammer/rust-blog/blob/master/posts/learning-rust-in-2024.md
+#### [**Learning Rust in 2024**](https://github.com/pretzelhammer/rust-blog/blob/master/posts/learning-rust-in-2024.md)
 
-  - Comprehensive guide
-  - Resource compilation
-  - Learning strategies
+- Comprehensive guide
+- Resource compilation
+- Learning strategies
 
-- **How to Learn Rust in 2025** - https://blog.jetbrains.com/rust/2024/09/20/how-to-learn-rust/
-  - JetBrains guide
-  - Tool recommendations
-  - Study approaches
+[**How to Learn Rust in 2025**](https://blog.jetbrains.com/rust/2024/09/20/how-to-learn-rust/)
+
+- JetBrains guide
+- Tool recommendations
+- Study approaches
+- Building real-world applications with Rust
+- Common challenges and how to overcome them
 
 ### Video Resources
 
-- **Rust Programming Courses** - https://www.classcentral.com/report/best-rust-courses/
-  - 11 free courses listed
-  - Various platforms
-  - Different skill levels
+[**Rust Programming Courses**](https://www.classcentral.com/report/best-rust-courses/)
 
-### Assessment Resources
-
-- **Online Judge Platforms** - https://code.fandom.com/wiki/Online_judge
-  - List of platforms supporting Rust
-  - Competitive programming
-  - Practice problems
+- 11 free courses listed
+- Various platforms
+- Different skill levels
 
 ## Final Project Ideas
 
@@ -296,24 +313,38 @@
 
 ### Essential Starting Points
 
-- Interactive Rust Book: https://rust-book.cs.brown.edu/
-- Rustlings: https://github.com/rust-lang/rustlings
-- Solana Playground: https://beta.solpg.io
-- teach-rs: https://github.com/trifectatechfoundation/teach-rs
+- [Interactive Rust Book:](https://rust-book.cs.brown.edu/)
+- [Rustlings](https://github.com/rust-lang/rustlings)
+- [Solana Playground](https://beta.solpg.io)
+- [teach-rs](https://github.com/trifectatechfoundation/teach-rs)
 
 ### Community Hubs
 
-- Rust Discord: Official server
-- Solana Stack Exchange: https://solana.stackexchange.com
-- Rust Users Forum: https://users.rust-lang.org
+- [Rust Discord: Official server](https://discord.com/invite/rust)
+- [Solana Stack Exchange](https://solana.stackexchange.com)
+- [Rust Users Forum](https://users.rust-lang.org)
 
 ### Documentation Centers
 
-- Rust Official Docs: https://doc.rust-lang.org/
-- Solana Docs: https://solana.com/docs
-- Anchor Docs: https://www.anchor-lang.com/
+- [Rust Official Docs](https://doc.rust-lang.org/)
+- [Solana Docs](https://solana.com/docs)
+- [Anchor Docs](https://www.anchor-lang.com/)
 
 ---
 
 _Last updated: June 2025_
 _Compiled for university-level Rust to Solana development courses_
+
+### Primary Textbooks and References
+
+#### **[Interactive Rust Book](https://rust-book.cs.brown.edu/)**
+
+  - Brown University’s enhanced version with quizzes, visualisations and learning analytics  
+  - Used by over 62 000 students  
+  - Includes interactive exercises and immediate feedback
+
+#### **[The Rust Programming Language](https://doc.rust-lang.org/book/)**  
+
+  - Official Rust book, updated February 2025  
+  - Now includes async-programming chapters  
+  - Available free online with exercises

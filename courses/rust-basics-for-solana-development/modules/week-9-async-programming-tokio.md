@@ -23,18 +23,22 @@
 
 ## Reading Assignment
 
-- Tokio Tutorial (official)
-- Async Book: Chapters 1-4
+- **[Tokio Tutorial](https://tokio.rs/tokio/tutorial/async)** (official)
+- **[Async Book — Chapters 1 - 4](https://book.async.rs/)**
 
 ## Homework
 
-- Concurrent file processor that:
-  - Reads multiple files simultaneously from a folder.
-  - Processes content (word count, line count)
-  - Aggregates results
-- Complete [Tokio Tutorial](https://tokio.rs/tokio/tutorial) sections:
-  - Hello Tokio
-  - Spawning
-  - Shared State
-  - Channels (first part only)
-- [Rustlings](https://github.com/rust-lang/rustlings): `threads1-3.rs`, `macros1-4.rs` (7 exercises)
+- **Concurrent file processor**  
+  - Read multiple files simultaneously from a folder  
+  - Process content (word count, line count)  
+  - Aggregate results  
+
+- **[Tokio Tutorial](https://tokio.rs/tokio/tutorial)** — complete sections:  
+  - [Hello Tokio](https://tokio.rs/tokio/tutorial/hello-tokio)  
+  - [Spawning](https://tokio.rs/tokio/tutorial/spawning)  
+  - [Shared State](https://tokio.rs/tokio/tutorial/shared-state)  
+  - [Channels](https://tokio.rs/tokio/tutorial/channels) *(first part only)*  
+
+- **[Rustlings](https://github.com/rust-lang/rustlings)**  
+  - [`threads1 – threads3`](https://github.com/rust-lang/rustlings/tree/main/exercises/20_threads)  
+  - [`macros1 – macros4`](https://github.com/rust-lang/rustlings/tree/main/exercises/21_macros) *(7 exercises)*

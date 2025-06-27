@@ -23,13 +23,14 @@
 
 ## Reading Assignment
 
-- The Rust Book: Chapter 9
-- Error Handling in Rust blog posts
+- [The Rust Book: Chapter 9](https://rust-book.cs.brown.edu/ch09-00-error-handling.html)
 
 ## Homework
 
 - Create a file parser with robust error handling (CSV or JSON, handle 5+ error types)
 - Complete these error handling exercises:
-  - [Rustlings](https://github.com/rust-lang/rustlings): `errors1-6.rs`, `options1-3.rs` (9 exercises)
+  - [Rustlings](https://github.com/rust-lang/rustlings): 
+    - [`errors1-6.rs`](https://github.com/rust-lang/rustlings/tree/main/exercises/13_error_handling)
+    -  [`options1-3.rs`](https://github.com/rust-lang/rustlings/tree/main/exercises/12_options) (9 exercises)
   - [100 Exercises to Learn Rust](https://rust-exercises.com/100-exercises/): Exercises 40-45 (Error Handling)
-  - [Exercism Rust Track](https://exercism.org/tracks/rust): "Anagram" (practice with Result)
+  - [Exercism Rust Track](https://exercism.org/tracks/rust/exercises/anagram): "Anagram" (practice with Result)

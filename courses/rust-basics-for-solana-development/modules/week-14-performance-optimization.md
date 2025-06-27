@@ -23,7 +23,7 @@
 
 ## Reading Assignment
 
-- Rust Performance Book
+- [Rust Performance Book](https://nnethercote.github.io/perf-book/)
 - Async optimization guides
 
 ## Homework
