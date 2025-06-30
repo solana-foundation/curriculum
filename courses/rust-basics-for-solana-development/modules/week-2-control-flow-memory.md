@@ -35,6 +35,6 @@
   - Check if height is "special" (divisible by 1000)
   - Use both if/else and match statements
 - Complete these [Rustlings](https://github.com/rust-lang/rustlings) exercises:
-  - `primitive_types/*` (all 6 exercises)
-  - `strings/*` (all 4 exercises - String vs &str)
-  - `if/*` (all 3 exercises)
+  - [`primitive_types/*`](https://github.com/rust-lang/rustlings/tree/main/exercises/04_primitive_types) (all 6 exercises)
+  - [`strings/*`](https://github.com/rust-lang/rustlings/tree/main/exercises/09_strings) (all 4 exercises - String vs &str)
+  - [`if/*`](https://github.com/rust-lang/rustlings/tree/main/exercises/03_if) (all 3 exercises)
