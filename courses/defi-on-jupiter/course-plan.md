@@ -116,13 +116,6 @@ This course is designed for intermediate web developers and hackathon builders e
 
 1. **Final Project:** Build a clone of jup.ag, integrating Ultra API, Swap API, Trigger & Recurring API, and open-source toolkits for token swaps, order management, and monetization
 
-## Recommended Readings
-
-- [Jupiter Documentation](https://docs.jup.ag) - Official API and usage guides
-- [Solana Cookbook](https://solanacookbook.com) - Core Solana recipes and patterns
-- [Jupiter Terminal](https://github.com/jup-ag/terminal) - Open-source toolkit for swap interfaces
-- [Unified Wallet Kit](https://github.com/jup-ag/wallet-kit) - Wallet integration examples
-
 ## Resources
 
 ### Core Documentation
@@ -130,10 +123,3 @@ This course is designed for intermediate web developers and hackathon builders e
 - [Solana RPC API Documentation](https://docs.solana.com/api/http) - For transaction and account queries
 - [Jupiter Terminal](https://github.com/jup-ag/terminal) - Open-source swap interface toolkit
 - [Unified Wallet Kit](https://github.com/jup-ag/wallet-kit) - Wallet integration toolkit
-
-### Community and Learning
-- [Solana Stack Exchange](https://solana.stackexchange.com) - Q&A for developers
-- [Solana Tech Discord](https://discord.gg/solana) - Community support
-- [Superteam DAO](https://superteam.fun) - DeFi and Solana learning resources
-- [Colosseum Hackathons](https://www.colosseum.org/hackathons) - Opportunities for practical experience
-- [freeCodeCamp Solana Curriculum](https://github.com/freeCodeCamp/solana-curriculum) - Interactive Solana exercises
