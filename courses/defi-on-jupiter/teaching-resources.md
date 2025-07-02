@@ -84,7 +84,7 @@
 - https://unified.jup.ag
 - Wallet adapter for seamless wallet integration. Supports Phantom, Solflare, and Backpack. Essential for teaching wallet connectivity.
 
-## Security and Best Practices
+## Best Practices and examples
 
 **API Setup Guide**
 
@@ -100,19 +100,6 @@
 
 - https://dev.jup.ag/docs/api-rate-limit
 - Guidelines for managing rate limits. Includes instructions for requesting elevated limits via https://portal.jup.ag. Key for production-ready apps.
-
-## Development Environment Setup
-
-**Solana CLI Installation**
-
-- https://docs.solana.com/cli/install-solana-cli-tools
-- Essential tools for Solana and Jupiter development. Includes wallet management and program deployment. Required for all projects.
-
-**Node.js and Package Managers**
-
-- Node.js 18+ recommended
-- npm or yarn for managing Jupiter SDKs and dependencies
-- TypeScript configuration for API integrations
 
 ## Advanced Topics and Patterns
 
@@ -139,32 +126,3 @@
 
 - https://x.com/JupDevRel
 - Follow for real-time updates, tutorials, and community projects. Great for student engagement and inspiration.
-
-## Supplementary Learning Platforms
-
-**Solana University**
-
-- https://www.solanau.org/
-- Student-focused programs with Jupiter integration guides. Offers certifications and university partnerships.
-
-**Rise In Solana Bootcamp**
-
-- https://www.risein.com/bootcamps/solana-bootcamp
-- 6-week program with Jupiter API focus. Includes live instruction and job placement support.
-
-**Encode Club Solana Bootcamp**
-
-- https://www.encode.club/solana-bootcamp
-- Free bootcamp with Jupiter project examples. Supports hackathon participation and project-based learning.
-
-## Teaching Tools and Utilities
-
-**Solana Explorer**
-
-- https://explorer.solana.com/
-- Debug Jupiter transactions and accounts. Supports network selection for devnet and mainnet. Essential for classroom demos.
-
-**Create Solana dApp CLI**
-
-- https://github.com/solana-labs/create-solana-dapp
-- Scaffolding for Jupiter-integrated dApps. Supports multiple frameworks. Includes best practices.
