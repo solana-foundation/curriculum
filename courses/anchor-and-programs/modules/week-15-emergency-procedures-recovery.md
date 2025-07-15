@@ -29,7 +29,6 @@
 ## Reading Assignment
 
 - [Key Management Best Practices](https://github.com/slowmist/solana-smart-contract-security-best-practices)
-- [Disaster Recovery Planning](https://www.nist.gov/cyberframework)
 - [Circuit Breaker Pattern](https://martinfowler.com/bliki/CircuitBreaker.html)
 
 ## Homework
@@ -236,5 +235,4 @@ The completed system demonstrates enterprise-grade capabilities suitable for:
 
 ## Resources
 
-- [Emergency Response Planning](https://www.nist.gov/cyberframework)
 - [Circuit Breaker Implementation](https://martinfowler.com/bliki/CircuitBreaker.html)

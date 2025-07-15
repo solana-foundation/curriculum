@@ -29,8 +29,9 @@
 
 ## Reading Assignment
 
-- [Time-Based Access Control Patterns](https://github.com/solana-developers/program-examples)
-- [Vesting Contract Implementations](https://docs.solana.com/developing/programming-model/calling-between-programs)
+- [Creating a Token Vesting Contract on Solana Blockchain](https://blockchain.oodles.io/dev-blog/token-vesting-contract-solana/)
+- [Token vesting](https://github.com/Bonfida/token-vesting)
+- [Solana: Creating a token and vesting the token in your program](https://docs.chainstack.com/docs/solana-tutorial-creating-a-token-and-vesting-the-token-in-your-program)
 
 ## Homework
 
@@ -158,5 +159,4 @@ Students will be evaluated on:
 
 ## Resources
 
-- [Time-Based Access Control Patterns](https://github.com/solana-developers/program-examples)
 - [Governance Time Delays](https://github.com/solana-labs/solana-program-library/tree/master/governance)

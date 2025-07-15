@@ -2,9 +2,13 @@
 
 ## Overview
 
-This comprehensive course provides a deep dive into the Anchor framework for Solana program development over 15 weeks. It guides learners from foundational concepts, such as workspace setup and state definition, to advanced techniques like Cross-Program Invocations (CPIs) and Program Derived Addresses (PDAs). The curriculum emphasizes **secure smart contract development** and how Anchor's type-safe abstractions enable building sophisticated on-chain applications. To solidify these concepts, the course culminates in building a **Multi-Signature Protocol Engine** over three weeks. This project serves as a practical application of Anchor's core features, demonstrating real-world blockchain solutions.
+This comprehensive course provides a deep dive into the Anchor framework for Solana program development over 15 weeks. It guides learners from foundational concepts, such as workspace setup and state definition, to advanced techniques like Cross-Program Invocations (CPIs) and Program Derived Addresses (PDAs). The curriculum emphasizes **secure smart contract development** and how Anchor's type-safe abstractions enable building sophisticated on-chain applications.
 
-The primary goal is to equip developers with production-ready Anchor skills, enabling them to build, test, and deploy secure on-chain programs. The course emphasizes a project-driven, hands-on approach where learners progressively develop sophisticated blockchain applications over 15 weeks.
+To solidify these concepts, the course culminates in building a **Multi-Signature Protocol Engine** over three weeks. This project serves as a practical application of Anchor's core features, demonstrating real-world blockchain solutions.
+
+The primary goal is to equip developers with production-ready Anchor skills, enabling them to build, test, and deploy secure on-chain programs.
+
+The course emphasizes a project-driven, hands-on approach where learners progressively develop sophisticated blockchain applications over 15 weeks.
 
 ## Learning Objectives
 
@@ -22,7 +26,7 @@ The primary goal is to equip developers with production-ready Anchor skills, ena
 ## Prerequisites
 
 - Understanding of core Solana concepts (accounts, transactions, programs).
-  - **Solana Docs:** https://solana.com/docs
+  - [**Solana Docs**](https://solana.com/docs)
 - Comfort with Rust syntax, ownership model, and common data structures.
 - Basic understanding of blockchain architecture and public key cryptography.
 - Experience with asynchronous programming concepts is helpful but not required.
@@ -49,7 +53,7 @@ The course covers the following key areas over 15 weeks:
 - **Cross-Program Invocations (CPIs) - Week 6:**
   - CPI security patterns and account validation
   - SPL Token program integration
-    - **SPL Token Docs:** https://spl.solana.com/token
+    - [**SPL Token Docs**](https://spl.solana.com/token)
   - Error propagation and handling across programs
 
 ### 3. Testing, Security, and Optimization (Weeks 7-9)
@@ -80,7 +84,7 @@ This course is ideal for developers with Rust experience and basic Solana knowle
 
 - **Level:** Intermediate to Advanced
 - **Focus:** Anchor framework mastery, secure program development, and real-world blockchain applications
-- **Career Opportunities:** https://web3.career/solana-jobs (2,700+ active positions, $80k-$250k+ salaries)
+- [**Career Opportunities**](https://web3.career/solana-jobs) (2,700+ active positions, $80k-$250k+ salaries)
 
 ## Assignments
 
@@ -111,13 +115,13 @@ This course is ideal for developers with Rust experience and basic Solana knowle
 
 ### Recommended Readings
 
-- ["The Anchor Book" (official documentation)](https://github.com/coral-xyz/anchor/tree/master/docs/book)
-- ["Solana Program Security Best Practices"](https://github.com/slowmist/solana-smart-contract-security-best-practices)
+- [The Anchor Book (official documentation)](https://github.com/coral-xyz/anchor/tree/master/docs/book)
+- [Solana Program Security Best Practices](https://github.com/slowmist/solana-smart-contract-security-best-practices)
 - [Anchor framework documentation](https://www.anchor-lang.com/)
 - [Solana developer documentation](https://solana.com/docs)
 
 ### Additional Resources
 
-- Anchor example programs repository
+- [Anchor example programs repository](https://examples.anchor-lang.com/)
 - Security audit reports from major protocols
-- Performance optimization guides
+- [Performance optimization guides](https://www.helius.dev/blog/optimizing-solana-programs)

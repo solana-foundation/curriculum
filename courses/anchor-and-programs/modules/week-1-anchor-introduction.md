@@ -28,9 +28,9 @@
 
 ## Reading Assignment
 
-- [Anchor Installation Guide](https://www.anchor-lang.com/docs/installation)
+- [Anchor Installation Guide](https://www.anchor-lang.com/docs/installation#:~:text=agave%2Dinstall%20update-,Install%20Anchor%20CLI,-Anchor%20is%20a)
 - [Solana Developer Documentation - Introduction](https://solana.com/docs)
-- [Anchor vs Native Solana Programs](https://www.helius.dev/blog/an-introduction-to-anchor-a-beginners-guide-to-building-solana-programs)
+- [An Introduction to Anchor: A Beginner’s Guide to Building Solana Programs](https://www.helius.dev/blog/an-introduction-to-anchor-a-beginners-guide-to-building-solana-programs)
 
 ## Homework
 

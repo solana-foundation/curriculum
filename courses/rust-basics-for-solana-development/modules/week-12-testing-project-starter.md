@@ -23,7 +23,7 @@
 
 ## Reading Assignment
 
-- The Rust Book: Chapter 11
+- [The Rust Book: Chapter 11](https://rust-book.cs.brown.edu/ch11-00-testing.html)
 - Testing best practices
 
 ## Homework

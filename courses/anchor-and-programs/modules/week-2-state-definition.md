@@ -43,4 +43,4 @@
 ## Resources
 
 - [Solana Cookbook - Account Model](https://solanacookbook.com/core-concepts/accounts.html)
-- [Space Calculation Tools](https://github.com/solana-developers/program-examples)
+- [Space Calculation Tools](https://github.com/GitBolt/anchor-space-calculator)

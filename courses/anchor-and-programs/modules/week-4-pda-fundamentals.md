@@ -29,7 +29,6 @@
 ## Reading Assignment
 
 - [Solana PDA Documentation](https://solana.com/docs/core/pda)
-- [PDA Security Patterns](https://github.com/slowmist/solana-smart-contract-security-best-practices)
 
 ## Homework
 

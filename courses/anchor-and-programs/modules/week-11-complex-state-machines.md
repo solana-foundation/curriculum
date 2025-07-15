@@ -28,10 +28,8 @@
 
 ## Reading Assignment
 
-- [State Machine Design Patterns](https://github.com/solana-developers/program-examples)
-- [Multi-Program Communication](https://www.rareskills.io/post/solana-multiple-transactions)
-- [Event-Driven Architectures](https://solana.com/developers/guides/javascript/events-and-errors)
-- [Program Composability](https://github.com/solana-labs/solana-program-library)
+- [Solana Event-Driven dApp Logic](https://instantnodes.io/articles/solana-event-driven-dapp-logic)
+- [Revisiting Solana’s Architecture for Accessibility and Decentralization](https://medium.com/@kyodo-tech/revisiting-solanas-architecture-for-accessibility-and-decentralization-36f1df3e7efb)
 
 ## Homework
 
@@ -430,7 +428,3 @@ describe("Complex State Machine Tests", () => {
 ```
 
 ## Resources
-
-- [State Machine Examples](https://github.com/solana-developers/program-examples)
-- [Multi-Program Patterns](https://github.com/coral-xyz/anchor/tree/master/examples)
-- [DeFi Architecture Patterns](https://github.com/solana-labs/solana-program-library)

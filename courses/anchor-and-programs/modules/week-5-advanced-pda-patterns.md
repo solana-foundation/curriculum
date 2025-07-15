@@ -28,7 +28,6 @@
 
 ## Reading Assignment
 
-- [Advanced PDA Patterns](https://github.com/solana-developers/program-examples)
 - [Hierarchical Account Structures](https://www.rareskills.io/post/solana-multiple-transactions)
 - [PDA Performance Optimization](https://solana.com/developers/guides/advanced/how-to-optimize-compute)
 
