@@ -2,297 +2,229 @@
 
 ## Primary Learning Materials
 
-**Official Anchor Documentation**
+### [**Official Anchor Documentation**](https://www.anchor-lang.com/)
 
-- https://www.anchor-lang.com/
-- The authoritative source for Anchor framework documentation. Essential for understanding current syntax, features, and best practices. Updated regularly with new releases.
+The authoritative source for Anchor framework documentation. Essential for understanding current syntax, features, and best practices. Updated regularly with new releases.
 
-**Anchor Book (Comprehensive Guide)**
+### [**Anchor Book (Comprehensive Guide)**](https://github.com/coral-xyz/anchor-book)
 
-- https://github.com/coral-xyz/anchor/tree/master/docs/book
-- In-depth explanations of Anchor concepts with progressive examples. Excellent for structured learning paths and understanding the "why" behind framework design decisions.
+In-depth explanations of Anchor concepts with progressive examples. Excellent for structured learning paths and understanding the "why" behind framework design decisions.
 
-**Solana Playground (Browser IDE)**
+### [**Solana Playground (Browser IDE)**](https://beta.solpg.io/)
 
-- https://beta.solpg.io/
-- No-installation development environment perfect for quick demonstrations and student exercises. Includes pre-built examples and supports full Anchor development workflow.
+No-installation development environment perfect for quick demonstrations and student exercises. Includes pre-built examples and supports full Anchor development workflow.
 
-**Solana Developer Documentation**
+### [**Solana Developer Documentation**](https://solana.com/docs)
 
-- https://solana.com/docs
-- Foundation knowledge for understanding Solana's architecture. Critical for explaining how Anchor abstracts underlying Solana concepts.
+Foundation knowledge for understanding Solana's architecture. Critical for explaining how Anchor abstracts underlying Solana concepts.
 
 ## Video Tutorials and Courses
 
-**Solana Foundation Official Course - Intro to Anchor**
+### [**Solana Foundation Official Course - Intro to Anchor**](https://solana.com/developers/courses/onchain-development/intro-to-anchor)
 
-- https://solana.com/developers/courses/onchain-development/intro-to-anchor
-- Structured curriculum with hands-on exercises. Includes starter code and progressive difficulty. Excellent for self-paced learning.
+Structured curriculum with hands-on exercises. Includes starter code and progressive difficulty. Excellent for self-paced learning.
 
-**Helius Beginner's Guide to Anchor**
+### [**Helius Beginner's Guide to Anchor**](https://www.helius.dev/blog/an-introduction-to-anchor-a-beginners-guide-to-building-solana-programs)
 
-- https://www.helius.dev/blog/an-introduction-to-anchor-a-beginners-guide-to-building-solana-programs
-- Comprehensive written guide with code examples. Explains concepts from first principles, making it ideal for students new to blockchain development.
+Comprehensive written guide with code examples. Explains concepts from first principles, making it ideal for students new to blockchain development.
 
-**QuickNode Anchor Tutorial Series**
+### [**QuickNode Anchor Tutorial Series**](https://www.quicknode.com/guides/solana-development/anchor/how-to-write-your-first-anchor-program-in-solana-part-1)
 
-- https://www.quicknode.com/guides/solana-development/anchor/how-to-write-your-first-anchor-program-in-solana-part-1
-- Multi-part series covering basic to advanced topics. Includes practical examples and common pitfall warnings.
+Multi-part series covering basic to advanced topics. Includes practical examples and common pitfall warnings.
 
 ## Example Projects and Code Repositories
 
-**Solana Program Examples (Official)**
+### [**Solana Program Examples (Official)**](https://github.com/solana-developers/program-examples)
 
-- https://github.com/solana-developers/program-examples
-- Comprehensive collection of example programs organized by topic. Each example includes tests and documentation. Perfect for demonstrating specific concepts.
+Comprehensive collection of example programs organized by topic. Each example includes tests and documentation. Perfect for demonstrating specific concepts.
 
-**Anchor Starter Templates**
+### [**WrRaThY Anchor Examples**](https://github.com/WrRaThY/anchor-example)
 
-- https://github.com/solana-developers/anchor-starter
-- Minimal boilerplate projects for quick starts. Reduces setup friction and lets students focus on learning core concepts.
+Well-commented example projects showing best practices. Includes modular structure examples and testing patterns.
 
-**WrRaThY Anchor Examples**
+### [**NFT Implementation Examples**](https://github.com/687c/solana-nft-anchor)
 
-- https://github.com/WrRaThY/anchor-example
-- Well-commented example projects showing best practices. Includes modular structure examples and testing patterns.
+Complete NFT minting implementation using Anchor. Demonstrates Metaplex integration and Token-2022 features.
 
-**NFT Implementation Examples**
+### [**Zero-Copy Advanced Examples**](https://github.com/solana-developers/anchor-zero-copy-example)
 
-- https://github.com/687c/solana-nft-anchor
-- Complete NFT minting implementation using Anchor. Demonstrates Metaplex integration and Token-2022 features.
-
-**Zero-Copy Advanced Examples**
-
-- https://github.com/solana-developers/anchor-zero-copy-example
-- Performance optimization patterns for large data structures. Essential for teaching efficient program design.
+Performance optimization patterns for large data structures. Essential for teaching efficient program design.
 
 ## Security and Best Practices
 
-**Sealevel Attacks Repository**
+### [**Sealevel Attacks Repository**](https://github.com/sannykim/solsec)
 
-- https://github.com/sannykim/solsec
-- Collection of common vulnerabilities and their fixes. Each attack includes explanation, vulnerable code, and secure implementation.
+Collection of common vulnerabilities and their fixes. Each attack includes explanation, vulnerable code, and secure implementation.
 
-**Solana Smart Contract Security Best Practices**
+### [**Solana Smart Contract Security Best Practices**](https://github.com/slowmist/solana-smart-contract-security-best-practices)
 
-- https://github.com/slowmist/solana-smart-contract-security-best-practices
-- Comprehensive security checklist with code examples. Organized by vulnerability type with mitigation strategies.
+Comprehensive security checklist with code examples. Organized by vulnerability type with mitigation strategies.
 
-**Helius Security Guide**
+### [**Helius Security Guide**](https://www.helius.dev/blog/a-hitchhikers-guide-to-solana-program-security)
 
-- https://www.helius.dev/blog/a-hitchhikers-guide-to-solana-program-security
-- Narrative guide to Solana security concepts. Explains security from attacker's perspective, making threats concrete.
+Narrative guide to Solana security concepts. Explains security from attacker's perspective, making threats concrete.
 
-**Sec3 Audit Guidelines**
+### [**Sec3 Audit Guidelines**](https://www.sec3.dev/blog/how-to-audit-solana-smart-contracts-part-4-the-anchor-framework)
 
-- https://www.sec3.dev/blog/how-to-audit-solana-smart-contracts-part-4-the-anchor-framework
-- Professional audit methodology adapted for educational use. Teaches systematic approach to finding vulnerabilities.
+Professional audit methodology adapted for educational use. Teaches systematic approach to finding vulnerabilities.
 
 ## Testing Frameworks and Tools
 
-**Bankrun Documentation**
+### [**LiteSVM**](https://solana.com/developers/guides/advanced/testing-with-jest-and-bankrun)
 
-- https://github.com/kevinheavey/bankrun
-- 10x faster testing framework with time manipulation features. Essential for efficient test-driven development workflows.
-
-**Solana Testing with Jest Guide**
-
-- https://solana.com/developers/guides/advanced/testing-with-jest-and-bankrun
-- Integration guide for modern JavaScript testing. Shows how to combine Anchor with familiar web development tools.
-
-**QuickNode Bankrun Tutorial**
-
-- https://www.quicknode.com/guides/solana-development/tooling/bankrun
-- Step-by-step setup and usage guide. Includes examples of advanced testing scenarios.
+litesvm is a fast and lightweight library for testing Solana programs. It works by creating an in-process Solana VM optimized for program developers. This makes it much faster to run and compile than alternatives like solana-program-test and solana-test-validator. litesvm is available in Rust, TS/JS and Python (as part of the solders library).
 
 ## Development Environment Setup
 
-**Official Installation Guide**
+### [**Official Installation Guide**](https://www.anchor-lang.com/docs/installation)
 
-- https://www.anchor-lang.com/docs/installation
-- Comprehensive setup instructions for all platforms. Includes troubleshooting section for common issues.
+Comprehensive setup instructions for all platforms. Includes troubleshooting section for common issues.
 
-**Solana CLI Installation**
+### [**Solana CLI Installation**](https://solana.com/docs/intro/installation)
 
-- https://solana.com/docs/intro/installation
-- Prerequisite tooling setup. Covers Windows (WSL), macOS, and Linux with platform-specific considerations.
+Prerequisite tooling setup. Covers Windows (WSL), macOS, and Linux with platform-specific considerations.
 
-**VS Code Extension for Anchor**
+### [**VS Code Extension for Anchor**](https://marketplace.visualstudio.com/items?itemName=Ayushh.vscode-anchor)
 
-- https://marketplace.visualstudio.com/items?itemName=Anchor.anchor-lang
-- IDE integration for syntax highlighting and snippets. Improves developer experience significantly.
+IDE integration for syntax highlighting and snippets. Improves developer experience significantly.
 
 ## Advanced Topics and Patterns
 
-**RareSkills Anchor Account Types Deep Dive**
+### [**RareSkills Anchor Account Types Deep Dive**](https://www.rareskills.io/post/anchor-account-types)
 
-- https://www.rareskills.io/post/anchor-account-types
-- Detailed explanation of `#[derive(Accounts)]` patterns. Clarifies when to use different account types with examples.
+Detailed explanation of `#[derive(Accounts)]` patterns. Clarifies when to use different account types with examples.
 
-**Account Constraints Guide**
+### [**Account Constraints Guide**](https://www.quicknode.com/guides/solana-development/anchor/how-to-use-constraints-in-anchor)
 
-- https://www.quicknode.com/guides/solana-development/anchor/how-to-use-constraints-in-anchor
-- Complete reference for Anchor constraints. Each constraint explained with use cases and security implications.
+Complete reference for Anchor constraints. Each constraint explained with use cases and security implications.
 
-**Cross-Program Invocation Patterns**
+### [**Cross-Program Invocation Patterns**](https://solana.com/docs/core/cpi)
 
-- https://hackmd.io/@ironaddicteddog/solana-anchor-escrow
-- Escrow implementation showing complex CPI patterns. Excellent for demonstrating real-world program composition.
+A Cross Program Invocation (CPI) refers to when one program invokes the instructions of another program. This allows for the composability of Solana programs.
 
 ## Community and Support Resources
 
-**Anchor Discord Server**
+### [**Anchor Discord Server**](https://discord.com/invite/NHHGSXAnXk)
 
-- https://discord.gg/anchor-lang
-- Official community with 15,000+ developers. Active help channels and direct access to framework maintainers.
+Official community with 15,000+ developers. Active help channels and direct access to framework maintainers.
 
-**Solana Tech Discord**
+### [**Solana Tech Discord**](https://discord.gg/solana)
 
-- https://discord.gg/solana
-- 145,000+ member community. Dedicated Anchor channels with quick response times for student questions.
+145,000+ member community. Dedicated Anchor channels with quick response times for student questions.
 
-**Stack Overflow Anchor Tag**
+### [**Stack Overflow Anchor Tag**](https://stackoverflow.com/questions/tagged/anchor-solana)
 
-- https://stackoverflow.com/questions/tagged/anchor-solana
-- Growing collection of Q&A. Good for finding solutions to common problems students encounter.
+Growing collection of Q&A. Good for finding solutions to common problems students encounter.
 
-**Reddit r/solana**
+### [**Reddit r/solana**](https://reddit.com/r/solana)
 
-- https://reddit.com/r/solana
-- 344,000+ subscribers. Mix of technical discussions and ecosystem news. Good for keeping curriculum current.
+344,000+ subscribers. Mix of technical discussions and ecosystem news. Good for keeping curriculum current.
 
 ## Assessment and Project Resources
 
-**60 Days of Solana Curriculum**
+### [**60 Days of Solana Curriculum**](https://www.rareskills.io/solana-tutorial) 
 
-- https://www.rareskills.io/solana-tutorial
-- Structured learning path with assessments. Designed for experienced developers transitioning to Solana.
+Structured learning path with assessments. Designed for experienced developers transitioning to Solana.
 
-**FreeCodeCamp Solana Curriculum**
+### [**FreeCodeCamp Solana Curriculum**](https://www.freecodecamp.org/news/solana-curriculum/)
 
-- https://www.freecodecamp.org/news/solana-curriculum/
-- Project-based learning approach. Includes grading rubrics and assessment strategies.
+Project-based learning approach. Includes grading rubrics and assessment strategies.
 
-**RiseIn Solana Bootcamp Materials**
+### [**RiseIn Solana Bootcamp Materials**](https://www.risein.com/bootcamps/solana-bootcamp)
 
-- https://www.risein.com/bootcamps/solana-bootcamp
-- Free bootcamp sponsored by Solana Foundation. Includes lesson plans and project specifications.
+Free bootcamp sponsored by Solana Foundation. Includes lesson plans and project specifications.
 
 ## Specialized Topics for Capstone Project
 
-**Token-2022 Implementation Guide**
+### [**Token-2022 Implementation Guide**](https://www.solana-program.com/docs/token-2022)
 
-- https://www.quicknode.com/guides/solana-development/anchor/token-2022
-- Advanced token features for NFT ticketing. Covers metadata extensions and transfer hooks.
+Advanced token features for NFT ticketing. Covers metadata extensions and transfer hooks.
 
-**SPL Governance Framework**
+### [**SPL Governance Framework**](https://github.com/solana-labs/solana-program-library/tree/master/governance)
 
-- https://github.com/solana-labs/solana-program-library/tree/master/governance
-- DAO implementation patterns. Useful for advanced event management features.
+DAO implementation patterns. Useful for advanced event management features.
 
-**NFT Ticketing References**
+### [**NFT Ticketing References**](https://www.seatlabnft.com/blog/how-verifying-nft-tickets-admitting-attendees-into-a-venue-works)
 
-- https://www.seatlabnft.com/blog/how-verifying-nft-tickets-admitting-attendees-into-a-venue-works
-- Real-world NFT ticketing implementation details. Covers QR code validation and fraud prevention.
+Real-world NFT ticketing implementation details. Covers QR code validation and fraud prevention.
 
-**Dynamic QR Code Patterns**
+### [**Dynamic QR Code Patterns**](https://belong.net/blog/qr-code-integration-nft-ticketing)
 
-- https://belong.net/blog/qr-code-integration-nft-ticketing
-- Security patterns for ticket validation. Explains rotating codes and offline verification.
+Security patterns for ticket validation. Explains rotating codes and offline verification.
 
 ## Career and Industry Resources
 
-**Solana Jobs Board**
+### [**Solana Jobs Board**](https://web3.career/solana-jobs)
 
-- https://web3.career/solana-jobs
-- Current job listings requiring Anchor skills. Useful for showing career relevance and salary ranges.
+Current job listings requiring Anchor skills. Useful for showing career relevance and salary ranges.
 
-**Developer Ecosystem Report**
+### [**Developer Ecosystem Report**](https://unchainedcrypto.com/a-big-2024-crypto-trend-solana-attracts-more-new-developers-than-ethereum/)
 
-- https://unchainedcrypto.com/a-big-2024-crypto-trend-solana-attracts-more-new-developers-than-ethereum/
-- Industry statistics showing Solana growth. Helps motivate students with market opportunity data.
+Industry statistics showing Solana growth. Helps motivate students with market opportunity data.
 
-**Solana Hackathon Platform (Colosseum)**
+### [**Solana Hackathon Platform (Colosseum)**](https://www.colosseum.org/)
 
-- https://www.colosseum.org/
-- Regular hackathons with significant prizes. Great for student project competitions and real-world experience.
+Regular hackathons with significant prizes. Great for student project competitions and real-world experience.
 
 ## Documentation and Reference Tools
 
-**Anchor API Documentation**
+### [**Anchor API Documentation**](https://docs.rs/anchor-lang/latest/anchor_lang/)
 
-- https://docs.rs/anchor-lang/latest/anchor_lang/
-- Rust API reference. Essential for understanding framework internals and advanced usage.
+Rust API reference. Essential for understanding framework internals and advanced usage.
 
-**TypeScript Client Documentation**
+### [**TypeScript Client Documentation**](https://www.anchor-lang.com/docs/clients/typescript)
 
-- https://coral-xyz.github.io/anchor/ts/
-- JavaScript/TypeScript library reference. Critical for frontend integration lessons.
+JavaScript/TypeScript library reference. Critical for frontend integration lessons.
 
-**Solana Cookbook**
+### [**Solana Cookbook**](https://solanacookbook.com/)
 
-- https://solanacookbook.com/
-- Quick reference for common patterns. Excellent cheat sheet for students during projects.
+Quick reference for common patterns. Excellent cheat sheet for students during projects.
 
 ## Deployment and Production Resources
 
-**Anchor CLI Reference**
+### [**Anchor CLI Reference**](https://www.anchor-lang.com/docs/cli)
 
-- https://www.anchor-lang.com/docs/cli
-- Complete command reference with examples. Covers deployment, testing, and program management.
+Complete command reference with examples. Covers deployment, testing, and program management.
 
-**Mainnet Deployment Guide**
+### [**Mainnet Deployment Guide**](https://solana.com/docs/intro/quick-start/deploying-programs)
 
-- https://solana.com/developers/guides/getstarted/deploy-a-program
-- Production deployment best practices. Includes cost considerations and upgrade patterns.
-
-**Program Upgrade Authority**
-
-- https://solana.stackexchange.com/questions/13875/anchor-ci-cd-issues-with-program-upgrade-and-keypair-management
-- Managing program upgrades safely. Critical for teaching maintainable program design.
+Production deployment best practices. Includes cost considerations and upgrade patterns.
 
 ## Performance and Optimization
 
-**Compute Optimization Guide**
+### [**Compute Optimization Guide**](https://solana.com/developers/guides/advanced/how-to-optimize-compute)
 
-- https://solana.com/developers/guides/advanced/how-to-optimize-compute
-- Techniques for efficient programs. Includes profiling tools and common optimizations.
+Techniques for efficient programs. Includes profiling tools and common optimizations.
 
-**Transaction Size Limits**
+### [**Transaction Size Limits**](https://www.rareskills.io/post/solana-multiple-transactions)
 
-- https://www.rareskills.io/post/solana-multiple-transactions
-- Understanding and working with Solana's constraints. Essential for complex program design.
+Understanding and working with Solana's constraints. Essential for complex program design.
 
 ## Supplementary Learning Platforms
 
-**Solana U (University Program)**
+### [**Solana U (University Program)**](https://solana.com/news/introducing-solana-u-a-new-program-for-student-builders)
 
-- https://solana.com/news/introducing-solana-u-a-new-program-for-student-builders
-- Resources for academic institutions. Includes curriculum support and guest speaker programs.
+Resources for academic institutions. Includes curriculum support and guest speaker programs.
 
-**101 Blockchains Anchor Tutorial**
+### [**101 Blockchains Anchor Tutorial**](https://101blockchains.com/solana-anchor/)
 
-- https://101blockchains.com/solana-anchor/
-- Alternative perspective on Anchor concepts. Good for students who need different explanations.
+Alternative perspective on Anchor concepts. Good for students who need different explanations.
 
-**Alchemy's Anchor Overview**
+### [**Alchemy's Anchor Overview**](https://www.alchemy.com/overviews/solana-anchor)
 
-- https://www.alchemy.com/overviews/solana-anchor
-- High-level framework introduction. Useful for course introduction materials.
+High-level framework introduction. Useful for course introduction materials.
 
 ## Teaching Tools and Utilities
 
-**Solana Explorer**
+### [**Solana Explorer**](https://explorer.solana.com/)
 
-- https://explorer.solana.com/
-- Essential for demonstrating transactions and account states. Supports all networks including localnet.
+Essential for demonstrating transactions and account states. Supports all networks including localnet.
 
-**Anchor IDL Viewer**
+### [**Anchor IDL Viewer**](https://anchor.so/)
 
-- https://anchor.so/
-- Visual IDL explorer for any Anchor program. Helps students understand program interfaces.
+Visual IDL explorer for any Anchor program. Helps students understand program interfaces.
 
-**Compute Unit Calculator**
+### **Compute Unit Calculator**
 
 - Built into Solana Explorer transaction details
 - Shows exact compute usage for optimization lessons. Critical for performance tuning exercises.

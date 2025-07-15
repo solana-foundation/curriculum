@@ -29,9 +29,7 @@
 ## Reading Assignment
 
 - [SPL Governance Documentation](https://github.com/solana-labs/solana-program-library/tree/master/governance)
-- [Multi-Signature Security Patterns](https://github.com/slowmist/solana-smart-contract-security-best-practices)
 - [Gnosis Safe Architecture](https://docs.gnosis-safe.io/) - Reference implementation study
-- [DAO Governance Patterns](https://blog.aragon.org/governance-design-patterns/)
 
 ## Homework
 

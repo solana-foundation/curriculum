@@ -74,3 +74,5 @@
 
 - [Solana Security Handbook](https://github.com/sannykim/solsec)
 - [Constraint Reference](https://docs.rs/anchor-lang/latest/anchor_lang/derive.Accounts.html)
+- [A Hitchhiker's Guide To Solana Program Security](https://www.helius.dev/blog/a-hitchhikers-guide-to-solana-program-security)
+- [Awesome Solana Security](https://github.com/0xMacro/awesome-solana-security)

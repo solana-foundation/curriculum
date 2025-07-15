@@ -10,13 +10,13 @@
 
 ## Topics Covered
 
-- CPI fundamentals: calling other programs from within your program
-- SPL Token program integration: minting, transferring, burning tokens
-- CPI security patterns: account validation and authority checking
-- PDA signing in CPIs: using program-derived addresses as signers
+- **CPI fundamentals**: calling other programs from within your program
+- **SPL Token program integration**: minting, transferring, burning tokens
+- **CPI security patterns:** account validation and authority checking
+- **PDA signing in CPIs:** using program-derived addresses as signers
 - Error handling and propagation across program boundaries
 - Composability patterns and program interaction design
-- Common CPI targets: System, Token, Associated Token, and custom programs
+- **Common CPI targets:** System, Token, Associated Token, and custom programs
 
 ## Hands-on Exercises
 
@@ -31,7 +31,6 @@
 - [SPL Token Documentation](https://spl.solana.com/token)
 - [Anchor CPI Guide](https://www.anchor-lang.com/docs/cross-program-invocations)
 - [CPI Security Patterns](https://github.com/slowmist/solana-smart-contract-security-best-practices)
-- [Escrow CPI Example](https://hackmd.io/@ironaddicteddog/solana-anchor-escrow)
 
 ## Homework
 
@@ -160,6 +159,6 @@ pub fn transfer_with_pda_authority(ctx: Context<TransferWithPDA>, amount: u64) -
 
 ## Resources
 
-- [SPL Token Examples](https://github.com/solana-labs/solana-program-library/tree/master/token/program/src)
-- [Anchor CPI Examples](https://github.com/coral-xyz/anchor/tree/master/examples)
+- [SPL Token Examples](https://solana.com/docs/tokens)
+- [Anchor CPI Examples](https://github.com/solana-foundation/anchor/tree/master/examples/tutorial)
 - [Token Program Guide](https://www.quicknode.com/guides/solana-development/anchor/token-2022)

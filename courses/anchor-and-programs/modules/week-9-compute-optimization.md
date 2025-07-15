@@ -31,7 +31,6 @@
 
 - [Solana Compute Optimization Guide](https://solana.com/developers/guides/advanced/how-to-optimize-compute)
 - [Transaction Size Limits](https://www.rareskills.io/post/solana-multiple-transactions)
-- [Performance Best Practices](https://docs.solana.com/developing/programming-model/runtime#compute-budget)
 
 ## Homework
 
