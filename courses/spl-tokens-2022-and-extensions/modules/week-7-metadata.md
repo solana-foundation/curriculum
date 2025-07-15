@@ -24,7 +24,7 @@
 
 ## Reading Assignment
 
-- [Metadata Extension Guide](https://spl.solana.com/token-2022/extensions#metadata)
+- [Metadata Extension Guide](https://solana.com/developers/courses/token-extensions/token-extensions-metadata)
 - Metaplex Token Metadata Standard comparison
 - On-chain storage optimization techniques
 

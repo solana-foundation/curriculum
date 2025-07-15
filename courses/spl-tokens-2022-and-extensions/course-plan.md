@@ -103,7 +103,7 @@ This course is ideal for individuals with some experience in Rust and a basic gr
 ### Recommended Readings
 
 - [SPL Token-2022 Documentation](https://spl.solana.com/token-2022)
-- [Token Extensions Guide](https://solana.com/developers/guides/token-extensions/overview)
+- [Token Extensions Guide](https://solana.com/developers/guides/token-extensions/getting-started)
 - [Solana Cookbook - Token Section](https://solanacookbook.com/references/token.html)
 - [Metaplex Token Metadata Standard](https://docs.metaplex.com/)
 

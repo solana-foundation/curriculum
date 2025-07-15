@@ -25,7 +25,7 @@
 ## Reading Assignment
 
 - [SPL Token-2022 Documentation](https://spl.solana.com/token-2022) - Overview section
-- [Token Extensions Overview](https://solana.com/solutions/token-extensions)
+- [What are Token Extensions?](https://www.helius.dev/blog/what-is-token-2022)
 - [Neodyme Security Article](https://neodyme.io/en/blog/token-2022/) - Introduction only
 
 ## Homework
