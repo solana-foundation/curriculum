@@ -5,14 +5,11 @@ _Compiled for university-level Token-2022 and Extensions courses_
 
 ## Primary Learning Materials
 
-- **[Official SPL Token-2022 Documentation](https://spl.solana.com/token-2022)**  
-  The authoritative source for Token-2022 program documentation. Essential for understanding all 16 extensions, implementation details, and security considerations. Updated with each new extension release.
-
 - **[Token Extensions Getting Started Guide](https://solana.com/developers/guides/token-extensions/getting-started)**  
   Comprehensive introduction to Token-2022 with step-by-step tutorials. Perfect for students' first exposure to token extensions with practical examples.
 
 - **[Solana Program Library Repository](https://github.com/solana-program/token-2022)**  
-  Source code and examples for Token-2022 program. Critical for understanding implementation details and advanced patterns. Includes extensive test cases.
+  Source code and examples for Token-2022 program. Critical for understanding implementation details and advanced patterns. Includes extensive test cases. Note that this includes clients that are compatible with both @solana/web3.js & @solana/kit. Kit is newer but not entirely adopted within the ecosystem.
 
 - **[Token Extensions Extension Guide](https://www.solana-program.com/docs/token-2022/extensions#:~:text=Token%2D2022-,Extension%20Guide,-Explanation%20of%20all)**  
   Detailed documentation for each of the 16 extensions. Explains use cases, implementation patterns, and compatibility considerations.
@@ -45,7 +42,7 @@ _Compiled for university-level Token-2022 and Extensions courses_
   Analysis of discovered vulnerabilities and their fixes. Teaches security mindset through real examples. Includes code snippets of vulnerable patterns.
 
 - **[Security Audit Reports Collection](https://github.com/solana-labs/security-audits/tree/master/spl)**  
-  Five complete security audits from leading firms. Shows professional security assessment methodology. Critical for teaching security-first development.
+  Five complete security audits from leading firms. Shows professional security assessment methodology. Critical for teaching security-first development.]
 
 ## Testing Frameworks and Tools
 
@@ -87,7 +84,10 @@ _Compiled for university-level Token-2022 and Extensions courses_
   - Best practices for handling SOL balances and transfers in your programs
 
 - **Confidential Transfer Architecture**  
-  Coming Q1 2025 with Agave 2.0. Zero-knowledge proof integration for private transfers. Theory and preparation materials available. Important for privacy-focused applications.
+  Coming Q3 2025 Zero-knowledge proof integration for private transfers. Theory and preparation materials available. Important for privacy-focused applications. Detailed examples and guides are avilable at this [Confidential Balances Cookbook GitHub repo](https://github.com/solana-developers/Confidential-Balances-Sample)
+
+- **Scaled UI Amount Integration**
+  Integration with the scaled ui amount extension can be complex. This [guide](https://solana.com/docs/tokens/extensions/scaled-ui-amount/integration-guide) includes specific recommended integration techniques for different applications.
 
 - **Interest-Bearing Token Mathematics**  
   Continuous compounding implementation details. Fixed-point arithmetic considerations. Rate calculation examples. Essential for DeFi and yield-bearing tokens.
@@ -102,9 +102,6 @@ _Compiled for university-level Token-2022 and Extensions courses_
 
 - **[Solana Stack Exchange Token-2022 Tag](https://solana.stackexchange.com/questions/tagged/token-2022)**  
   Growing collection of Q&A specific to extensions. Well-documented solutions to common problems. Good for troubleshooting exercises.
-
-- **Token Extensions Working Group**  
-  Monthly community calls. Open to educators and developers. Roadmap updates and feedback sessions. Networking with other instructors.
 
 ## Assessment and Project Resources
 
@@ -121,7 +118,7 @@ _Compiled for university-level Token-2022 and Extensions courses_
 ## Specialized Topics for Capstone Projects
 
 - **Stablecoin Implementation Guide**  
-  Paxos USDP case study ($360M+ market cap). Combines permanent delegate and compliance features. Real-world regulatory considerations. Template for institutional tokens.
+  Paxos USDG case study ($130M+ market cap). Combines permanent delegate and compliance features. Real-world regulatory considerations. Template for institutional tokens.
 
 - **NFT Ticketing with Extensions**  
   - Non-transferable for soulbound tickets  
