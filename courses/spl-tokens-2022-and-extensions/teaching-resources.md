@@ -1,6 +1,6 @@
 # Token-2022 and Extensions: Teaching Resources
 
-_Last updated: June 2025_  
+_Last updated: July 2025_  
 _Compiled for university-level Token-2022 and Extensions courses_
 
 ## Primary Learning Materials
@@ -42,7 +42,7 @@ _Compiled for university-level Token-2022 and Extensions courses_
   Analysis of discovered vulnerabilities and their fixes. Teaches security mindset through real examples. Includes code snippets of vulnerable patterns.
 
 - **[Security Audit Reports Collection](https://github.com/solana-labs/security-audits/tree/master/spl)**  
-  Five complete security audits from leading firms. Shows professional security assessment methodology. Critical for teaching security-first development.]
+  Five complete security audits from leading firms. Shows professional security assessment methodology. Critical for teaching security-first development.
 
 ## Testing Frameworks and Tools
 
@@ -221,5 +221,5 @@ _Compiled for university-level Token-2022 and Extensions courses_
 
 ---
 
-_Last updated: June 2025_  
+_Last updated: July 2025_  
 _Compiled for university-level Token-2022 and Extensions courses_
