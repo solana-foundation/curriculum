@@ -220,7 +220,6 @@ Create a comprehensive transaction management interface that includes:
 ### Supplementary Materials
 - [Priority Fees Explained](https://www.helius.dev/blog/priority-fees-understanding-solanas-transaction-fees)
 - [Versioned Transactions Guide](https://solana.com/docs/core/transactions/versions)
-- Video: [Transaction Optimization Techniques](https://www.youtube.com/watch?v=example)
 
 ### Practice Exercises
 1. Build a transaction fee estimator

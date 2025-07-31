@@ -268,9 +268,8 @@ Create a comprehensive social media dashboard with advanced Anchor patterns:
 - [Solana Account Subscription](https://docs.solana.com/developing/clients/jsonrpc-api#accountsubscribe)
 
 ### Supplementary Materials
-- [Building Offline-First Solana Apps](https://www.quicknode.com/guides/solana-development/dapps/offline-first-solana-dapps)
+
 - [Advanced Caching Strategies](https://tkdodo.eu/blog/effective-react-query-keys)
-- Video: [PDA Design Patterns](https://www.youtube.com/watch?v=example)
 
 ### Practice Exercises
 1. Build a PDA hierarchy visualizer
