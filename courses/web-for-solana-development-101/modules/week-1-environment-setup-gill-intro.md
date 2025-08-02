@@ -19,6 +19,7 @@ Learning outcomes for this week include:
 ### Lesson 1: Development Environment Setup
 
 **Topics Covered:**
+
 - Installing Node.js (v18+), pnpm, and Git
 - Setting up Solana CLI and creating a file system wallet
 - Cloning and exploring the wallet-ui repository
@@ -26,9 +27,12 @@ Learning outcomes for this week include:
 - Running wallet-ui examples
 
 **Lab Exercise:**
-Set up development environment with Node.js, pnpm, and Solana CLI. Clone and explore the wallet-ui repository to understand the project structure and run example applications.
+
+- Set up development environment with Node.js, pnpm, and Solana CLI. 
+- Clone and explore the wallet-ui repository to understand the project structure and run example applications.
 
 **Key Concepts:**
+
 - Solana CLI tools and their purpose
 - File system wallets vs hardware wallets
 - Monorepo benefits for Solana projects
@@ -37,6 +41,7 @@ Set up development environment with Node.js, pnpm, and Solana CLI. Clone and exp
 ### Lesson 2: Introduction to Gill Library
 
 **Topics Covered:**
+
 - Why gill? Modern JavaScript patterns and tree-shaking
 - Gill vs Web3.js comparison
 - Core gill concepts: `SolanaClient`, RPC methods, functional composition
@@ -45,12 +50,14 @@ Set up development environment with Node.js, pnpm, and Solana CLI. Clone and exp
 
 **Lab Exercise:**
 Create a basic gill program that:
+
 - Initializes a Solana client for devnet
 - Fetches blockchain data using RPC methods
 - Displays cluster information
 - Explores the functional composition pattern
 
 **Key Concepts:**
+
 - Tree-shaking and bundle size optimization
 - Type safety with TypeScript
 - Functional programming patterns in gill
@@ -59,6 +66,7 @@ Create a basic gill program that:
 ### Lesson 3: Solana Fundamentals for Web Developers
 
 **Topics Covered:**
+
 - Solana's account model from a frontend perspective
 - Understanding transactions, instructions, and signatures
 - Program Derived Addresses (PDAs) introduction
@@ -66,13 +74,16 @@ Create a basic gill program that:
 - Compute units and priority fees
 
 **Lab Exercise:**
+
 Explore Solana fundamentals using gill:
+
 - Generate keypairs and derive addresses
 - Query account information
 - Understand the relationship between accounts and balances
 - Practice with RPC method calls
 
 **Key Concepts:**
+
 - Accounts vs wallets
 - Lamports and SOL conversion
 - Transaction anatomy
@@ -94,12 +105,14 @@ Create a simple web application that:
 4. Shows recent transactions (bonus)
 
 **Requirements:**
+
 - Use gill for all RPC calls
 - Implement proper error handling
 - Display loading states
 - Format SOL amounts correctly (lamports to SOL)
 
 **Implementation Guide:**
+
 - Validate Solana addresses using gill utilities
 - Create reusable functions for account queries
 - Implement proper error handling
@@ -108,16 +121,20 @@ Create a simple web application that:
 ## Additional Resources
 
 ### Required Reading
+
 - [Gill Library Documentation](https://github.com/solana-foundation/gill)
 - [Solana Account Model](https://docs.solana.com/developing/programming-model/accounts)
 - [Understanding Transactions](https://docs.solana.com/developing/programming-model/transactions)
 
 ### Supplementary Materials
-- [wallet-ui Repository](https://github.com/solana-labs/wallet-ui) - Study the example implementations
+
 - [Solana Cookbook - Getting Started](https://solanacookbook.com/getting-started/installation.html)
-- [TypeScript for Solana Development](https://www.quicknode.com/guides/solana-development/getting-started/typescript-solana-development)
+
+- **[TypeScript for Solana Development](https://solana.com/docs/clients/javascript)**  
+  The official TypeScript/JavaScript SDK documentation for Solana, covering @solana/web3.js, wallet integration, and full-stack client usage. 
 
 ### Practice Exercises
+
 1. Modify the account explorer to support multiple clusters
 2. Add a "copy address" button with user feedback
 3. Implement address validation with helpful error messages
@@ -126,12 +143,15 @@ Create a simple web application that:
 ## Common Issues and Solutions
 
 ### Issue: "Cannot find module 'gill'"
+
 **Solution:** Ensure gill is properly installed in your project dependencies.
 
 ### Issue: RPC rate limiting
+
 **Solution:** Implement request throttling or use a dedicated RPC provider with higher rate limits.
 
 ### Issue: CORS errors in browser
+
 **Solution:** Use a proxy or ensure the RPC endpoint supports CORS
 
 ## Week 1 Quiz Questions
@@ -145,9 +165,10 @@ Create a simple web application that:
 ## Looking Ahead
 
 Next week covers wallet integration using the wallet-ui patterns, including:
+
 - Set up wallet providers
 - Build wallet connection UI
 - Handle multiple wallet adapters
 - Implement wallet-based authentication
 
-Prerequisites for next week: at least one browser wallet installed (Phantom, Solflare, or Backpack).
+_Prerequisites for next week: at least one browser wallet installed (Phantom, Solflare, or Backpack)._

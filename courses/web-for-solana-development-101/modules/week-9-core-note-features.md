@@ -286,14 +286,12 @@ Build a fully functional note management system with the following features:
 ## Additional Resources
 
 ### State Management
-- [Zustand Recipes](https://github.com/pmndrs/zustand/blob/main/docs/recipes.md)
 - [React Query Mutations](https://tanstack.com/query/latest/docs/react/guides/mutations)
 - [Optimistic Updates Guide](https://tkdodo.eu/blog/optimistic-updates)
 
 ### IPFS Integration
 - [IPFS HTTP Client](https://github.com/ipfs/js-ipfs/tree/master/packages/ipfs-http-client)
 - [Pinata SDK](https://docs.pinata.cloud/sdks/node-js-sdk)
-- [Web3.Storage](https://web3.storage/docs/)
 
 ### Rich Text Editing
 - [Tiptap Extensions](https://tiptap.dev/extensions)

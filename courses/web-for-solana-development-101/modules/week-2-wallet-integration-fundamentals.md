@@ -19,15 +19,16 @@ Learning outcomes for this week include:
 ### Lesson 1: Setting Up Wallet Providers
 
 **Topics Covered:**
-- Understanding the wallet adapter architecture
-- Configuring `WalletUi` provider
-- Cluster management with wallet-ui
-- Storage patterns for wallet preferences
-- Provider composition in React
 
-**Lab Exercise: Setting Up Wallet Providers**
+- Understanding the wallet adapter architecture  
+- Configuring `WalletUi` provider  
+- Cluster management with wallet-ui  
+- Storage patterns for wallet preferences  
+- Provider composition in React  
 
+**Lab Exercise: Setting Up Wallet Providers**  
 Implement an app providers component that:
+
 - Imports necessary wallet-ui components and utilities
 - Creates cluster storage for persisting user's cluster selection
 - Configures wallet UI with all Solana clusters (devnet, localnet, testnet, mainnet)
@@ -36,64 +37,69 @@ Implement an app providers component that:
 - Integrates with React Query for data fetching
 
 **Key Concepts:**
-- Provider hierarchy and context
-- Cluster configuration and switching
-- Wallet auto-detection
-- Storage abstraction for preferences
+
+- Provider hierarchy and context  
+- Cluster configuration and switching  
+- Wallet auto-detection  
+- Storage abstraction for preferences  
 
 ### Lesson 2: Building Wallet Connection UI
 
 **Topics Covered:**
-- Using wallet-ui hooks: `useWallets`, `useWalletUi`
-- Creating wallet selection modal
-- Responsive wallet button design
-- Handling connection loading states
-- Accessibility considerations
 
-**Lab Exercise: Building Wallet Connection UI**
+- Using wallet-ui hooks: `useWallets`, `useWalletUi`  
+- Creating wallet selection modal  
+- Responsive wallet button design  
+- Handling connection loading states  
+- Accessibility considerations  
 
+**Lab Exercise: Building Wallet Connection UI**  
 Create a WalletButton component that:
-- Uses wallet-ui hooks to access wallet state and functions
-- Displays different UI based on connection status:
-  - When connected: Shows truncated public key with disconnect option
-  - When disconnected: Shows "Connect Wallet" button
-- Implements modal pattern for wallet selection
-- Handles wallet connection through modal selection
-- Applies appropriate styling for different states
-- Manages modal visibility with local state
+
+- Uses wallet-ui hooks to access wallet state and functions  
+- Displays different UI based on connection status:  
+  - When connected: Shows truncated public key with disconnect option  
+  - When disconnected: Shows "Connect Wallet" button  
+- Implements modal pattern for wallet selection  
+- Handles wallet connection through modal selection  
+- Applies appropriate styling for different states  
+- Manages modal visibility with local state  
 
 **Key Concepts:**
-- Conditional rendering based on wallet state
-- User-friendly address display
-- Modal patterns for wallet selection
-- Loading and error states
+
+- Conditional rendering based on wallet state  
+- User-friendly address display  
+- Modal patterns for wallet selection  
+- Loading and error states  
 
 ### Lesson 3: Advanced Wallet Features
 
 **Topics Covered:**
-- Auto-connect implementation
-- Wallet persistence with localStorage
-- Handling wallet events
-- Multi-wallet support patterns
-- Security considerations
 
-**Lab Exercise: Implementing Auto-Connect**
+- Auto-connect implementation  
+- Wallet persistence with localStorage  
+- Handling wallet events  
+- Multi-wallet support patterns  
+- Security considerations  
 
+**Lab Exercise: Implementing Auto-Connect**  
 Build a custom hook for auto-connect functionality that:
-- Checks if user is already connected to avoid redundant attempts
-- Retrieves saved wallet preference from localStorage
-- Finds the saved wallet in available wallets list
-- Verifies wallet is installed before attempting connection
-- Automatically connects to previously used wallet on page load
-- Saves wallet preference when user connects manually
-- Uses proper React effect dependencies
-- Handles edge cases gracefully
+
+- Checks if user is already connected to avoid redundant attempts  
+- Retrieves saved wallet preference from localStorage  
+- Finds the saved wallet in available wallets list  
+- Verifies wallet is installed before attempting connection  
+- Automatically connects to previously used wallet on page load  
+- Saves wallet preference when user connects manually  
+- Uses proper React effect dependencies  
+- Handles edge cases gracefully  
 
 **Key Concepts:**
-- Browser storage strategies
-- Wallet ready states
-- Event handling patterns
-- Security best practices
+
+- Browser storage strategies  
+- Wallet ready states  
+- Event handling patterns  
+- Security best practices  
 
 ## Practical Assignment
 
@@ -124,101 +130,105 @@ Create a wallet integration feature that includes:
    - Includes disconnect option
 
 **Requirements:**
-- Use wallet-ui patterns from examples
-- Implement proper error handling
-- Add loading states for all async operations
-- Ensure mobile responsiveness
-- Include accessibility features (ARIA labels, keyboard navigation)
+
+- Use wallet-ui patterns from examples  
+- Implement proper error handling  
+- Add loading states for all async operations  
+- Ensure mobile responsiveness  
+- Include accessibility features (ARIA labels, keyboard navigation)  
 
 **Implementation Guidelines:**
 
 1. **WalletProvider Component**
-   - Configure wallet-ui with appropriate settings
-   - Add error boundary for graceful error handling
-   - Implement auto-connect functionality
-   - Set up proper provider hierarchy
+   - Configure wallet-ui with appropriate settings  
+   - Add error boundary for graceful error handling  
+   - Implement auto-connect functionality  
+   - Set up proper provider hierarchy  
 
 2. **WalletConnect Component**
-   - Build intuitive connection UI
-   - Handle all connection states (disconnected, connecting, connected, error)
-   - Add smooth animations for state transitions
-   - Ensure responsive design for all screen sizes
+   - Build intuitive connection UI  
+   - Handle all connection states (disconnected, connecting, connected, error)  
+   - Add smooth animations for state transitions  
+   - Ensure responsive design for all screen sizes  
 
 3. **WalletInfo Component**
-   - Display complete wallet information (address, balance, cluster)
-   - Implement copy-to-clipboard for public key
-   - Show real-time SOL balance
-   - Add disconnect functionality
-   - Include visual indicators for connection status
+   - Display complete wallet information (address, balance, cluster)  
+   - Implement copy-to-clipboard for public key  
+   - Show real-time SOL balance  
+   - Add disconnect functionality  
+   - Include visual indicators for connection status  
 
 ## Additional Resources
 
 ### Required Reading
-- [Wallet Adapter Documentation](https://github.com/anza-xyz/wallet-adapter)
-- [Wallet UI Examples](https://github.com/solana-labs/wallet-ui/tree/main/examples)
-- [Wallet Standard](https://github.com/wallet-standard/wallet-standard)
 
-### Supplementary Materials
-- [Building User-Friendly Web3 UIs](https://www.quicknode.com/guides/solana-development/dapps/how-to-create-a-user-friendly-wallet-connection)
-- [Wallet Security Best Practices](https://docs.phantom.app/security/security-best-practices)
-- Video: [Solana Wallet Integration Deep Dive](https://www.youtube.com/watch?v=example)
+- [Wallet Adapter Documentation](https://github.com/anza-xyz/wallet-adapter)  
+- [Wallet Standard](https://github.com/wallet-standard/wallet-standard)  
 
 ### Practice Exercises
-1. Add wallet switching without disconnecting
-2. Implement a "recently used wallets" section
-3. Create wallet connection analytics
-4. Build a mini wallet dashboard
+
+1. Add wallet switching without disconnecting  
+2. Implement a "recently used wallets" section  
+3. Create wallet connection analytics  
+4. Build a mini wallet dashboard  
 
 ## Common Issues and Solutions
 
 ### Issue: Wallet not detected
-**Solution:** 
-- Check wallet ready state before attempting connection
-- If wallet is not detected, provide installation link
-- Open wallet download page in new tab
-- Show helpful message to user about installing wallet
+
+**Solution:**  
+- Check wallet ready state before attempting connection  
+- If wallet is not detected, provide installation link  
+- Open wallet download page in new tab  
+- Show helpful message to user about installing wallet  
 
 ### Issue: Auto-connect loops
-**Solution:** 
-- Implement connection attempt tracking with state
-- Add guards to prevent multiple connection attempts
-- Use debouncing techniques for connection logic
-- Track connection history to avoid infinite loops
+
+**Solution:**  
+- Implement connection attempt tracking with state  
+- Add guards to prevent multiple connection attempts  
+- Use debouncing techniques for connection logic  
+- Track connection history to avoid infinite loops  
 
 ### Issue: Wallet disconnects on page refresh
-**Solution:** Implement proper persistence and re-connection logic
+
+**Solution:**  
+- Implement proper persistence and re-connection logic  
 
 ## Week 2 Quiz Questions
 
-1. What is the purpose of the wallet adapter pattern?
-2. How do you handle multiple wallet types in a single interface?
-3. Explain the wallet ready states and their meanings
-4. What security considerations apply to auto-connect features?
-5. How can you improve wallet connection UX for mobile users?
+1. What is the purpose of the wallet adapter pattern?  
+2. How do you handle multiple wallet types in a single interface?  
+3. Explain the wallet ready states and their meanings  
+4. What security considerations apply to auto-connect features?  
+5. How can you improve wallet connection UX for mobile users?  
 
 ## Hands-On Challenge
 
 ### Wallet Connection Speed Run
 
 Build a wallet connection interface with these constraints:
-- Must connect in under 3 clicks
-- Should remember last used wallet
-- Must work on mobile devices
-- Include visual feedback for all states
-- Handle errors gracefully
+
+- Must connect in under 3 clicks  
+- Should remember last used wallet  
+- Must work on mobile devices  
+- Include visual feedback for all states  
+- Handle errors gracefully  
 
 **Bonus Points:**
-- Add wallet balance display
-- Implement ENS/SNS domain resolution
-- Create custom wallet icons
-- Add connection animations
+
+- Add wallet balance display  
+- Implement ENS/SNS domain resolution  
+- Create custom wallet icons  
+- Add connection animations  
 
 ## Looking Ahead
 
 Next week covers message signing and transaction patterns, including:
-- Message signing for authentication
-- Transaction signing workflows
-- Building transaction preview UIs
-- Implementing approval patterns
+
+- Message signing for authentication  
+- Transaction signing workflows  
+- Building transaction preview UIs  
+- Implementing approval patterns  
 
 Prerequisites for next week include having devnet SOL available for transaction exercises. Free devnet SOL is available from the [Solana Faucet](https://faucet.solana.com/).
