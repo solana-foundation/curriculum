@@ -1,9 +1,7 @@
----
-
-```markdown
 # 1-Hour Anchor Workshop (Gateway) — Slides, Notes, Code
 
 **Purpose:** A reusable, Solana-branded workshop package for universities and meetups. In 60 minutes, learners **scaffold, deploy, and verify** a minimal Anchor program (counter) and get **conceptual previews** of accounts, PDAs, testing, and the **security/audit mindset**.  
+
 **Scope:** **Anchor only**. No frontend UI and **no CPI** in this session. (Those move to the 3-hour/full-stack track.)
 
 ---
@@ -37,13 +35,17 @@ By the end of the workshop, participants can:
 
 ```
 
-.
+courses/anchor-and-programs/workshop/anchor-1h/
 ├── code/
-│   └── counter/                # scaffolded Anchor project (minimal)
-│       ├── programs/counter/src/lib.rs
+│   └── counter/
 │       ├── Anchor.toml
 │       ├── Cargo.toml
-│       └── tests/counter.ts
+│       ├── programs/
+│       │   └── counter/
+│       │       └── src/
+│       │           └── lib.rs
+│       └── tests/
+│           └── counter.ts
 └── README.md
 
 ````
@@ -72,11 +74,14 @@ node --version
 
 ## Quick Start (Facilitator)
 
-### 0) Configure devnet & fund dev wallet
+### 0) Configure devnet & fund dev wallet (single wallet)
+
+Use a single wallet for everything: `~/.config/solana/id.json`.
 
 ```bash
-solana config set --url https://api.devnet.solana.com
-solana airdrop 2
+yarn devnet:env
+solana address    # verify it prints the same pubkey used for deploy/tests
+solana airdrop 2  # may need to retry if rate-limited
 ```
 
 ### 1) Scaffold the project
@@ -110,8 +115,8 @@ anchor keys list
 ### 4) Build & deploy (devnet)
 
 ```bash
-anchor build
-anchor deploy --provider.cluster devnet
+yarn devnet:build
+yarn devnet:deploy
 ```
 
 Expected:
@@ -129,11 +134,40 @@ Open `tests/counter.ts`.
   2. Calls `increment`.
   3. Fetches the counter account and confirms its value changed from `0` to `1`.
 
-Run:
+Run (skip re-deploy to save SOL after first deploy):
 
 ```bash
-anchor test --provider.cluster devnet
+yarn devnet:test:skip-deploy
 ```
+
+Or to include deploy each time:
+
+```bash
+yarn devnet:test
+```
+
+### Localnet quick-switch
+
+For fully offline dev:
+
+```bash
+solana config set --url http://127.0.0.1:8899
+solana-test-validator -r
+anchor build
+anchor deploy --provider.cluster localnet
+anchor test --provider.cluster localnet --skip-deploy
+```
+
+### Troubleshooting: Program ID drift
+
+If you see “Unsupported program id” or the client can’t find your program:
+
+1) Run `anchor keys list` and copy the `counter` Program ID.
+2) Ensure the same ID appears in:
+   - `programs/counter/src/lib.rs` inside `declare_id!(...)`
+   - `Anchor.toml` in both `[programs.localnet]` and `[programs.devnet]`
+   - `programs/counter/keys/counter-keypair.json` (source of truth)
+3) Rebuild and redeploy.
 
 Expected:
 
@@ -181,6 +215,35 @@ Expected:
 * **Discovery:** add to Solana curriculum site/index.
 * **Ratings & Feedback:** facilitators share session results; learners rate.
 * **Incomplete Courses:** clearly mark drafts/WIP; keep them in `draft/` branches.
+
+---
+
+## Presenter Prep
+
+### For Instructors
+
+Before teaching this workshop, review the **reference implementation** in `/code/final/`:
+
+- 📖 [final/README.md](code/final/README.md) - Teaching notes, troubleshooting, FAQs
+- 💻 [final/programs/counter/src/lib.rs](code/final/programs/counter/src/lib.rs) - Deeply commented program
+- 🧪 [final/tests/counter.ts](code/final/tests/counter.ts) - Annotated test suite
+
+### Official Resources
+
+- [Anchor Book](https://www.anchor-lang.com/) - Framework documentation
+- [Solana Docs](https://solana.com/docs) - Core concepts
+- [Solana Cookbook](https://solanacookbook.com/) - Recipes and examples
+
+### What Comes Next
+
+This workshop is a **gateway** to deeper Solana development:
+
+- **Weeks 4-5:** PDAs and advanced account patterns
+- **Week 7:** Testing with LiteSVM
+- **Week 8:** Security and vulnerability analysis
+- **3-Hour Workshop:** Full-stack (IDL → TypeScript client → UI)
+
+The **IDL** (Interface Definition Language) generated at `target/idl/counter.json` becomes your program's API contract for building frontends. We preview this concept here but save the implementation for the full-stack session.
 
 ---
 
