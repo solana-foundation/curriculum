@@ -31,7 +31,7 @@ import idl from "./counter.json";
  * 5. Fetch and verify account state changes
  */
 async function main() {
-  console.log("🚀 Starting Anchor 3h Workshop Client Demo");
+  console.log("Starting Anchor 3h Workshop Client Demo");
   console.log("==========================================");
 
   // Set up the Anchor provider for localnet connection
@@ -58,7 +58,7 @@ async function main() {
   // - The program's IDL account on-chain
   // - A package registry like npm
   const program = new Program(idl as anchor.Idl, provider);
-  console.log("📋 Program ID:", program.programId.toString());
+  console.log("Program ID:", program.programId.toString());
 
   // Get the payer wallet from the provider
   // 
@@ -72,7 +72,7 @@ async function main() {
   // - Hardware wallets like Ledger
   // - Mobile wallet apps
   const payer = provider.wallet as anchor.Wallet;
-  console.log("👤 Payer:", payer.publicKey.toString());
+  console.log("Payer:", payer.publicKey.toString());
 
   // Derive the PDA using findProgramAddressSync
   // 
@@ -90,8 +90,8 @@ async function main() {
     [Buffer.from("state"), payer.publicKey.toBuffer()],
     program.programId
   );
-  console.log("🔑 Derived PDA:", statePda.toString());
-  console.log("📊 Bump:", bump);
+  console.log("Derived PDA:", statePda.toString());
+  console.log("Bump:", bump);
 
   try {
     // Initialize the PDA account (starts at 0)
@@ -99,7 +99,7 @@ async function main() {
     // We use nested try-catch blocks to handle the case where
     // the PDA already exists from previous runs. This makes the
     // script more resilient and allows for multiple executions.
-    console.log("\n📝 Initializing PDA...");
+    console.log("\nInitializing PDA...");
     try {
       await program.methods
         .initializePda()
@@ -113,7 +113,7 @@ async function main() {
       // If PDA already exists, that's fine - we can still test updates
       // This is a common pattern in client applications to handle
       // account reuse and idempotent operations
-      console.log("✅ PDA already exists, continuing with updates...");
+      console.log("PDA already exists, continuing with updates...");
     }
 
     // Fetch the initial state using direct connection access
@@ -129,14 +129,14 @@ async function main() {
       // - First 8 bytes: Anchor discriminator (automatically added)
       // - Next 8 bytes: Our u64 count value (little-endian)
       const count = stateData.readBigUInt64LE(8); // Skip 8-byte discriminator
-      console.log("✅ PDA initialized! Count =", count.toString());
+      console.log("PDA initialized! Count =", count.toString());
     }
 
     // First PDA update: 0 → 1
     // 
     // This demonstrates how a frontend would trigger state changes
     // in response to user interactions (button clicks, form submissions, etc.)
-    console.log("\n📈 Updating PDA (1st time)...");
+    console.log("\nUpdating PDA (1st time)...");
     await program.methods
       .updatePda()
       .accounts({
@@ -150,14 +150,14 @@ async function main() {
     if (stateAccountInfo1) {
       const stateData = stateAccountInfo1.data;
       const count = stateData.readBigUInt64LE(8);
-      console.log("✅ PDA updated! Count =", count.toString());
+      console.log("PDA updated! Count =", count.toString());
     }
 
     // Second PDA update: 1 → 2
     // 
     // Multiple updates demonstrate how frontend applications
     // can perform sequential operations and track state changes
-    console.log("\n📈 Updating PDA (2nd time)...");
+    console.log("\nUpdating PDA (2nd time)...");
     await program.methods
       .updatePda()
       .accounts({
@@ -171,13 +171,13 @@ async function main() {
     if (stateAccountInfo2) {
       const stateData = stateAccountInfo2.data;
       const count = stateData.readBigUInt64LE(8);
-      console.log("✅ PDA updated! Count =", count.toString());
+      console.log("PDA updated! Count =", count.toString());
     }
 
     // Third PDA update: 2 → 3
     // 
     // Final update to demonstrate the complete workflow
-    console.log("\n📈 Updating PDA (3rd time)...");
+    console.log("\nUpdating PDA (3rd time)...");
     await program.methods
       .updatePda()
       .accounts({
@@ -191,10 +191,10 @@ async function main() {
     if (stateAccountInfo3) {
       const stateData = stateAccountInfo3.data;
       const count = stateData.readBigUInt64LE(8);
-      console.log("✅ PDA updated! Count =", count.toString());
-      console.log("\n🎉 Client demo completed successfully!");
-      console.log("📊 Final PDA state: count =", count.toString());
-      console.log("🔗 PDA address:", statePda.toString());
+      console.log("PDA updated! Count =", count.toString());
+      console.log("\nClient demo completed successfully!");
+      console.log("Final PDA state: count =", count.toString());
+      console.log("PDA address:", statePda.toString());
     }
 
   } catch (error) {
@@ -205,7 +205,7 @@ async function main() {
     // - Log errors for debugging
     // - Provide retry mechanisms
     // - Handle specific error types differently
-    console.error("❌ Error:", error);
+    console.error("Error:", error);
     process.exit(1);
   }
 }
@@ -217,6 +217,6 @@ async function main() {
 // you would handle errors by updating the UI state rather
 // than exiting the process.
 main().catch((error) => {
-  console.error("❌ Fatal error:", error);
+  console.error("Fatal error:", error);
   process.exit(1);
 });

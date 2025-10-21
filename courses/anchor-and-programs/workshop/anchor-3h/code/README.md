@@ -4,7 +4,7 @@
 
 Welcome to the live coding scaffold for the 3-Hour Solana Anchor & dApp Workshop! This is your hands-on environment where we'll build upon the 1-hour counter program and add powerful PDA (Program Derived Address) functionality with real client interaction.
 
-## 🎯 What's New in 3h vs 1h
+## What's New in 3h vs 1h
 
 ### **PDA Mastery**
 - **Deterministic Addresses**: Learn how PDAs create predictable, program-controlled accounts
@@ -21,7 +21,7 @@ Welcome to the live coding scaffold for the 3-Hour Solana Anchor & dApp Workshop
 - **Error Handling**: Robust client-side error management
 - **Type Safety**: Leverage TypeScript for bulletproof program interactions
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - **Solana CLI**: `solana --version ≥ 1.18`
@@ -60,7 +60,7 @@ solana config set --url localhost
 solana cluster-version
 ```
 
-## 🏗️ Workshop Structure
+## Workshop Structure
 
 ### **Hour 1-2: Program Development**
 Building on the 1h counter program (if you haven't completed it, see the [1h Workshop](../anchor-1h/) first), we'll extend it with PDA functionality:
@@ -108,7 +108,7 @@ await program.methods
   .rpc();
 ```
 
-## 🛠️ Build & Deploy
+## Build & Deploy
 
 ### **Step 1: Build the Program**
 ```bash
@@ -140,11 +140,11 @@ anchor test
 
 **Expected Output:**
 ```
-✅ initialize → increment → fetch
-✅ PDA: derive → initialize → update → fetch
+- initialize → increment → fetch
+- PDA: derive → initialize → update → fetch
 ```
 
-## 🖥️ Client Demo
+## Client Demo
 
 ### **Step 1: Install Dependencies**
 ```bash
@@ -160,31 +160,31 @@ ANCHOR_PROVIDER_URL=http://localhost:8899 ANCHOR_WALLET=~/.config/solana/id.json
 
 **Expected Output:**
 ```
-🚀 Starting Anchor 3h Workshop Client Demo
+Starting Anchor 3h Workshop Client Demo
 ==========================================
-📋 Program ID: [YOUR_PROGRAM_ID]
-👤 Payer: [YOUR_WALLET_ADDRESS]
-🔑 Derived PDA: [YOUR_PDA_ADDRESS]
-📊 Bump: [YOUR_BUMP_VALUE]
+Program ID: [YOUR_PROGRAM_ID]
+Payer: [YOUR_WALLET_ADDRESS]
+Derived PDA: [YOUR_PDA_ADDRESS]
+Bump: [YOUR_BUMP_VALUE]
 
-📝 Initializing PDA...
-✅ PDA initialized! Count = 0
+Initializing PDA...
+PDA initialized! Count = 0
 
-📈 Updating PDA (1st time)...
-✅ PDA updated! Count = 1
+Updating PDA (1st time)...
+PDA updated! Count = 1
 
-📈 Updating PDA (2nd time)...
-✅ PDA updated! Count = 2
+Updating PDA (2nd time)...
+PDA updated! Count = 2
 
-📈 Updating PDA (3rd time)...
-✅ PDA updated! Count = 3
+Updating PDA (3rd time)...
+PDA updated! Count = 3
 
-🎉 Client demo completed successfully!
-📊 Final PDA state: count = 3
-🔗 PDA address: [YOUR_PDA_ADDRESS]
+Client demo completed successfully!
+Final PDA state: count = 3
+PDA address: [YOUR_PDA_ADDRESS]
 ```
 
-## ✅ Workshop Completion Checklist
+## Workshop Completion Checklist
 
 Mark these off as you complete them:
 
@@ -297,14 +297,14 @@ export ANCHOR_WALLET=~/.config/solana/id.json
 yarn ts-node callProgram.ts
 ```
 
-## 📚 Resources
+## Resources
 
 - **[Anchor Book](https://book.anchor-lang.com/)**: Comprehensive Anchor documentation
 - **[Solana Docs - PDAs](https://solana.com/docs/core/pda)**: Official PDA documentation
 - **[Solana Cookbook](https://solanacookbook.com/core-concepts/pdas.html)**: Practical PDA examples
 - **[1h Workshop](../anchor-1h/)**: Foundation concepts
 
-## 🎯 Next Steps
+## Next Steps
 
 After completing this workshop:
 1. **Explore Advanced PDAs**: Multi-seed PDAs, cross-program invocations
@@ -314,6 +314,6 @@ After completing this workshop:
 
 ---
 
-**Ready to build the future of decentralized applications? Let's dive in!** 🚀
+**Ready to build the future of decentralized applications? Let's dive in!**
 
 *This scaffold is designed for live coding sessions. All commands are tested and ready to run.*
