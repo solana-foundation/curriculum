@@ -26,8 +26,8 @@ use anchor_lang::prelude::*;
 // 2. programs/counter/keys/counter-keypair.json
 // 3. The deployed program address
 //
-// 🔗 Why? Solana uses this ID to route transactions to your program.
-// 🔗 PDAs (covered in Week 4) derive from this ID.
+// Why? Solana uses this ID to route transactions to your program.
+// PDAs (covered in Week 4) derive from this ID.
 // 📖 https://solana.com/docs/core/programs#program-derived-addresses
 declare_id!("FoKCfkWjCJxuHLxHGkzdQ3VXrFgrnGdq4xNsZLnjJLbK");
 
@@ -40,8 +40,8 @@ declare_id!("FoKCfkWjCJxuHLxHGkzdQ3VXrFgrnGdq4xNsZLnjJLbK");
 // Think of this as your program's "API surface" - what external
 // clients can call. Each pub fn becomes an instruction handler.
 //
-// 🔗 Context<T>: Anchor's account safety system
-// 🔗 Result<()>: Rust error handling (vs panics in production)
+// Context<T>: Anchor's account safety system
+// Result<()>: Rust error handling (vs panics in production)
 // 📖 https://www.anchor-lang.com/docs
 #[program]
 pub mod counter {
@@ -55,8 +55,8 @@ pub mod counter {
     // - Setting count = 0: explicit initialization (vs undefined behavior)
     // - Space calculation: 8 (discriminator) + 8 (u64) = 16 bytes
     //
-    // 🔗 Why &mut? Solana enforces exclusive access for data integrity
-    // 🔗 Why explicit init? Prevents reading uninitialized memory
+    // Why &mut? Solana enforces exclusive access for data integrity
+    // Why explicit init? Prevents reading uninitialized memory
     // 📖 https://www.anchor-lang.com/docs
     pub fn initialize(ctx: Context<Initialize>) -> Result<()> {
         let counter = &mut ctx.accounts.counter;
@@ -72,8 +72,8 @@ pub mod counter {
     // - unwrap(): safe here because we're adding 1 to a u64
     // - State persists: Solana stores account data on-chain
     //
-    // 🔗 Why checked_add? Prevents integer overflow attacks
-    // 🔗 Why unwrap? In production, handle Result properly
+    // Why checked_add? Prevents integer overflow attacks
+    // Why unwrap? In production, handle Result properly
     // 📖 https://doc.rust-lang.org/std/primitive.u64.html#method.checked_add
     pub fn increment(ctx: Context<Increment>) -> Result<()> {
         let counter = &mut ctx.accounts.counter;
@@ -93,8 +93,8 @@ pub mod counter {
 // - Why not Vec or String? Complexity vs learning goals
 // - Discriminator: hash of "account:Counter" for type safety
 //
-// 🔗 Borsh: Binary Object Representation Serializer for Hashing
-// 🔗 Discriminator: prevents account type confusion
+// Borsh: Binary Object Representation Serializer for Hashing
+// Discriminator: prevents account type confusion
 // 📖 https://www.anchor-lang.com/docs
 #[account]
 pub struct Counter {
@@ -111,9 +111,9 @@ pub struct Counter {
 // - System program: Solana's "account factory" (creates accounts)
 // - Lifetimes ('info): Rust memory safety (brief note)
 //
-// 🔗 init constraint: creates account if it doesn't exist
-// 🔗 space = 8 + 8: discriminator (8) + u64 (8) = 16 bytes
-// 🔗 Signer: proves caller owns the private key
+// init constraint: creates account if it doesn't exist
+// space = 8 + 8: discriminator (8) + u64 (8) = 16 bytes
+// Signer: proves caller owns the private key
 // 📖 https://www.anchor-lang.com/docs
 // 📖 https://solana.com/docs/core/transactions#signatures
 #[derive(Accounts)]
@@ -134,8 +134,8 @@ pub struct Initialize<'info> {
 // - Minimal constraints: show evolution to complex checks
 // - Preview: add ownership checks, PDAs in advanced lessons
 //
-// 🔗 mut constraint: account must be mutable for writes
-// 🔗 No init: account must already exist
+// mut constraint: account must be mutable for writes
+// No init: account must already exist
 // 📖 https://www.anchor-lang.com/docs
 #[derive(Accounts)]
 pub struct Increment<'info> {

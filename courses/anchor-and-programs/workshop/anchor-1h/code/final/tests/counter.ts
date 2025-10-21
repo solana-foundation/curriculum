@@ -30,8 +30,8 @@ describe("counter", () => {
   // This is the "connection + wallet" bundle that Anchor needs
   // to send transactions and sign them.
   //
-  // 🔗 Why .env()? Consistent environment across team members
-  // 🔗 Why not manual setup? Reduces boilerplate and errors
+  // Why .env()? Consistent environment across team members
+  // Why not manual setup? Reduces boilerplate and errors
   // 📖 https://www.anchor-lang.com/docs/testing#provider
   anchor.setProvider(anchor.AnchorProvider.env());
 
@@ -45,8 +45,8 @@ describe("counter", () => {
   // - workspace: Anchor's program registry
   // - .methods.*: instruction handlers become method calls
   //
-  // 🔗 IDL: JSON schema of your program's interface
-  // 🔗 Type safety: TypeScript knows your program's shape
+  // IDL: JSON schema of your program's interface
+  // Type safety: TypeScript knows your program's shape
   // 📖 https://www.anchor-lang.com/docs/testing#program
   const program = anchor.workspace.counter as Program<Counter>;
 
@@ -57,8 +57,8 @@ describe("counter", () => {
     // 1. Sign transactions (cryptographic authorization)
     // 2. Pay for account creation (rent-exempt minimum balance)
     //
-    // 🔗 Signer: proves ownership of private key
-    // 🔗 Payer: pays transaction fees + account creation costs
+    // Signer: proves ownership of private key
+    // Payer: pays transaction fees + account creation costs
     // 📖 https://solana.com/docs/core/transactions#signatures
     const provider = program.provider as anchor.AnchorProvider;
     const payer = provider.wallet as anchor.Wallet;
@@ -72,8 +72,8 @@ describe("counter", () => {
     // Alternative: reuse a PDA (Program Derived Address)
     // but that's advanced and requires seeds.
     //
-    // 🔗 Keypair: public key + private key pair
-    // 🔗 .generate(): cryptographically secure random generation
+    // Keypair: public key + private key pair
+    // .generate(): cryptographically secure random generation
     // 📖 https://solana-labs.github.io/solana-web3.js/classes/Keypair.html
     const counterKeypair = anchor.web3.Keypair.generate();
 
@@ -86,8 +86,8 @@ describe("counter", () => {
     // - .signers(): who authorizes this transaction
     // - .rpc(): send transaction + wait for confirmation
     //
-    // 🔗 Transaction = instruction + accounts + signers
-    // 🔗 systemProgram: Solana's account creation program
+    // Transaction = instruction + accounts + signers
+    // systemProgram: Solana's account creation program
     // 📖 https://www.anchor-lang.com/docs/testing#calling-instructions
     await program.methods
       .initialize()
@@ -107,8 +107,8 @@ describe("counter", () => {
     // - No systemProgram: no account creation
     // - Just the counter account: matches Increment<'info> struct
     //
-    // 🔗 State persistence: Solana stores account data on-chain
-    // 🔗 Multiple calls: prove state survives across transactions
+    // State persistence: Solana stores account data on-chain
+    // Multiple calls: prove state survives across transactions
     await program.methods
       .increment()
       .accounts({ counter: counterKeypair.publicKey })
@@ -121,8 +121,8 @@ describe("counter", () => {
     // 2. The increment worked (count = 1)
     // 3. State persists between transactions
     //
-    // 🔗 .fetch(): deserialize on-chain data to TypeScript
-    // 🔗 .toString(): convert BigNum to readable string
+    // .fetch(): deserialize on-chain data to TypeScript
+    // .toString(): convert BigNum to readable string
     // 📖 https://www.anchor-lang.com/docs/testing#fetching-accounts
     let counterAcc = await program.account.counter.fetch(
       counterKeypair.publicKey
