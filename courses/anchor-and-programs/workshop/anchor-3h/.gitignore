@@ -1,0 +1,35 @@
+# Rust build artifacts
+**/target/
+**/Cargo.lock
+
+# Node.js dependencies
+**/node_modules/
+**/yarn.lock
+**/package-lock.json
+
+# IDE files
+**/.vscode/
+**/.idea/
+**/*.swp
+**/*.swo
+
+# OS files
+**/.DS_Store
+**/Thumbs.db
+
+# Solana/Anchor specific
+**/.anchor/
+**/test-ledger/
+**/keypairs/
+
+# Environment files
+**/.env
+**/.env.local
+
+# Logs
+**/*.log
+**/logs/
+
+# Temporary files
+**/tmp/
+**/temp/
