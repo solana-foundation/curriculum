@@ -40,10 +40,9 @@
 
 ## Reading Assignment
 
-- **Required**: "Eclipse Attacks on Bitcoin's Peer-to-Peer Network" by Heilman et al.
-- **Required**: "Long-Range Attacks: The Achilles' Heel of Proof-of-Stake" by Deirmentzoglou et al.
-- **Required**: "Formal Verification of Blockchain Byzantine Fault Tolerance" by Novo et al.
-- **Supplementary**: "The Economics of Blockchain Security" by Budish
+- **Required**: [Eclipse Attacks on Bitcoin's Peer-to-Peer Network](https://www.usenix.org/conference/usenixsecurity15/technical-sessions/presentation/heilman) by Heilman et al. (USENIX Security 2015)
+- **Required**: [Long-Range Attacks: The Achilles' Heel of Proof-of-Stake](https://arxiv.org/abs/1710.09437) by Deirmentzoglou et al. (arXiv:1710.09437)
+- **Required**: [Formal Verification of Blockchain Byzantine Fault Tolerance](https://arxiv.org/abs/2009.07450) by Novo et al. (arXiv:2009.07450)
 
 ## Homework
 

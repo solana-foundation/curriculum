@@ -17,8 +17,7 @@
 
 ## Reading Assignment
 
-- **Required**: "Distributed Systems for Fun and Profit" - Chapter 1 (easy introduction)
-- **Optional**: Watch "What is a Distributed System?" (YouTube, 15 min)
+*(Reading assignment links to be added)*
 
 ## Hands-on Exercises
 

@@ -17,8 +17,9 @@
 
 ## Reading Assignment
 
-- **Required**: "Solana's 8 Innovations" - overview
-- **Watch**: "Solana Explained" - Coin Bureau
+- **Required**: [Solana Developer Documentation](https://solana.com/developers/docs) - Overview and core concepts
+- **Required**: [Solana's 8 Innovations](https://solana.com/news/8-innovations)
+- **Supplementary**: [Solana GitHub Repository](https://github.com/solana-labs/solana)
 
 ## Hands-on Exercises
 
@@ -37,3 +38,8 @@
 - Set up a Solana development environment
 - Deploy a simple program
 - Measure actual performance
+
+## Additional Resources
+
+- [Solana Developer Documentation](https://solana.com/developers/docs)
+- [Solana GitHub Repository](https://github.com/solana-labs/solana)
