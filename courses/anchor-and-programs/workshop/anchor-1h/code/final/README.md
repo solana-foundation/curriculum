@@ -4,7 +4,7 @@
 **Audience:** Instructors preparing to teach the 1-hour Anchor workshop.  
 **Not for students:** Students work in `/code/counter/` with minimal comments.
 
-## ⚠️ Important: This is Reference Only
+## Important: This is Reference Only
 
 **Students work in `/code/counter/`** - this directory is for presenter study only.
 
@@ -82,7 +82,7 @@ A: No - Rust doesn't have ++ operator. But more importantly, we want checked_add
 
 ### Wallet Hygiene
 
-⚠️ **Critical Safety Message**
+**Critical Safety Message**
 
 - **Dev wallet only**: Never use production keys in workshops
 - **Devnet ≠ Mainnet**: Make this distinction crystal clear

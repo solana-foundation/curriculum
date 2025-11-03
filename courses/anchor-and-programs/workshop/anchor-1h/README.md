@@ -224,9 +224,9 @@ Expected:
 
 Before teaching this workshop, review the **reference implementation** in `/code/final/`:
 
-- 📖 [final/README.md](code/final/README.md) - Teaching notes, troubleshooting, FAQs
-- 💻 [final/programs/counter/src/lib.rs](code/final/programs/counter/src/lib.rs) - Deeply commented program
-- 🧪 [final/tests/counter.ts](code/final/tests/counter.ts) - Annotated test suite
+- [final/README.md](code/final/README.md) - Teaching notes, troubleshooting, FAQs
+- [final/programs/counter/src/lib.rs](code/final/programs/counter/src/lib.rs) - Deeply commented program
+- [final/tests/counter.ts](code/final/tests/counter.ts) - Annotated test suite
 
 ### Official Resources
 

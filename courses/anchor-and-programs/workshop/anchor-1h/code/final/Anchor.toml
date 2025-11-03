@@ -8,8 +8,8 @@
 # 3. [provider] sets default cluster and wallet
 # 4. [scripts] defines test commands
 #
-# 🔗 Why separate clusters? Different environments (local vs devnet vs mainnet)
-# 🔗 Why same Program ID? Consistency across environments
+# Why separate clusters? Different environments (local vs devnet vs mainnet)
+# Why same Program ID? Consistency across environments
 # 📖 https://www.anchor-lang.com/docs
 
 [toolchain]
