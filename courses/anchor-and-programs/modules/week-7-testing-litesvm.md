@@ -46,12 +46,14 @@
 
 ### Installation and Configuration
 
+<!-- UPDATE: version alignment – updated dependency versions to Anchor 0.31.1 and Solana SDK 2.1.0 for October 2025 baseline -->
+
 ```toml
 # Cargo.toml
 [dev-dependencies]
 litesvm = "0.2"
-anchor-lang = { version = "0.30.0", features = ["dev"] }
-solana-sdk = "1.18"
+anchor-lang = { version = "0.31.1", features = ["dev"] }
+solana-sdk = "2.1"
 tokio = { version = "1.0", features = ["macros"] }
 ```
 

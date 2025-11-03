@@ -17,8 +17,8 @@
 
 ## Reading Assignment
 
-- **Required**: "Solana Explained Simply" - introduction
-- **Watch**: Anatoly Yakovenko explains PoH (simplified version)
+- **Required**: [Proof of History: Bringing Time to Crypto](https://solana.com/news/proof-of-history) - Solana's explanation of PoH
+- **Supplementary**: [Solana Developer Documentation](https://solana.com/developers/docs) - General Solana documentation
 
 ## Hands-on Exercises
 
@@ -37,3 +37,8 @@
 - Build a PoH generator
 - Add events to the timeline
 - See the speed difference
+
+## Additional Resources
+
+- [Solana Developer Documentation](https://solana.com/developers/docs)
+- [Solana GitHub Repository](https://github.com/solana-labs/solana)

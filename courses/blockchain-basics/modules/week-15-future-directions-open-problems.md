@@ -40,10 +40,9 @@
 
 ## Reading Assignment
 
-- **Required**: "SoK: Communication Across Distributed Ledgers" by Zamyatin et al.
-- **Required**: "Zerocash: Decentralized Anonymous Payments from Bitcoin" by Sasson et al.
-- **Required**: "Quantum Attacks on Bitcoin, and How to Protect Against Them" by Aggarwal et al.
-- **Supplementary**: "Governance in Blockchain Technologies & Social Contract Theories" by Reijers et al.
+- **Required**: [SoK: Communication Across Distributed Ledgers](https://arxiv.org/abs/1904.09320) by Zamyatin et al. (arXiv:1904.09320)
+- **Required**: [Quantum Attacks on Bitcoin, and How to Protect Against Them](https://arxiv.org/abs/1710.10377) by Aggarwal et al. (arXiv:1710.10377)
+- **Supplementary**: [Governance in Blockchain Technologies & Social Contract Theories](https://link.springer.com/article/10.1007/s10676-020-09538-y) by Reijers et al. (Ethics and Information Technology, 2021)
 
 ## Final Project Presentations
 
