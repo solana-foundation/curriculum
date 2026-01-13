@@ -5,8 +5,11 @@
 - **[Official Solana Documentation](https://solana.com/docs)**  
   The authoritative source for Solana development. Essential for understanding core concepts, account model, and transaction structure. Continuously updated with new features.
 
-- **[Gill Library Repository](https://github.com/solana-foundation/gill)**  
-  Modern JavaScript/TypeScript client for Solana. Lightweight alternative to Web3.js with tree-shakable architecture. Includes comprehensive examples and API documentation.
+- **[Framework-Kit Repository](https://github.com/solana-foundation/framework-kit)**
+  Modern Solana React development with `@solana/client` and `@solana/react-hooks`. Wallet Standard-first approach with comprehensive hooks and patterns for dApp development.
+
+- **[@solana/kit Documentation](https://solana.com/docs/clients/kit)**
+  The modern Solana SDK (v5.x) with Kit-native types, transaction message APIs, and functional composition patterns.
 
 - **[Solana Cookbook](https://solanacookbook.com/)**  
   Copy-paste solutions for common Solana development patterns. Perfect for quick reference during class exercises. Covers both Web3.js and modern approaches.
@@ -73,9 +76,14 @@
 
 ## Advanced Topics and Patterns
 
-- **[Gill vs Web3.js Comparison (Dev.to)](https://dev.to/shivamsspirit/introducing-gill-the-modern-solana-javascript-client-library-325l)**  
-  [Gill Getting Started (Nick.af)](https://nick.af/articles/gill-solana-javascript-get-started)  
-  Performance comparisons, migration guides, and live examples in the wallet-ui repo.
+- **[@solana/web3-compat Documentation](https://solana.com/docs/frontend/web3-compat)**
+  Boundary adapter for legacy web3.js dependencies. Use this when integrating libraries that expect web3.js types.
+
+- **[Codama IDL Code Generation](https://github.com/codama-idl/codama)**
+  Generate Kit-native TypeScript clients from program IDLs. The modern approach to type-safe program interactions.
+
+- **[LiteSVM Testing Framework](https://github.com/LiteSVM/litesvm)**
+  Fast, lightweight in-process Solana VM for unit testing. Supports Rust, TypeScript, and Python.
 
 - **[Wallet Integration Patterns (blog)](https://blog.anishde.dev/creating-a-custom-solana-connect-wallet-ui-with-react-and-chakra-ui)**  
   Custom wallet UIs, multi-wallet strategies, and state-management best practices.
@@ -85,21 +93,20 @@
 
 ## Community and Support Resources
 
-- **[Solana Tech Discord](https://discord.gg/solana)** — 145 k members  
-- **[Solana Stack Exchange](https://solana.stackexchange.com/)**  
-- **[Superteam DAO](https://superteam.fun/)** — bounties, regional chapters  
+- **[Solana Tech Discord](https://discord.gg/solana)** — 145 k members
+- **[Solana Stack Exchange](https://solana.stackexchange.com/)**
+- **[Superteam DAO](https://superteam.fun/)** — bounties, regional chapters
 - **GitHub Discussions** — active on major Solana repos
 
 ## Assessment and Project Resources
 
-- **[Hackathon Winners Gallery](https://build.superteam.fun/past-hackathon-winners)**  
-- **[Solana Breakpoint Projects](https://solana.com/breakpoint)**  
-- **Project Assessment Rubric Template**  
-  - Technical Implementation 40 %  
-  - User Experience 25 %  
-  - Code Quality 20 %  
+- **[Hackathon Winners Gallery](https://build.superteam.fun/past-hackathon-winners)**
+- **[Solana Breakpoint Projects](https://solana.com/breakpoint)**
+- **Project Assessment Rubric Template**
+  - Technical Implementation 40 %
+  - User Experience 25 %
+  - Code Quality 20 %
   - Documentation 15 %
-
 
 ## Specialized Topics for Capstone Projects
 
@@ -126,15 +133,15 @@
 
 ## Career and Industry Resources
 
-- **[Solana Jobs Board](https://jobs.solana.com/)**  
-- **[Colosseum Accelerator](https://colosseum.org/)**  
+- **[Solana Jobs Board](https://jobs.solana.com/)**
+- **[Colosseum Accelerator](https://colosseum.org/)**
 - **[Solana Hacker Houses](https://lu.ma/solanahackerhouse)**  
   Official calendar of in-person Hacker House and community build events worldwide.
 
 ## Documentation and Reference Tools
 
-- **[@solana/wallet-adapter Docs](https://github.com/anza-xyz/wallet-adapter)**  
-- **[@coral-xyz/anchor TypeScript Client](https://www.anchor-lang.com/docs/clients/typescript)**  
+- **[@solana/wallet-adapter Docs](https://github.com/anza-xyz/wallet-adapter)**
+- **[@coral-xyz/anchor TypeScript Client](https://www.anchor-lang.com/docs/clients/typescript)**
 - **[Solana Web3.js Documentation](https://solana.com/docs/clients/javascript)**
 
 ## Deployment and Production Resources
@@ -150,16 +157,16 @@
 
 ## Wallet-Specific Documentation
 
-- **[Phantom Wallet Docs](https://docs.phantom.app/)** — most-used Solana wallet; full developer guide.  
-- **[Solflare Wallet Docs](https://docs.solflare.com/)** — multi-platform wallet with hardware-wallet support.  
-- **[Backpack Wallet](https://docs.backpack.app/)** — xNFT support and built-in debugging tools.  
+- **[Phantom Wallet Docs](https://docs.phantom.app/)** — most-used Solana wallet; full developer guide.
+- **[Solflare Wallet Docs](https://docs.solflare.com/)** — multi-platform wallet with hardware-wallet support.
+- **[Backpack Wallet](https://docs.backpack.app/)** — xNFT support and built-in debugging tools.
 
 ---
 
 ## Additional Teaching Resources
 
-- **University Partnership Programs** — Solana Foundation education grants, guest lecturers, hackathon sponsorships.  
-- **[Assessment Templates – Rubric Design](https://www.buffalo.edu/catt/teach/develop/design/designing-assessments/rubrics.html)**  
+- **University Partnership Programs** — Solana Foundation education grants, guest lecturers, hackathon sponsorships.
+- **[Assessment Templates – Rubric Design](https://www.buffalo.edu/catt/teach/develop/design/designing-assessments/rubrics.html)**
 - **Industry Guest Speakers** — DevRel engineers, dApp founders, security researchers, infra providers.
 
 ---
@@ -167,4 +174,3 @@
 _Last updated: June 2025_
 
 _Compiled for university-level Web for Solana Development courses_
-
