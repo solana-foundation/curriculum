@@ -1,14 +1,14 @@
-# Week 5: Advanced Transaction Construction with Gill
+# Week 5: Advanced Transaction Construction
 
 ## Overview
 
-This week focuses on mastering gill's functional approach to transaction construction. Topics include building complex transactions using the pipe pattern, handling priority fees, implementing retry mechanisms, and creating robust transaction confirmation flows.
+This week focuses on mastering Kit's approach to transaction construction. Topics include building complex transactions using transaction message APIs, handling priority fees, implementing retry mechanisms, and creating robust transaction confirmation flows.
 
 ## Learning Objectives
 
 Learning outcomes for this week include:
 
-1. Master gill's pipe-based transaction construction
+1. Master Kit's transaction message API-based construction
 2. Build multi-instruction transactions
 3. Implement priority fees and compute budget optimization
 4. Create robust retry and confirmation mechanisms
@@ -16,20 +16,22 @@ Learning outcomes for this week include:
 
 ## Lessons
 
-### Lesson 1: Transaction Construction with Pipe Pattern
+### Lesson 1: Transaction Construction with Kit APIs
 
 **Topics Covered:**
-- Understanding gill's functional composition
+
+- Understanding Kit's functional composition
 - Transaction message creation and configuration
-- Adding instructions with pipe
+- Adding instructions with transaction message builders
 - Transaction versioning (legacy vs v0)
 - Lookup tables for v0 transactions
 
-**Lab Exercise: Transaction Builder with Pipe Pattern**
+**Lab Exercise: Transaction Builder with Kit APIs**
 
 Create a transaction builder component that:
+
 - Manages state for recipient, amount, and transaction status
-- Creates a gill Solana client for devnet
+- Creates a Solana client using `createClient()` for devnet
 - Implements transaction building function that:
   - Updates status through building phases
   - Fetches latest blockhash for transaction lifetime
@@ -37,7 +39,7 @@ Create a transaction builder component that:
     - System program ID
     - Proper account keys (sender as signer/writable, recipient as writable)
     - Encoded data with transfer discriminator and amount in lamports
-  - Uses gill's pipe pattern to:
+  - Uses Kit's transaction message APIs to:
     - Create v0 transaction message
     - Set fee payer signer
     - Set transaction lifetime with blockhash
@@ -53,7 +55,8 @@ Create a transaction builder component that:
   - Status indicator component
 
 **Key Concepts:**
-- Pipe function composition
+
+- Kit functional composition
 - Transaction message structure
 - Instruction format
 - Signer management
@@ -62,6 +65,7 @@ Create a transaction builder component that:
 ### Lesson 2: Multi-Instruction Transactions and Compute Budget
 
 **Topics Covered:**
+
 - Building complex multi-instruction transactions
 - Compute unit optimization
 - Priority fees implementation
@@ -73,17 +77,19 @@ Create a transaction builder component that:
 Build a complex transaction builder that:
 
 **Component Interface:**
+
 - Accepts array of operations with type and data
 - Supports transfer, tokenTransfer, and memo operations
 
 **Transaction Building Logic:**
-- Creates gill client and fetches latest blockhash
+
+- Creates client using `createClient()` and fetches latest blockhash
 - Estimates compute units based on operation count
 - Constructs compute budget instructions:
   - Sets compute unit limit (max 1.4M)
   - Sets priority fee in microlamports
 - Maps operations to appropriate instructions
-- Uses pipe pattern to build transaction:
+- Uses Kit transaction message APIs to build transaction:
   - Creates v0 transaction message
   - Sets fee payer and lifetime
   - Adds compute budget instructions first
@@ -94,6 +100,7 @@ Build a complex transaction builder that:
 - Signs and sends final transaction
 
 **UI Components:**
+
 - Display operations with visual indicators
 - Show compute unit estimates per operation
 - Calculate total estimated compute units
@@ -102,6 +109,7 @@ Build a complex transaction builder that:
 - Proper styling with cards and sections
 
 **Key Concepts:**
+
 - Compute budget management
 - Priority fee strategies
 - Instruction ordering
@@ -111,6 +119,7 @@ Build a complex transaction builder that:
 ### Lesson 3: Transaction Confirmation and Retry Strategies
 
 **Topics Covered:**
+
 - Confirmation strategies and commitment levels
 - Implementing retry logic
 - Handling dropped transactions
@@ -120,8 +129,10 @@ Build a complex transaction builder that:
 **Lab Exercise: Transaction Confirmation and Retry System**
 
 **TransactionConfirmer Class Implementation:**
-- Create a class that accepts a gill Solana client
+
+- Create a class that accepts a Solana client from `createClient()`
 - Implement confirmWithRetry method that:
+
   - Accepts signature and confirmation options
   - Uses configurable parameters (commitment, retries, delay, timeout)
   - Tracks elapsed time and attempt count
@@ -146,6 +157,7 @@ Build a complex transaction builder that:
   - Cleans up resources properly
 
 **TransactionSender Component:**
+
 - Manages transaction status states
 - Implements sendAndConfirm function that:
   - Updates status through phases
@@ -160,6 +172,7 @@ Build a complex transaction builder that:
   - Status display component integration
 
 **Key Concepts:**
+
 - Confirmation strategies
 - Retry patterns
 - Timeout handling
@@ -173,18 +186,21 @@ Build a complex transaction builder that:
 Create a comprehensive transaction management interface that includes:
 
 1. **Transaction Builder**
+
    - Visual instruction builder
    - Drag-and-drop instruction ordering
    - Compute unit estimation
    - Priority fee calculator
 
 2. **Batch Transaction Tool**
+
    - Execute multiple operations in one transaction
    - Optimize instruction ordering
    - Handle size limits gracefully
    - Progress tracking
 
 3. **Smart Confirmation System**
+
    - Adaptive retry logic
    - Multiple confirmation strategies
    - Transaction status tracking
@@ -197,13 +213,15 @@ Create a comprehensive transaction management interface that includes:
    - Share templates
 
 **Requirements:**
-- Use gill's pipe pattern throughout
+
+- Use Kit's transaction message APIs throughout
 - Implement comprehensive error handling
 - Add transaction simulation before sending
 - Include detailed logging
 - Support offline transaction creation
 
 **Evaluation Criteria:**
+
 - Code architecture and reusability
 - Error handling robustness
 - User experience quality
@@ -213,15 +231,19 @@ Create a comprehensive transaction management interface that includes:
 ## Additional Resources
 
 ### Required Reading
-- [Gill Transaction Documentation](https://github.com/solana-foundation/gill#transactions)
+
+- [Framework-Kit Repository](https://github.com/solana-foundation/framework-kit)
+- [@solana/kit Transaction Documentation](https://solana.com/docs/clients/kit)
 - [Transaction Confirmation Best Practices](https://solana.com/docs/core/transactions/confirmation)
 - [Compute Budget Documentation](https://docs.solana.com/developing/programming-model/runtime#compute-budget)
 
 ### Supplementary Materials
+
 - [Priority Fees Explained](https://www.helius.dev/blog/priority-fees-understanding-solanas-transaction-fees)
 - [Versioned Transactions Guide](https://solana.com/docs/core/transactions/versions)
 
 ### Practice Exercises
+
 1. Build a transaction fee estimator
 2. Create a transaction debugger
 3. Implement transaction batching
@@ -230,14 +252,18 @@ Create a comprehensive transaction management interface that includes:
 ## Common Issues and Solutions
 
 ### Issue: Transaction too large
-**Solution:** 
+
+**Solution:**
+
 - Create and use address lookup tables for v0 transactions
 - Reduce account references by using lookup tables
 - Split large transactions into multiple smaller ones
 - Consider instruction data optimization
 
 ### Issue: Compute units exceeded
-**Solution:** 
+
+**Solution:**
+
 - Analyze compute unit usage per instruction
 - Split instructions into chunks under compute limit
 - Optimize instruction order for efficiency
@@ -245,7 +271,9 @@ Create a comprehensive transaction management interface that includes:
 - Set appropriate compute unit limits
 
 ### Issue: Transaction dropped
-**Solution:** 
+
+**Solution:**
+
 - Fetch fresh blockhash for retry attempts
 - Rebuild transaction with new blockhash
 - Implement exponential backoff for retries
@@ -254,7 +282,7 @@ Create a comprehensive transaction management interface that includes:
 
 ## Week 5 Quiz Questions
 
-1. How does the pipe pattern improve transaction building?
+1. How do Kit's transaction message APIs improve transaction building?
 2. When should you use v0 vs legacy transactions?
 3. What factors determine optimal priority fees?
 4. How do different confirmation strategies compare?
@@ -265,6 +293,7 @@ Create a comprehensive transaction management interface that includes:
 ### Transaction Optimization Challenge
 
 Build a tool that:
+
 - Analyzes transaction compute usage
 - Suggests optimization strategies
 - Implements automatic batching
@@ -272,6 +301,7 @@ Build a tool that:
 - Generates performance reports
 
 **Advanced Features:**
+
 - AI-powered instruction ordering
 - Dynamic priority fee adjustment
 - Predictive confirmation times
@@ -280,6 +310,7 @@ Build a tool that:
 ## Looking Ahead
 
 Next week begins integration with Anchor programs. Topics include:
+
 - Understanding Anchor IDLs
 - Type generation from IDLs
 - Calling program methods

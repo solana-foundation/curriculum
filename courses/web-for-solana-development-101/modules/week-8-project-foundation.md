@@ -19,6 +19,7 @@ Learning outcomes for this week include:
 ### Lesson 1: Project Architecture and Planning
 
 **Topics Covered:**
+
 - Analyzing requirements for a note-taking dApp
 - Designing the on-chain data model
 - Planning the component architecture
@@ -30,6 +31,7 @@ Learning outcomes for this week include:
 **Architecture Planning:**
 
 1. **Feature Requirements:**
+
    - Full CRUD operations for notes
    - Rich text editing with markdown support
    - Organization through categories and tags
@@ -38,15 +40,17 @@ Learning outcomes for this week include:
    - Collaborative features (future enhancement)
 
 2. **On-chain Data Model Design:**
-   
+
    **UserProfile PDA Structure:**
+
    - Owner wallet public key
    - Username (32 character limit)
    - Note counter for tracking
    - Creation timestamp
    - Avatar IPFS hash (64 chars)
-   
+
    **Note PDA Structure:**
+
    - Author public key reference
    - Unique note ID
    - Title (64 character limit)
@@ -56,8 +60,9 @@ Learning outcomes for this week include:
    - Public/private flag
    - Shared wallet list (max 10)
    - Timestamps and version tracking
-   
+
    **Off-chain Storage:**
+
    - Full markdown content in IPFS
    - File attachments
    - Version history tracking
@@ -65,7 +70,7 @@ Learning outcomes for this week include:
 3. **Project Setup Steps:**
    - Initialize Next.js with TypeScript and Tailwind
    - Configure app directory structure
-   - Install Solana dependencies (gill, wallet-ui, anchor)
+   - Install Solana dependencies (@solana/client, @solana/react-hooks, @coral-xyz/anchor)
    - Add UI libraries (tiptap, react-query, react-hook-form)
    - Set up state management (zustand)
    - Configure validation (zod)
@@ -74,6 +79,7 @@ Learning outcomes for this week include:
    - Configure environment variables
 
 **Key Concepts:**
+
 - Scalable architecture design
 - On-chain vs off-chain data decisions
 - PDA hierarchy planning
@@ -83,6 +89,7 @@ Learning outcomes for this week include:
 ### Lesson 2: Core UI Components
 
 **Topics Covered:**
+
 - Building reusable UI components
 - Implementing responsive design
 - Creating a consistent design system
@@ -92,6 +99,7 @@ Learning outcomes for this week include:
 **Lab Exercise: Core UI Components Implementation**
 
 **1. Layout Component Structure:**
+
 - Create main layout wrapper with header and optional sidebar
 - Use flexible container with proper spacing
 - Implement responsive design patterns
@@ -101,12 +109,14 @@ Learning outcomes for this week include:
 **2. Note Editor Component:**
 
 **Setup Requirements:**
+
 - Initialize Tiptap editor with StarterKit and Markdown extensions
 - Configure markdown-only mode (no HTML)
 - Apply Tailwind prose classes for typography
 - Set minimum height and responsive sizing
 
 **Component Features:**
+
 - Title input field with large font styling
 - Rich text editor with toolbar
 - Save/Cancel button actions
@@ -117,6 +127,7 @@ Learning outcomes for this week include:
 **3. Note Card Component:**
 
 **Card Structure:**
+
 - Clickable card with hover effects
 - Title with single-line truncation
 - Public/private indicator badge
@@ -125,6 +136,7 @@ Learning outcomes for this week include:
 - Relative time display
 
 **Visual Design:**
+
 - White background with subtle shadow
 - Border and hover shadow transition
 - Color-coded badges for categorization
@@ -133,12 +145,14 @@ Learning outcomes for this week include:
 **4. Search and Filter Component:**
 
 **Form Implementation:**
+
 - Use react-hook-form for state management
 - Define filter options interface
 - Set default values for all fields
 - Watch form changes for real-time filtering
 
 **Filter Controls:**
+
 - Search input with full-width styling
 - Category dropdown selector
 - Public-only checkbox toggle
@@ -147,6 +161,7 @@ Learning outcomes for this week include:
 - Auto-trigger filter on changes
 
 **Key Concepts:**
+
 - Component reusability
 - Responsive design patterns
 - Form handling
@@ -156,6 +171,7 @@ Learning outcomes for this week include:
 ### Lesson 3: Wallet Integration and Authentication
 
 **Topics Covered:**
+
 - Implementing wallet-based authentication
 - Creating user profiles on-chain
 - Session management
@@ -167,17 +183,20 @@ Learning outcomes for this week include:
 **1. Auth Store Implementation (Zustand):**
 
 **Store Structure:**
+
 - Define authentication state interface
 - Track authentication status, profile, wallet, loading, and errors
 - Implement action methods for auth operations
 
 **Core Methods:**
+
 - **signIn**: Check for existing profile and update auth state
 - **signOut**: Clear all authentication data
 - **checkProfile**: Derive PDA and fetch profile data
 - **createProfile**: Execute on-chain profile creation
 
 **PDA Derivation:**
+
 - Use 'profile' seed with wallet public key
 - Consistent PDA generation across methods
 - Handle fetch errors gracefully
@@ -185,11 +204,13 @@ Learning outcomes for this week include:
 **2. Auth Provider Component:**
 
 **Integration Points:**
+
 - Connect wallet-ui hooks for wallet state
 - Use Anchor program hook
 - Access auth store actions
 
 **Lifecycle Management:**
+
 - Monitor wallet connection changes
 - Auto-signin when wallet connects
 - Auto-signout on disconnect
@@ -198,12 +219,14 @@ Learning outcomes for this week include:
 **3. Protected Route Implementation:**
 
 **Route Protection Logic:**
+
 - Check authentication status
 - Redirect to home if not authenticated
 - Show loading screen during auth check
 - Render children only when authenticated
 
 **Navigation Handling:**
+
 - Use Next.js router for redirects
 - Implement proper loading states
 - Prevent content flash
@@ -211,11 +234,13 @@ Learning outcomes for this week include:
 **4. Profile Creation Modal:**
 
 **Form Setup:**
+
 - Define Zod schema for validation
 - Username constraints (3-32 chars, alphanumeric)
 - Use react-hook-form with Zod resolver
 
 **Modal Features:**
+
 - Full-screen overlay with backdrop
 - Centered modal container
 - Form with validation feedback
@@ -223,12 +248,14 @@ Learning outcomes for this week include:
 - Success/error handling
 
 **Profile Creation Flow:**
+
 - Validate username input
 - Call store's createProfile method
 - Handle success with modal close
 - Display errors appropriately
 
 **Key Concepts:**
+
 - Wallet-based authentication flow
 - State management with Zustand
 - Protected route implementation
@@ -242,18 +269,21 @@ Learning outcomes for this week include:
 Complete the following tasks to establish your note-taking dApp foundation:
 
 1. **Project Setup**
+
    - Initialize the project with Next.js and TypeScript
-   - Configure wallet-ui and gill
+   - Configure @solana/client and @solana/react-hooks
    - Set up Tailwind CSS with custom theme
    - Create the folder structure
 
 2. **Core Components**
+
    - Implement the layout system
    - Build the note editor with Tiptap
    - Create note card and list components
    - Add search and filter functionality
 
 3. **Authentication System**
+
    - Integrate wallet connection
    - Implement profile creation flow
    - Set up protected routes
@@ -266,6 +296,7 @@ Complete the following tasks to establish your note-taking dApp foundation:
    - Add error boundaries
 
 **Deliverables:**
+
 - GitHub repository with clean commit history
 - README with setup instructions
 - Component storybook (optional)
@@ -274,18 +305,21 @@ Complete the following tasks to establish your note-taking dApp foundation:
 ## Additional Resources
 
 ### UI/UX Inspiration
+
 - [Notion](https://notion.so) - Note organization
 - [Bear](https://bear.app) - Minimal design
 - [Obsidian](https://obsidian.md) - Linking features
 - [Linear](https://linear.app) - Modern UI patterns
 
 ### Technical References
+
 - [Tiptap Documentation](https://tiptap.dev/)
 - [Zustand State Management](https://zustand-demo.pmnd.rs/)
 - [React Hook Form](https://react-hook-form.com/)
 - [Tailwind CSS Components](https://tailwindui.com/)
 
 ### Solana dApp Examples
+
 - [Solana Cookbook Examples](https://solanacookbook.com/)
 - [Realms](https://github.com/solana-labs/governance-ui)
 - [Metaplex Candy Machine UI](https://github.com/metaplex-foundation/candy-machine-ui)
@@ -293,7 +327,9 @@ Complete the following tasks to establish your note-taking dApp foundation:
 ## Common Issues and Solutions
 
 ### Issue: Wallet connection in development
-**Solution:** 
+
+**Solution:**
+
 - Detect development environment
 - Implement mock wallet adapter
 - Provide test wallet functionality
@@ -301,7 +337,9 @@ Complete the following tasks to establish your note-taking dApp foundation:
 - Skip actual wallet connection requirements
 
 ### Issue: Large note content
-**Solution:** 
+
+**Solution:**
+
 - Define maximum content size limit (e.g., 900 bytes)
 - Implement content splitting algorithm
 - Store chunks separately or use IPFS
@@ -309,7 +347,9 @@ Complete the following tasks to establish your note-taking dApp foundation:
 - Handle chunk references properly
 
 ### Issue: SEO for public notes
-**Solution:** 
+
+**Solution:**
+
 - Implement Next.js generateMetadata function
 - Fetch public note data server-side
 - Return proper meta tags
@@ -330,12 +370,14 @@ Complete the following tasks to establish your note-taking dApp foundation:
 ### Speed Development Challenge
 
 In 2 hours, implement:
+
 - Complete authentication flow
 - Basic note CRUD operations
 - Search functionality
 - Responsive design
 
 Focus on:
+
 - Clean code structure
 - Error handling
 - Loading states
@@ -344,6 +386,7 @@ Focus on:
 ## Looking Ahead
 
 Next week implements the core note functionality. Topics include:
+
 - Create note storage on-chain
 - Implement CRUD operations
 - Add categorization system

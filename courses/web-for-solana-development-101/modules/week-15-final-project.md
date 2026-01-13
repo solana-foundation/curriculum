@@ -2,31 +2,35 @@
 
 ## Overview
 
-This final week is dedicated to completing, polishing, and presenting a full-featured note-taking dApp. Topics include finalizing implementations, preparing comprehensive documentation, and presenting projects demonstrating mastery of Solana web development with gill and wallet-ui.
+This final week is dedicated to completing, polishing, and presenting a full-featured note-taking dApp. Topics include finalizing implementations, preparing comprehensive documentation, and presenting projects demonstrating mastery of Solana web development with framework-kit (`@solana/client` + `@solana/react-hooks`).
 
 ## Project Requirements
 
 ### Core Features (Required)
 
 1. **Authentication & User Management**
-   - Wallet-based authentication using wallet-ui
+
+   - Wallet-based authentication using `@solana/react-hooks`
    - User profile creation and management
    - Session persistence
-   - Multi-wallet support
+   - Multi-wallet support via Wallet Standard
 
 2. **Note CRUD Operations**
+
    - Create, read, update, delete notes
    - Rich text editing with markdown support
    - Auto-save functionality
    - Optimistic updates
 
 3. **Organization & Search**
+
    - Categories and tags
    - Full-text search with highlighting
    - Filtering and sorting
    - Smart collections
 
 4. **Sharing & Collaboration**
+
    - Public note sharing with unique URLs
    - Wallet-based sharing
    - Permission management
@@ -41,21 +45,25 @@ This final week is dedicated to completing, polishing, and presenting a full-fea
 ### Advanced Features (Choose at least 2)
 
 1. **State Compression**
+
    - Compressed note storage
    - Cost savings analysis
    - Migration tools
 
 2. **WebAssembly Integration**
+
    - WASM modules for performance
    - Encryption/decryption
    - Image processing
 
 3. **Cross-Chain Support**
+
    - Multi-chain wallet integration
    - Cross-chain note sharing
    - Bridge functionality
 
 4. **AI Integration**
+
    - Note suggestions
    - Auto-categorization
    - Smart search
@@ -68,6 +76,7 @@ This final week is dedicated to completing, polishing, and presenting a full-fea
 ## Final Implementation Guide
 
 ### Project Structure
+
 ```
 solana-notes-app/
 ├── src/
@@ -99,6 +108,7 @@ solana-notes-app/
 ### Final Checklist
 
 #### Functionality
+
 - [ ] All CRUD operations working correctly
 - [ ] Search and filtering functional
 - [ ] Sharing features implemented
@@ -109,6 +119,7 @@ solana-notes-app/
 - [ ] Mobile responsive design
 
 #### Code Quality
+
 - [ ] TypeScript strict mode enabled
 - [ ] No TypeScript errors
 - [ ] ESLint passing
@@ -119,6 +130,7 @@ solana-notes-app/
 - [ ] Environment variables documented
 
 #### Performance
+
 - [ ] Lighthouse score > 90
 - [ ] Bundle size < 250KB initial
 - [ ] LCP < 2.5s
@@ -129,6 +141,7 @@ solana-notes-app/
 - [ ] Images optimized
 
 #### Security
+
 - [ ] Input validation on all forms
 - [ ] XSS protection
 - [ ] CSRF protection
@@ -139,6 +152,7 @@ solana-notes-app/
 - [ ] Security audit passed
 
 #### Deployment
+
 - [ ] Deployed to production
 - [ ] CI/CD pipeline working
 - [ ] Monitoring configured
@@ -151,10 +165,11 @@ solana-notes-app/
 ## Documentation Requirements
 
 ### README.md Template
+
 ```markdown
 # Solana Notes dApp
 
-A full-featured note-taking application built on Solana using gill and wallet-ui.
+A full-featured note-taking application built on Solana using framework-kit (@solana/client + @solana/react-hooks).
 
 ## Features
 
@@ -170,7 +185,7 @@ A full-featured note-taking application built on Solana using gill and wallet-ui
 
 - **Frontend**: Next.js 14, TypeScript, Tailwind CSS
 - **Blockchain**: Solana, Anchor Framework
-- **Libraries**: gill, wallet-ui, @coral-xyz/anchor
+- **Libraries**: @solana/client, @solana/react-hooks, @coral-xyz/anchor
 - **State**: Zustand, React Query
 - **Deployment**: Vercel
 
@@ -186,17 +201,22 @@ A full-featured note-taking application built on Solana using gill and wallet-ui
 ### Installation
 
 \`\`\`bash
+
 # Clone repository
+
 git clone https://github.com/yourusername/solana-notes-app
 cd solana-notes-app
 
 # Install dependencies
+
 pnpm install
 
 # Set up environment variables
+
 cp .env.example .env.local
 
 # Run development server
+
 pnpm dev
 \`\`\`
 
@@ -226,6 +246,7 @@ MIT
 ```
 
 ### Technical Documentation
+
 ```markdown
 # Technical Architecture
 
@@ -236,15 +257,17 @@ The Solana Notes dApp is built with a modern architecture focusing on performanc
 ## System Architecture
 
 ### Frontend Architecture
+
 - **Framework**: Next.js 14 with App Router
 - **State Management**: Zustand for global state, React Query for server state
 - **Styling**: Tailwind CSS with custom design system
 - **Type Safety**: TypeScript with strict mode
 
 ### Blockchain Architecture
+
 - **Program**: Anchor framework for Solana programs
-- **Client**: gill library for RPC interactions
-- **Wallet**: wallet-ui for wallet integration
+- **Client**: @solana/client for RPC interactions
+- **Wallet**: @solana/react-hooks with Wallet Standard
 
 ### Data Flow
 
@@ -285,23 +308,27 @@ The Solana Notes dApp is built with a modern architecture focusing on performanc
 ### Presentation Structure (15 minutes)
 
 1. **Introduction (2 minutes)**
+
    - Problem statement
    - Solution overview
    - Tech stack choices
 
 2. **Live Demo (8 minutes)**
+
    - User journey walkthrough
    - Core features demonstration
    - Advanced features showcase
    - Performance metrics
 
 3. **Technical Deep Dive (3 minutes)**
+
    - Architecture decisions
    - Challenging problems solved
    - Performance optimizations
    - Security measures
 
 4. **Future Roadmap (1 minute)**
+
    - Planned features
    - Scaling strategies
    - Community building
@@ -309,6 +336,7 @@ The Solana Notes dApp is built with a modern architecture focusing on performanc
 5. **Q&A (1 minute)**
 
 ### Demo Script
+
 ```typescript
 // Demo Flow
 1. Connect wallet (show multi-wallet support)
@@ -326,36 +354,43 @@ The Solana Notes dApp is built with a modern architecture focusing on performanc
 ### Slides Template
 
 **Slide 1: Title**
+
 - Project name
 - Your name
 - Date
 
 **Slide 2: Problem & Solution**
+
 - Current note-taking limitations
 - Blockchain advantages
 - Your solution
 
 **Slide 3: Architecture**
+
 - High-level architecture diagram
 - Tech stack visualization
 - Data flow
 
 **Slide 4: Key Features**
+
 - Feature matrix
 - Screenshots
 - User benefits
 
 **Slide 5: Technical Highlights**
+
 - Performance metrics
 - Security features
 - Innovation points
 
 **Slide 6: Challenges & Learning**
+
 - Technical challenges
 - Solutions implemented
 - Key learnings
 
 **Slide 7: Future Vision**
+
 - Roadmap
 - Potential impact
 - Call to action
@@ -363,6 +398,7 @@ The Solana Notes dApp is built with a modern architecture focusing on performanc
 ## Evaluation Criteria
 
 ### Technical Implementation (40%)
+
 - Code quality and organization
 - Feature completeness
 - Performance optimization
@@ -370,6 +406,7 @@ The Solana Notes dApp is built with a modern architecture focusing on performanc
 - Error handling
 
 ### User Experience (25%)
+
 - Interface design
 - Responsiveness
 - Loading states
@@ -377,18 +414,21 @@ The Solana Notes dApp is built with a modern architecture focusing on performanc
 - Accessibility
 
 ### Innovation (15%)
+
 - Advanced features
 - Creative solutions
 - Technical excellence
 - Problem-solving
 
 ### Documentation (10%)
+
 - Code documentation
 - README quality
 - API documentation
 - Deployment guide
 
 ### Presentation (10%)
+
 - Clear communication
 - Demo effectiveness
 - Technical knowledge
@@ -397,24 +437,28 @@ The Solana Notes dApp is built with a modern architecture focusing on performanc
 ## Submission Requirements
 
 1. **GitHub Repository**
+
    - Public repository
    - Clean commit history
    - Proper branching
    - Issues/PR usage
 
 2. **Live Demo**
+
    - Deployed application
    - Demo credentials
    - Test wallet setup
    - Sample data
 
 3. **Documentation**
+
    - README.md
    - CONTRIBUTING.md
    - Technical docs
    - API documentation
 
 4. **Video Demo**
+
    - 5-minute walkthrough
    - Feature highlights
    - Technical explanation
@@ -429,24 +473,28 @@ The Solana Notes dApp is built with a modern architecture focusing on performanc
 ## Final Week Schedule
 
 ### Monday-Tuesday: Final Implementation
+
 - Complete remaining features
 - Fix critical bugs
 - Performance optimization
 - Security audit
 
 ### Wednesday: Documentation & Testing
+
 - Write documentation
 - Record video demo
 - Prepare presentation
 - Final testing
 
 ### Thursday: Deployment & Polish
+
 - Deploy to production
 - Final UI polish
 - Performance testing
 - Backup preparations
 
 ### Friday: Presentations
+
 - Project presentations
 - Peer reviews
 - Instructor feedback
@@ -455,17 +503,20 @@ The Solana Notes dApp is built with a modern architecture focusing on performanc
 ## Resources for Final Week
 
 ### Presentation Tools
+
 - [Pitch](https://pitch.com/) - Presentation software
 - [Excalidraw](https://excalidraw.com/) - Architecture diagrams
 - [Carbon](https://carbon.now.sh/) - Code screenshots
 - [Loom](https://www.loom.com/) - Video recording
 
 ### Performance Testing
+
 - [Lighthouse CI](https://github.com/GoogleChrome/lighthouse-ci)
 - [WebPageTest](https://www.webpagetest.org/)
 - [Bundlephobia](https://bundlephobia.com/)
 
 ### Documentation
+
 - [Docusaurus](https://docusaurus.io/) - Documentation site
 - [Swagger](https://swagger.io/) - API documentation
 - [Mermaid](https://mermaid-js.github.io/) - Diagrams in markdown
@@ -473,21 +524,25 @@ The Solana Notes dApp is built with a modern architecture focusing on performanc
 ## Success Tips
 
 1. **Prioritize Core Features**
+
    - Ensure all required features work perfectly
    - Polish before adding new features
    - Test thoroughly
 
 2. **Practice Your Demo**
+
    - Rehearse multiple times
    - Prepare for failures
    - Have backup plans
 
 3. **Tell a Story**
+
    - Connect features to user needs
    - Show real-world applications
    - Highlight innovations
 
 4. **Be Professional**
+
    - Clean code and UI
    - Proper error handling
    - Comprehensive documentation
@@ -512,18 +567,21 @@ The goal is not just to build an application, but to demonstrate the ability to 
 ## After the Course
 
 ### Continue Learning
+
 - Join Solana hackathons
 - Contribute to open source
 - Build more dApps
 - Share your knowledge
 
 ### Career Opportunities
+
 - Solana developer positions
 - Web3 startups
 - Freelance opportunities
 - Developer relations
 
 ### Stay Connected
+
 - Course alumni network
 - Solana developer community
 - Regular meetups

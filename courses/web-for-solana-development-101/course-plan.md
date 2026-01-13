@@ -4,7 +4,7 @@
 
 This comprehensive course provides a foundation in building decentralized application (dApp) frontends on the Solana blockchain using modern web technologies.
 
-Learners will master Solana web development through the emerging `gill` library, a lightweight, modern alternative to traditional Web3.js—while building practical interfaces that connect to the Solana network.
+Learners will master Solana web development through framework-kit (`@solana/client` + `@solana/react-hooks`), a modern, Wallet Standard-first approach to building Solana applications—while building practical interfaces that connect to the Solana network.
 
 The curriculum emphasizes modern JavaScript/TypeScript patterns and how Solana's unique architecture enables high-performance blockchain applications.
 
@@ -14,19 +14,19 @@ To solidify these concepts, the course culminates in building a full-stack note-
 
 - Build production-ready dApps using the `@coral-xyz/anchor` client library for program interactions.
 
-- Construct, sign, and send Solana transactions using `gill`'s modern API.
+- Construct, sign, and send Solana transactions using framework-kit's modern API.
 
 - Create responsive, accessible web interfaces following Web3 UX best practices
 
 - Deploy and interact with Anchor programs across different Solana clusters.
 
-- Implement wallet integration using `@solana/wallet-adapter-react` and create custom UI components with Tailwind CSS.
+- Implement wallet integration using `@solana/react-hooks` with Wallet Standard and create custom UI components with Tailwind CSS.
 
 - Implement robust error handling and transaction confirmation strategies
 
 - Master Solana's web development ecosystem: RPC connections, transaction lifecycle, and account model.
 
-- Set up and configure a modern Solana development environment with Node.js, TypeScript, and the `gill` library.
+- Set up and configure a modern Solana development environment with Node.js, TypeScript, and framework-kit (`@solana/client`).
 
 - Understand the Interface Definition Language (IDL) pattern for type-safe program interactions
 
@@ -54,9 +54,9 @@ The course will cover the following key areas, culminating in the final project:
 
 - Setting up the development environment with Node.js, npm/yarn, and Solana CLI tools.
 
-- Introduction to `Gill` library as a modern alternative to `Web3.js`.
+- Introduction to framework-kit (`@solana/client` + `@solana/react-hooks`) as the modern approach to Solana web development.
 
-- Core concepts: `SolanaClient`, RPC methods, and transaction builders.
+- Core concepts: `createClient()`, RPC methods, and transaction message APIs.
 
 - Solana fundamentals for frontend developers: account model, PDAs, transaction structure.
 
@@ -64,9 +64,9 @@ The course will cover the following key areas, culminating in the final project:
 
 ### 2. Wallet Integration and User Authentication
 
-- Modern wallet adapter implementation with `@solana/wallet-adapter-react`
+- Modern Wallet Standard-first wallet integration with `@solana/react-hooks`
 
-- Creating custom wallet UI with `@solana/wallet-adapter-react-ui` and Tailwind CSS
+- Creating custom wallet UI with `SolanaProvider` and Tailwind CSS
 
 - Multi-wallet support (Phantom, Solflare, Backpack)
 
@@ -76,19 +76,19 @@ The course will cover the following key areas, culminating in the final project:
 
 - **Reference Implementation:** wallet-ui examples showcase modern patterns for wallet integration
 
-### 3. On-Chain Interactions with Gill
+### 3. On-Chain Interactions with Framework-Kit
 
 - Basic RPC operations: fetching balances, querying token accounts.
 
-- Subscribing to account changes with `rpcSubscriptions`.
+- Subscribing to account changes with Kit watchers and abort handles.
 
-- Building transfers with `gill`'s transaction builders.
+- Building transfers with Kit's transaction message APIs.
 
 - Transaction simulation, fee estimation, and confirmation strategies.
 
 - Implementing real-time updates in the UI.
 
-- **Reference Examples:** wallet-ui demonstrates `gill` usage patterns in Next.js and React apps
+- **Reference Examples:** framework-kit demonstrates usage patterns in Next.js and React apps
 
 ### 4. Anchor Client Integration
 
@@ -128,7 +128,7 @@ The course will cover the following key areas, culminating in the final project:
 
 ## Target Audience
 
-This course is ideal for web developers seeking to transition into blockchain development or expand their skills to include Web3 technologies. 
+This course is ideal for web developers seeking to transition into blockchain development or expand their skills to include Web3 technologies.
 
 It's perfect for those with JavaScript/React experience who want to build production-ready Solana applications. The hands-on approach ensures practical skills that are immediately applicable in the job market.
 
@@ -139,11 +139,11 @@ It's perfect for those with JavaScript/React experience who want to build produc
 
 ### Foundation Assignments
 
-1. **Environment Setup:** Configure development environment and run first gill program.
+1. **Environment Setup:** Configure development environment and run first framework-kit program.
 
 2. **Wallet Integration:** Build custom wallet connection UI with persistence.
 
-3. **RPC Explorer:** Create account explorer using gill RPC methods.
+3. **RPC Explorer:** Create account explorer using framework-kit RPC methods.
 
 ### Interaction Assignments
 
@@ -161,7 +161,6 @@ It's perfect for those with JavaScript/React experience who want to build produc
 
 3. **Account Monitor:** Real-time program account updates.
 
-
 ### Advanced Features
 
 1. **Performance Optimization:** Implement code splitting and lazy loading.
@@ -177,7 +176,8 @@ It's perfect for those with JavaScript/React experience who want to build produc
 ### Recommended Readings
 
 - [Solana Cookbook](https://solanacookbook.com/) - Official recipes and patterns
-- [Gill Library Documentation](https://github.com/solana-foundation/gill)
+- [Framework-Kit Repository](https://github.com/solana-foundation/framework-kit) - Modern Solana React development
+- [@solana/kit Documentation](https://solana.com/docs/clients/kit) - Kit SDK reference
 - [Anchor Book](https://book.anchor-lang.com/) - Complete Anchor guide
 
 ### Additional Resources
@@ -192,7 +192,8 @@ It's perfect for those with JavaScript/React experience who want to build produc
 ### Core Documentation
 
 - [Solana Cookbook](https://solanacookbook.com/) - Official recipes and patterns
-- [`gill` library documentation](https://github.com/solana-foundation/gill) - GitHub repository with examples
+- [Framework-Kit Repository](https://github.com/solana-foundation/framework-kit) - @solana/client + @solana/react-hooks
+- [@solana/kit Documentation](https://solana.com/docs/clients/kit) - Modern SDK reference
 - [@coral-xyz/anchor TypeScript docs](https://www.anchor-lang.com/docs/clients/typescript) - Official client documentation
 - [Solana RPC API Documentation](https://docs.solana.com/api/http) - For advanced queries
 
