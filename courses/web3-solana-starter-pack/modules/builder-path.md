@@ -24,18 +24,18 @@ Bookmark: [Quick Start Guide](https://solana.com/docs/intro/quick-start), [Solan
 **Step 2 – On-chain moves**  
 
 - [Request SOL airdrop on Devnet](https://solana.com/developers/cookbook/development/test-sol)  
-- [Create and send an SPL token](https://solana.com/developers/cookbook/tokens)  
+- [SPL token cookbook recipes (create, mint, transfer)](https://solana.com/developers/cookbook/tokens)  
 - [Inspect in Explorer](https://explorer.solana.com?cluster=devnet)  
 
 **Step 3 – Your first contract**  
 
-- [Anchor counter example](https://book.anchor-lang.com/)  
+- [The Anchor book — build your first Anchor program](https://book.anchor-lang.com/)  
 - [Deploy to devnet](https://solana.com/developers/cookbook/programs/deploy)  
-- [Test with a client script](https://solana.com/developers/cookbook/development/connect-environment)  
+- [Connect your dev environment, then run your first client script](https://solana.com/developers/cookbook/development/connect-environment)  
 
 **Step 4 – NFTs as keys**  
 
-- [Mint an NFT on devnet (Metaplex guide)](https://developers.metaplex.com/token-metadata)  
+- [Metaplex Token Metadata — docs for minting NFTs](https://developers.metaplex.com/token-metadata)  
 - [Gate a page with NFT ownership](https://developers.metaplex.com/guides/nft-gating)  
 
 **Step 5 – Front end**  

@@ -52,7 +52,7 @@
 # Cargo.toml
 [dev-dependencies]
 litesvm = "0.16"
-anchor-lang = { version = "1.2", features = ["dev"] }
+anchor-lang = "1.2"
 solana-sdk = "3.0"
 tokio = { version = "1.0", features = ["macros"] }
 ```

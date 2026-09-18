@@ -66,7 +66,7 @@ The course will cover the following key areas, culminating in the final project:
 
 - Modern Wallet Standard-first wallet integration with kit signer plugins
 
-- Creating custom wallet UI with `SolanaProvider` and Tailwind CSS
+- Creating custom wallet UI with `ClientProvider` (`@solana/react`), wallet hooks from `@solana/kit-plugin-wallet/react`, and Tailwind CSS
 
 - Multi-wallet support (Phantom, Solflare, Backpack)
 
@@ -74,7 +74,7 @@ The course will cover the following key areas, culminating in the final project:
 
 - Implementing transaction signing flows and wallet-aware React components
 
-- **Reference Implementation:** wallet-ui examples showcase modern patterns for wallet integration
+- **Reference Implementation:** `@solana/react` + `@solana/kit-plugin-wallet` examples showcase modern patterns for wallet integration
 
 ### 3. On-Chain Interactions with Kit Plugins
 

@@ -42,15 +42,19 @@ Learning outcomes for this week include:
 
 2. **useAnchorProgram Hook Implementation:**
 
-   - Use kit signer plugins to get wallet functions
-   - Create Solana client using `createClient()` for RPC connection
-   - Implement `useMemo` for program instance that:
-     - Returns null if no wallet connected
-     - Creates `Connection` from client endpoint
-     - Constructs wallet object with signing functions
-     - Initializes `AnchorProvider` with connection and wallet
-     - Sets provider globally with `setProvider`
-     - Creates and returns `Program` instance with IDL and address
+   Choose the integration path based on the program's client tooling:
+
+   **Preferred — Codama-generated Kit client (no AnchorProvider):**
+   - Generate a Codama client from the program IDL (Codama-first codegen)
+   - Consume it with the app's kit plugin client — instructions (`get{Name}InstructionAsync()`), account fetchers (`fetch{Account}()`), and PDA helpers (`find{Name}Pda()`) compose directly with `useClient<AppClient>()`
+   - Returns null-safe hooks when no wallet is connected
+
+   **Alternative — `@coral-xyz/anchor` compat boundary:**
+   - Note the boundary explicitly: `AnchorProvider` expects web3.js types (`Connection` + wallet adapter), not kit plugin client objects
+   - Create a dedicated web3.js `Connection` pointed at the same RPC endpoint as the kit client
+   - Bridge the connected kit wallet into a web3.js-compatible wallet via `@solana/web3-compat`
+   - Initialize `AnchorProvider` with that connection/wallet pair and register it with `setProvider`
+   - Create and return the `Program` instance with IDL and address, memoized with `useMemo`
 
 3. **IDLExplorer Component:**
    - Build visual IDL explorer that displays:
@@ -68,7 +72,7 @@ Learning outcomes for this week include:
 
 - IDL as contract ABI
 - Type generation benefits
-- Provider setup with wallet
+- Codama clients vs the Anchor/web3.js compat boundary
 - Program instantiation
 - Version compatibility
 

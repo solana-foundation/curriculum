@@ -205,7 +205,7 @@ Learning outcomes for this week include:
 
 **Integration Points:**
 
-- Connect wallet-ui hooks for wallet state
+- Connect kit wallet hooks (`@solana/kit-plugin-wallet/react`) for wallet state
 - Use Anchor program hook
 - Access auth store actions
 

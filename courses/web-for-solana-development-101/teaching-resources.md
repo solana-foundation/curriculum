@@ -40,14 +40,14 @@
   [Docs mirror](https://solana.com/docs/programs/examples)  
   Official examples with web-client implementations, maintained by Solana Foundation.
 
-- **[dApp Scaffold](https://github.com/solana-labs/dapp-scaffold)**  
-  Complete scaffolding for Solana dApps, including wallet integration and transaction examples.
+- **[dApp Scaffold (archived, legacy)](https://github.com/solana-labs/dapp-scaffold)**  
+  Legacy scaffolding for Solana dApps. Reference only — new projects should use `create-solana-dapp`.
 
 - **[Next.js Solana Starter Kit](https://github.com/aeminium-labs/nextjs-solana-starter-kit)**  
-  Full-stack template with TypeScript, wallet-adapter setup, and UI components.
+  Full-stack template with TypeScript and UI components.
 
-- **[Solana Wallet Adapter + Shadcn Components](https://github.com/luigiremor/solana-wallet-adapter-base-ui-shadcn)**  
-  Modern UI components using shadcn/ui for customizable wallet-connection interfaces.
+- **[Wallet Adapter + Shadcn Components (legacy)](https://github.com/luigiremor/solana-wallet-adapter-base-ui-shadcn)**  
+  UI components using shadcn/ui for wallet-connection interfaces. Wallet Adapter is legacy — new apps should use Wallet Standard discovery via `@solana/kit-plugin-wallet`.
 
 ## Security and Best Practices
 
@@ -142,7 +142,8 @@
 
 ## Documentation and Reference Tools
 
-- **[@solana/wallet-adapter Docs](https://github.com/anza-xyz/wallet-adapter)**
+- **[@solana/wallet-adapter Docs (legacy)](https://github.com/anza-xyz/wallet-adapter)**
+  Legacy wallet adapter framework. Reference only — Wallet Standard discovery via `@solana/kit-plugin-wallet` covers modern wallets.
 - **[@coral-xyz/anchor TypeScript Client](https://www.anchor-lang.com/docs/clients/typescript)**
 - **[Solana Web3.js Documentation (legacy)](https://github.com/solana-foundation/solana-web3.js)**
   Reference for the legacy `@solana/web3.js` SDK. Keep for reading legacy codebases; new code should use `@solana/kit` with kit plugins.
