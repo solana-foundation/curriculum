@@ -1,18 +1,20 @@
 # Web for Solana Development 101: Teaching Resources
 
+> **Stack note:** This course uses `@solana/kit` with kit plugin clients (`createClient().use(...)`). Framework-kit (`@solana/client` + `@solana/react-hooks`) is **deprecated** and has been removed from all course materials — update any legacy facilitator slides or examples accordingly.
+
 ## Primary Learning Materials
 
 - **[Official Solana Documentation](https://solana.com/docs)**  
   The authoritative source for Solana development. Essential for understanding core concepts, account model, and transaction structure. Continuously updated with new features.
 
-- **[Framework-Kit Repository](https://github.com/solana-foundation/framework-kit)**
-  Modern Solana React development with `@solana/client` and `@solana/react-hooks`. Wallet Standard-first approach with comprehensive hooks and patterns for dApp development.
+- **[Solana Dev Skill — solana-foundation/solana-dev-skill](https://github.com/solana-foundation/solana-dev-skill/tree/main/skills/solana-dev)**
+  Modern Solana client patterns with `@solana/kit` and `@solana/kit-plugin-*` packages. Plugin composition via `createClient().use(...)` with conventions for dApp development.
 
-- **[@solana/kit Documentation](https://solana.com/docs/clients/kit)**
-  The modern Solana SDK (v5.x) with Kit-native types, transaction message APIs, and functional composition patterns.
+- **[@solana/kit Documentation](https://solana.com/docs/clients/official/javascript)**
+  The modern Solana SDK (v8.x) with Kit-native types, transaction message APIs, plugin client architecture, and functional composition patterns.
 
 - **[Solana Cookbook](https://solanacookbook.com/)**  
-  Copy-paste solutions for common Solana development patterns. Perfect for quick reference during class exercises. Covers both Web3.js and modern approaches.
+  Copy-paste solutions for common Solana development patterns. Perfect for quick reference during class exercises. Prefer the modern `@solana/kit` recipes.
 
 - **[Anchor Book](https://book.anchor-lang.com/)**  
   Complete guide to the Anchor framework. Critical for understanding IDL generation and client-side interactions. Updated with each Anchor release.
@@ -142,7 +144,8 @@
 
 - **[@solana/wallet-adapter Docs](https://github.com/anza-xyz/wallet-adapter)**
 - **[@coral-xyz/anchor TypeScript Client](https://www.anchor-lang.com/docs/clients/typescript)**
-- **[Solana Web3.js Documentation](https://solana.com/docs/clients/javascript)**
+- **[Solana Web3.js Documentation (legacy)](https://github.com/solana-foundation/solana-web3.js)**
+  Reference for the legacy `@solana/web3.js` SDK. Keep for reading legacy codebases; new code should use `@solana/kit` with kit plugins.
 
 ## Deployment and Production Resources
 

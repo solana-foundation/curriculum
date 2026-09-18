@@ -4,7 +4,7 @@
 
 This comprehensive course provides a foundation in building decentralized application (dApp) frontends on the Solana blockchain using modern web technologies.
 
-Learners will master Solana web development through framework-kit (`@solana/client` + `@solana/react-hooks`), a modern, Wallet Standard-first approach to building Solana applications—while building practical interfaces that connect to the Solana network.
+Learners will master Solana web development through `@solana/kit` and the kit plugin architecture (`@solana/kit-plugin-rpc`, `@solana/kit-plugin-signer`), the modern, Wallet Standard-first approach to building Solana applications—while building practical interfaces that connect to the Solana network.
 
 The curriculum emphasizes modern JavaScript/TypeScript patterns and how Solana's unique architecture enables high-performance blockchain applications.
 
@@ -14,19 +14,19 @@ To solidify these concepts, the course culminates in building a full-stack note-
 
 - Build production-ready dApps using the `@coral-xyz/anchor` client library for program interactions.
 
-- Construct, sign, and send Solana transactions using framework-kit's modern API.
+- Construct, sign, and send Solana transactions using kit plugin clients and Kit's modern API.
 
 - Create responsive, accessible web interfaces following Web3 UX best practices
 
 - Deploy and interact with Anchor programs across different Solana clusters.
 
-- Implement wallet integration using `@solana/react-hooks` with Wallet Standard and create custom UI components with Tailwind CSS.
+- Implement wallet integration using kit signer plugins with Wallet Standard and create custom UI components with Tailwind CSS.
 
 - Implement robust error handling and transaction confirmation strategies
 
 - Master Solana's web development ecosystem: RPC connections, transaction lifecycle, and account model.
 
-- Set up and configure a modern Solana development environment with Node.js, TypeScript, and framework-kit (`@solana/client`).
+- Set up and configure a modern Solana development environment with Node.js, TypeScript, `@solana/kit`, and kit plugins.
 
 - Understand the Interface Definition Language (IDL) pattern for type-safe program interactions
 
@@ -54,7 +54,7 @@ The course will cover the following key areas, culminating in the final project:
 
 - Setting up the development environment with Node.js, npm/yarn, and Solana CLI tools.
 
-- Introduction to framework-kit (`@solana/client` + `@solana/react-hooks`) as the modern approach to Solana web development.
+- Introduction to `@solana/kit` and kit plugins (`createClient().use(...)`) as the modern approach to Solana web development.
 
 - Core concepts: `createClient()`, RPC methods, and transaction message APIs.
 
@@ -64,7 +64,7 @@ The course will cover the following key areas, culminating in the final project:
 
 ### 2. Wallet Integration and User Authentication
 
-- Modern Wallet Standard-first wallet integration with `@solana/react-hooks`
+- Modern Wallet Standard-first wallet integration with kit signer plugins
 
 - Creating custom wallet UI with `SolanaProvider` and Tailwind CSS
 
@@ -76,7 +76,7 @@ The course will cover the following key areas, culminating in the final project:
 
 - **Reference Implementation:** wallet-ui examples showcase modern patterns for wallet integration
 
-### 3. On-Chain Interactions with Framework-Kit
+### 3. On-Chain Interactions with Kit Plugins
 
 - Basic RPC operations: fetching balances, querying token accounts.
 
@@ -88,7 +88,7 @@ The course will cover the following key areas, culminating in the final project:
 
 - Implementing real-time updates in the UI.
 
-- **Reference Examples:** framework-kit demonstrates usage patterns in Next.js and React apps
+- **Reference Examples:** kit plugin clients demonstrate usage patterns in Next.js and React apps
 
 ### 4. Anchor Client Integration
 
@@ -139,11 +139,11 @@ It's perfect for those with JavaScript/React experience who want to build produc
 
 ### Foundation Assignments
 
-1. **Environment Setup:** Configure development environment and run first framework-kit program.
+1. **Environment Setup:** Configure development environment and run first kit plugin client program.
 
 2. **Wallet Integration:** Build custom wallet connection UI with persistence.
 
-3. **RPC Explorer:** Create account explorer using framework-kit RPC methods.
+3. **RPC Explorer:** Create account explorer using RPC plugin methods.
 
 ### Interaction Assignments
 
@@ -176,8 +176,8 @@ It's perfect for those with JavaScript/React experience who want to build produc
 ### Recommended Readings
 
 - [Solana Cookbook](https://solanacookbook.com/) - Official recipes and patterns
-- [Framework-Kit Repository](https://github.com/solana-foundation/framework-kit) - Modern Solana React development
-- [@solana/kit Documentation](https://solana.com/docs/clients/kit) - Kit SDK reference
+- [Solana Dev Skill — solana-foundation/solana-dev-skill](https://github.com/solana-foundation/solana-dev-skill/tree/main/skills/solana-dev) - Plugin client patterns and conventions
+- [@solana/kit Documentation](https://solana.com/docs/clients/official/javascript) - Kit SDK reference
 - [Anchor Book](https://book.anchor-lang.com/) - Complete Anchor guide
 
 ### Additional Resources
@@ -192,8 +192,8 @@ It's perfect for those with JavaScript/React experience who want to build produc
 ### Core Documentation
 
 - [Solana Cookbook](https://solanacookbook.com/) - Official recipes and patterns
-- [Framework-Kit Repository](https://github.com/solana-foundation/framework-kit) - @solana/client + @solana/react-hooks
-- [@solana/kit Documentation](https://solana.com/docs/clients/kit) - Modern SDK reference
+- [Solana Dev Skill — solana-foundation/solana-dev-skill](https://github.com/solana-foundation/solana-dev-skill/tree/main/skills/solana-dev) - @solana/kit + @solana/kit-plugin-*
+- [@solana/kit Documentation](https://solana.com/docs/clients/official/javascript) - Modern SDK reference
 - [@coral-xyz/anchor TypeScript docs](https://www.anchor-lang.com/docs/clients/typescript) - Official client documentation
 - [Solana RPC API Documentation](https://docs.solana.com/api/http) - For advanced queries
 
@@ -202,7 +202,7 @@ It's perfect for those with JavaScript/React experience who want to build produc
 - [Solana Playground](https://beta.solpg.io/) - Browser-based IDE for quick prototyping
 - [Anchor CLI](https://www.anchor-lang.com/docs/installation) - For program deployment and testing
 - [Solana Explorer](https://explorer.solana.com/) - For transaction debugging
-- [create-solana-dapp](https://github.com/solana-labs/create-solana-dapp) - Official scaffolding tool
+- [create-solana-dapp](https://github.com/solana-foundation/create-solana-dapp) - Official scaffolding tool
 
 ### Community and Learning
 

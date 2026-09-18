@@ -2,14 +2,14 @@
 
 ## Overview
 
-This week introduces integrating Anchor programs in web applications. Topics include working with Anchor IDLs, generating TypeScript types, and building type-safe interactions with on-chain programs using the `@coral-xyz/anchor` client library alongside framework-kit.
+This week introduces integrating Anchor programs in web applications. Topics include working with Anchor IDLs, generating TypeScript types, and building type-safe interactions with on-chain programs using the `@coral-xyz/anchor` client library alongside kit plugin clients.
 
 ## Learning Objectives
 
 Learning outcomes for this week include:
 
 1. Understand Anchor IDL structure and purpose
-2. Set up Anchor client with framework-kit
+2. Set up Anchor client with kit plugin clients
 3. Generate and use TypeScript types from IDLs
 4. Call program instructions with type safety
 5. Handle program errors gracefully
@@ -42,7 +42,7 @@ Learning outcomes for this week include:
 
 2. **useAnchorProgram Hook Implementation:**
 
-   - Use `@solana/react-hooks` to get wallet functions
+   - Use kit signer plugins to get wallet functions
    - Create Solana client using `createClient()` for RPC connection
    - Implement `useMemo` for program instance that:
      - Returns null if no wallet connected
@@ -247,7 +247,7 @@ Learning outcomes for this week include:
 
 - [Anchor Book - TypeScript Client](https://www.anchor-lang.com/docs/clients/typescript)
 - [IDL Specification](https://docs.rs/anchor-lang-idl-spec)
-- [Anchor Errors Reference](https://docs.rs/anchor-lang/latest/anchor_lang/error/enum.ErrorCode.html)
+- [Anchor Errors Reference](https://docs.rs/anchor-lang)
 
 ### Practice Exercises
 

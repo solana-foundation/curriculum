@@ -23,25 +23,25 @@ Bookmark: [Quick Start Guide](https://solana.com/docs/intro/quick-start), [Solan
 
 **Step 2 – On-chain moves**  
 
-- [Request SOL airdrop on Devnet](https://solana.com/docs/intro/devnet)  
+- [Request SOL airdrop on Devnet](https://solana.com/developers/cookbook/development/test-sol)  
 - [Create and send an SPL token](https://solana.com/developers/cookbook/tokens)  
 - [Inspect in Explorer](https://explorer.solana.com?cluster=devnet)  
 
 **Step 3 – Your first contract**  
 
-- [Anchor counter example](https://book.anchor-lang.com/chapter_3/the_counter_program.html)  
+- [Anchor counter example](https://book.anchor-lang.com/)  
 - [Deploy to devnet](https://solana.com/developers/cookbook/programs/deploy)  
-- [Test with a client script](https://solana.com/developers/cookbook/clients/javascript)  
+- [Test with a client script](https://solana.com/developers/cookbook/development/connect-environment)  
 
 **Step 4 – NFTs as keys**  
 
-- [Mint an NFT on devnet (Metaplex guide)](https://developers.metaplex.com/token-metadata/minting)  
+- [Mint an NFT on devnet (Metaplex guide)](https://developers.metaplex.com/token-metadata)  
 - [Gate a page with NFT ownership](https://developers.metaplex.com/guides/nft-gating)  
 
 **Step 5 – Front end**  
 
-- [Use Solana Wallet Adapter](https://solana-labs.github.io/wallet-adapter/) to connect wallets  
-- [Read token balances with Web3.js](https://solana.com/developers/cookbook/clients/javascript#get-token-balance)  
+- [Kit plugin clients with @solana/kit](https://github.com/solana-foundation/solana-dev-skill/tree/main/skills/solana-dev) to connect wallets  
+- [Read token balances with @solana/kit](https://solanacookbook.com/references/accounts.html#how-to-get-token-balance)  
 - Call your program from a minimal React app  
 
 **Step 6 – Ship a demo**  

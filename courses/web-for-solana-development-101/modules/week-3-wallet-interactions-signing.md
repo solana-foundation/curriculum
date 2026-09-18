@@ -208,7 +208,6 @@ Create a complete transaction approval flow that includes:
 
 ### Supplementary Materials
 
-- [Building Secure Web3 Authentication](https://www.quicknode.com/guides/ethereum-development/dapps/how-to-build-a-web3-login)
 - [Transaction UX Best Practices](https://solana.com/developers/guides/advanced/introduction-to-durable-nonces)
 
 ### Practice Exercises
@@ -285,11 +284,11 @@ Create a transaction builder with these features:
 
 ## Looking Ahead
 
-Next week covers framework-kit's RPC methods in depth, including:
+Next week covers RPC operations via kit plugins in depth, including:
 
 - Advanced RPC operations
 - Token account queries
 - WebSocket subscriptions with Kit watchers
 - Performance optimization techniques
 
-> **Prerequisite:** Review the [framework-kit documentation](https://github.com/solana-foundation/framework-kit).
+> **Prerequisite:** Review the [kit plugin patterns](https://github.com/solana-foundation/solana-dev-skill/tree/main/skills/solana-dev).

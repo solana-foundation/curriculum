@@ -232,14 +232,14 @@ Create a comprehensive transaction management interface that includes:
 
 ### Required Reading
 
-- [Framework-Kit Repository](https://github.com/solana-foundation/framework-kit)
-- [@solana/kit Transaction Documentation](https://solana.com/docs/clients/kit)
+- [Solana Dev Skill — solana-foundation/solana-dev-skill](https://github.com/solana-foundation/solana-dev-skill/tree/main/skills/solana-dev)
+- [@solana/kit Transaction Documentation](https://solana.com/docs/clients/official/javascript)
 - [Transaction Confirmation Best Practices](https://solana.com/docs/core/transactions/confirmation)
 - [Compute Budget Documentation](https://docs.solana.com/developing/programming-model/runtime#compute-budget)
 
 ### Supplementary Materials
 
-- [Priority Fees Explained](https://www.helius.dev/blog/priority-fees-understanding-solanas-transaction-fees)
+- [Priority Fees Explained](https://www.helius.dev/docs/sending-transactions/optimizing-transactions)
 - [Versioned Transactions Guide](https://solana.com/docs/core/transactions/versions)
 
 ### Practice Exercises
