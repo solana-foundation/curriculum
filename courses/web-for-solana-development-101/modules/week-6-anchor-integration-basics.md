@@ -291,7 +291,7 @@ Learning outcomes for this week include:
 
 1. What information does an Anchor IDL contain?
 2. How does type generation improve developer experience?
-3. What’s the difference between `.rpc()` and `.transaction()`?
+3. What’s the difference between sending an instruction directly and building a standalone transaction?
 4. How should custom program errors be handled?
 5. Why is PDA derivation consistency important?
 
