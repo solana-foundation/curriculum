@@ -2,7 +2,7 @@
 
 ## Overview
 
-This final week is dedicated to completing, polishing, and presenting a full-featured note-taking dApp. Topics include finalizing implementations, preparing comprehensive documentation, and presenting projects demonstrating mastery of Solana web development with framework-kit (`@solana/client` + `@solana/react-hooks`).
+This final week is dedicated to completing, polishing, and presenting a full-featured note-taking dApp. Topics include finalizing implementations, preparing comprehensive documentation, and presenting projects demonstrating mastery of Solana web development with `@solana/kit` and kit plugins.
 
 ## Project Requirements
 
@@ -10,7 +10,7 @@ This final week is dedicated to completing, polishing, and presenting a full-fea
 
 1. **Authentication & User Management**
 
-   - Wallet-based authentication using `@solana/react-hooks`
+   - Wallet-based authentication using kit signer plugins
    - User profile creation and management
    - Session persistence
    - Multi-wallet support via Wallet Standard
@@ -169,7 +169,7 @@ solana-notes-app/
 ```markdown
 # Solana Notes dApp
 
-A full-featured note-taking application built on Solana using framework-kit (@solana/client + @solana/react-hooks).
+A full-featured note-taking application built on Solana using @solana/kit and kit plugins.
 
 ## Features
 
@@ -185,7 +185,7 @@ A full-featured note-taking application built on Solana using framework-kit (@so
 
 - **Frontend**: Next.js 14, TypeScript, Tailwind CSS
 - **Blockchain**: Solana, Anchor Framework
-- **Libraries**: @solana/client, @solana/react-hooks, @coral-xyz/anchor
+- **Libraries**: @solana/kit, @solana/kit-plugin-rpc, @solana/kit-plugin-signer, @anchor-lang/core
 - **State**: Zustand, React Query
 - **Deployment**: Vercel
 
@@ -204,7 +204,7 @@ A full-featured note-taking application built on Solana using framework-kit (@so
 
 # Clone repository
 
-git clone https://github.com/yourusername/solana-notes-app
+git clone https://github.com/<your-username>/solana-notes-app
 cd solana-notes-app
 
 # Install dependencies
@@ -225,7 +225,7 @@ pnpm dev
 \`\`\`env
 NEXT_PUBLIC_RPC_ENDPOINT=https://api.devnet.solana.com
 NEXT_PUBLIC_PROGRAM_ID=your_program_id
-NEXT_PUBLIC_IPFS_GATEWAY=https://gateway.pinata.cloud
+NEXT_PUBLIC_IPFS_GATEWAY=https://<your-gateway>.mypinata.cloud
 \`\`\`
 
 ## Architecture
@@ -266,8 +266,8 @@ The Solana Notes dApp is built with a modern architecture focusing on performanc
 ### Blockchain Architecture
 
 - **Program**: Anchor framework for Solana programs
-- **Client**: @solana/client for RPC interactions
-- **Wallet**: @solana/react-hooks with Wallet Standard
+- **Client**: @solana/kit + @solana/kit-plugin-rpc for RPC interactions
+- **Wallet**: kit signer plugins with Wallet Standard
 
 ### Data Flow
 
