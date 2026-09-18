@@ -63,7 +63,7 @@ Learning outcomes for this week include:
    const client = useClient<AppClient>();
 
    const [dataAccount] = await findDataAccountPda({
-     seeds: ['data-account', owner],
+     owner, // PDA seed fields come from the IDL, passed as named fields
    });
    const instruction = await getInitializeInstructionAsync({
      dataAccount,
@@ -72,7 +72,7 @@ Learning outcomes for this week include:
    });
    // The kit wallet client plans, signs, and sends — no legacy provider needed
    const signature = await client.sendTransaction([instruction]);
-   const account = await fetchDataAccount(dataAccount);
+   const account = await fetchDataAccount(client.rpc, dataAccount);
    ```
 
    **Alternative — `@anchor-lang/core` (Anchor 1.x TypeScript client):**
