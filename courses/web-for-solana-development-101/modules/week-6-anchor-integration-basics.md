@@ -49,11 +49,37 @@ Learning outcomes for this week include:
    - Consume it with the app's kit plugin client — instructions (`get{Name}InstructionAsync()`), account fetchers (`fetch{Account}()`), and PDA helpers (`find{Name}Pda()`) compose directly with `useClient<AppClient>()`
    - Returns null-safe hooks when no wallet is connected
 
+   Example of the full flow with a kit plugin client:
+
+   ```ts
+   import { useClient } from '@solana/react';
+   import type { AppClient } from '@/app/providers';
+   import {
+     getInitializeInstructionAsync,
+     findDataAccountPda,
+     fetchDataAccount,
+   } from '@project/clients'; // Codama-generated
+
+   const client = useClient<AppClient>();
+
+   const [dataAccount] = await findDataAccountPda({
+     seeds: ['data-account', owner],
+   });
+   const instruction = await getInitializeInstructionAsync({
+     dataAccount,
+     owner,
+     value,
+   });
+   // The kit wallet client plans, signs, and sends — no legacy provider needed
+   const signature = await client.sendTransaction([instruction]);
+   const account = await fetchDataAccount(dataAccount);
+   ```
+
    **Alternative — `@anchor-lang/core` (Anchor 1.x TypeScript client):**
    - Anchor 1.x renamed the TS package from `@coral-xyz/anchor` to `@anchor-lang/core`; install `@anchor-lang/core`
-   - The 1.x client is designed to work alongside Kit code — do not reach for the legacy `AnchorProvider` + web3.js `Connection` wiring from 0.3x-era `@coral-xyz/anchor` examples
+   - The 1.x client (exports `Program`, `Idl`, `BN` at the package root) is designed to work alongside Kit code — do not reach for the legacy `AnchorProvider` + web3.js `Connection` wiring from 0.3x-era `@coral-xyz/anchor` examples
    - Boundary note: `@solana/web3-compat` converts instructions/addresses and offers a Kit-backed `Connection`, but provides no kit-wallet-to-`AnchorProvider` bridge — mixing legacy `AnchorProvider` with the kit wallet client is not supported
-   - Construct the Anchor program instance from the IDL and address, memoized with `useMemo`, and drive it with the kit wallet client
+   - Construct the IDL-typed program instance from the IDL and program address, memoized with `useMemo`, build instructions from it, and send them through the same kit wallet client shown above (`client.sendTransaction([...])`)
    - Returns null when no wallet is connected
 
 3. **IDLExplorer Component:**
