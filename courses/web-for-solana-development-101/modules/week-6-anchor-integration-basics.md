@@ -126,14 +126,14 @@ Learning outcomes for this week include:
 
 - Check program client availability before proceeding
 - Set loading state appropriately
-- Derive the PDA using the generated helper:
-  - `findDataAccountPda({ seeds: ['data-account', ownerAddress] })` (Codama) or the equivalent PDA derivation from the program instance
+- Derive the PDA using the generated helper (named seed fields from the IDL):
+  - `findDataAccountPda({ owner: ownerAddress })` (Codama) or the equivalent PDA derivation from the program instance
 - Build and send the instruction with the kit wallet client:
   - `getInitializeInstructionAsync({ dataAccount, owner, value }, { programAddress })` (Codama)
   - `await client.sendTransaction([instruction])`
 - After transaction:
   - Log transaction signature
-  - Fetch created account data with `fetchDataAccount()` (Codama) or the program instance getter
+  - Fetch created account data with `fetchDataAccount(client.rpc, dataAccount)` (Codama — fetchers take the RPC client first) or the program instance getter
 - Handle errors with:
   - Codama/Anchor error parsing (`isProgramError` / coded errors)
   - User-friendly messages
