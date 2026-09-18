@@ -12,7 +12,7 @@ To solidify these concepts, the course culminates in building a full-stack note-
 
 ## Learning Objectives
 
-- Build production-ready dApps using the `@coral-xyz/anchor` client library for program interactions.
+- Build production-ready dApps using the Anchor 1.x TypeScript client (`@anchor-lang/core`, renamed from `@coral-xyz/anchor`) and Codama-generated Kit clients for program interactions.
 
 - Construct, sign, and send Solana transactions using kit plugin clients and Kit's modern API.
 
@@ -94,7 +94,7 @@ The course will cover the following key areas, culminating in the final project:
 
 - Understanding Anchor IDLs and type generation.
 
-- Setting up `@coral-xyz/anchor` client library.
+- Setting up the Anchor 1.x TypeScript client (`@anchor-lang/core`) and Codama-generated Kit clients.
 
 - Creating typed `Program` instances and calling program methods.
 
@@ -194,7 +194,7 @@ It's perfect for those with JavaScript/React experience who want to build produc
 - [Solana Cookbook](https://solanacookbook.com/) - Official recipes and patterns
 - [Solana Dev Skill — solana-foundation/solana-dev-skill](https://github.com/solana-foundation/solana-dev-skill/tree/main/skills/solana-dev) - @solana/kit + @solana/kit-plugin-*
 - [@solana/kit Documentation](https://solana.com/docs/clients/official/javascript) - Modern SDK reference
-- [@coral-xyz/anchor TypeScript docs](https://www.anchor-lang.com/docs/clients/typescript) - Official client documentation
+- [Anchor 1.x TypeScript docs (`@anchor-lang/core`)](https://www.anchor-lang.com/docs/clients/typescript) - Official client documentation
 - [Solana RPC API Documentation](https://docs.solana.com/api/http) - For advanced queries
 
 ### Development Tools

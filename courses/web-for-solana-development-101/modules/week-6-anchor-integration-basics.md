@@ -2,7 +2,7 @@
 
 ## Overview
 
-This week introduces integrating Anchor programs in web applications. Topics include working with Anchor IDLs, generating TypeScript types, and building type-safe interactions with on-chain programs using the `@coral-xyz/anchor` client library alongside kit plugin clients.
+This week introduces integrating Anchor programs in web applications. Topics include working with Anchor IDLs, generating TypeScript types, and building type-safe interactions with on-chain programs using the Anchor 1.x TypeScript client (`@anchor-lang/core`, renamed from `@coral-xyz/anchor`) alongside kit plugin clients.
 
 ## Learning Objectives
 
@@ -49,12 +49,12 @@ Learning outcomes for this week include:
    - Consume it with the app's kit plugin client — instructions (`get{Name}InstructionAsync()`), account fetchers (`fetch{Account}()`), and PDA helpers (`find{Name}Pda()`) compose directly with `useClient<AppClient>()`
    - Returns null-safe hooks when no wallet is connected
 
-   **Alternative — `@coral-xyz/anchor` compat boundary:**
-   - Note the boundary explicitly: `AnchorProvider` expects web3.js types (`Connection` + wallet adapter), not kit plugin client objects
-   - Create a dedicated web3.js `Connection` pointed at the same RPC endpoint as the kit client
-   - Bridge the connected kit wallet into a web3.js-compatible wallet via `@solana/web3-compat`
-   - Initialize `AnchorProvider` with that connection/wallet pair and register it with `setProvider`
-   - Create and return the `Program` instance with IDL and address, memoized with `useMemo`
+   **Alternative — `@anchor-lang/core` (Anchor 1.x TypeScript client):**
+   - Anchor 1.x renamed the TS package from `@coral-xyz/anchor` to `@anchor-lang/core`; install `@anchor-lang/core`
+   - The 1.x client is designed to work alongside Kit code — do not reach for the legacy `AnchorProvider` + web3.js `Connection` wiring from 0.3x-era `@coral-xyz/anchor` examples
+   - Boundary note: `@solana/web3-compat` converts instructions/addresses and offers a Kit-backed `Connection`, but provides no kit-wallet-to-`AnchorProvider` bridge — mixing legacy `AnchorProvider` with the kit wallet client is not supported
+   - Construct the Anchor program instance from the IDL and address, memoized with `useMemo`, and drive it with the kit wallet client
+   - Returns null when no wallet is connected
 
 3. **IDLExplorer Component:**
    - Build visual IDL explorer that displays:

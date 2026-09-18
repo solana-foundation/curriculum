@@ -70,7 +70,7 @@ Learning outcomes for this week include:
 3. **Project Setup Steps:**
    - Initialize Next.js with TypeScript and Tailwind
    - Configure app directory structure
-   - Install Solana dependencies (@solana/kit, @solana/kit-plugin-rpc, @solana/kit-plugin-signer, @coral-xyz/anchor)
+   - Install Solana dependencies (@solana/kit, @solana/kit-plugin-rpc, @solana/kit-plugin-signer, @anchor-lang/core)
    - Add UI libraries (tiptap, react-query, react-hook-form)
    - Set up state management (zustand)
    - Configure validation (zod)

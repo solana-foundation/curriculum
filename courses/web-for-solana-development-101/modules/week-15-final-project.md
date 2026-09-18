@@ -185,7 +185,7 @@ A full-featured note-taking application built on Solana using @solana/kit and ki
 
 - **Frontend**: Next.js 14, TypeScript, Tailwind CSS
 - **Blockchain**: Solana, Anchor Framework
-- **Libraries**: @solana/kit, @solana/kit-plugin-rpc, @solana/kit-plugin-signer, @coral-xyz/anchor
+- **Libraries**: @solana/kit, @solana/kit-plugin-rpc, @solana/kit-plugin-signer, @anchor-lang/core
 - **State**: Zustand, React Query
 - **Deployment**: Vercel
 

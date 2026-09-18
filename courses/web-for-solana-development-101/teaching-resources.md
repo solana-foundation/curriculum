@@ -144,7 +144,7 @@
 
 - **[@solana/wallet-adapter Docs (legacy)](https://github.com/anza-xyz/wallet-adapter)**
   Legacy wallet adapter framework. Reference only — Wallet Standard discovery via `@solana/kit-plugin-wallet` covers modern wallets.
-- **[@coral-xyz/anchor TypeScript Client](https://www.anchor-lang.com/docs/clients/typescript)**
+- **[Anchor 1.x TypeScript Client (`@anchor-lang/core`)](https://www.anchor-lang.com/docs/clients/typescript)**
 - **[Solana Web3.js Documentation (legacy)](https://github.com/solana-foundation/solana-web3.js)**
   Reference for the legacy `@solana/web3.js` SDK. Keep for reading legacy codebases; new code should use `@solana/kit` with kit plugins.
 
