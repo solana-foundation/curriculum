@@ -82,57 +82,52 @@ Learning outcomes for this week include:
 
 **Topics Covered:**
 
-- Using program methods namespace
-- Account resolution patterns
-- Passing instruction arguments
-- Transaction options and configuration
-- Handling responses
+- Calling instructions through Codama-generated Kit clients (`get{Name}InstructionAsync()`, `find{Name}Pda()`, `fetch{Account}()`)
+- Calling instructions through `@anchor-lang/core` program instances (IDL-typed)
+- Account resolution and PDA derivation patterns
+- Sending and confirming transactions with the kit wallet client
+- Handling responses and program errors
 
 **Lab Exercise: Program Interaction Implementation**
 
 **Component Setup:**
 
-- Use custom Anchor program hook
+- Use the program client hook from Lesson 1 (Codama client preferred, `@anchor-lang/core` alternative)
 - Manage loading and data states
 - Create input interface for user data
 
 **Initialize Account Function:**
 
-- Check program availability before proceeding
+- Check program client availability before proceeding
 - Set loading state appropriately
-- Generate PDA using:
-  - Seed array with `'data-account'` and user public key
-  - Program ID for derivation
-- Call program instruction using:
-  - `methods` namespace with instruction name
-  - Pass required arguments
-  - Provide `accounts` object
-  - Execute with `.rpc()` method
+- Derive the PDA using the generated helper:
+  - `findDataAccountPda({ seeds: ['data-account', ownerAddress] })` (Codama) or the equivalent PDA derivation from the program instance
+- Build and send the instruction with the kit wallet client:
+  - `getInitializeInstructionAsync({ dataAccount, owner, value }, { programAddress })` (Codama)
+  - `await client.sendTransaction([instruction])`
 - After transaction:
   - Log transaction signature
-  - Fetch created account data
+  - Fetch created account data with `fetchDataAccount()` (Codama) or the program instance getter
 - Handle errors with:
-  - Anchor error parsing
+  - Codama/Anchor error parsing (`isProgramError` / coded errors)
   - User-friendly messages
   - Cleanup in `finally` block
 
 **Update Data Function:**
 
-- Derive PDA same as initialization
-- Use program methods with RPC options:
-  - `skipPreflight`, `commitment`, `maxRetries`
+- Derive the PDA the same as initialization
+- Build the update instruction and send with the kit wallet client, configuring priority fees/commitment via the RPC plugin rather than legacy RPC options
 - Handle errors with a dedicated error handler
 
 **Build Transaction Alternative:**
 
-- Use `.instruction()` to get raw instruction
-- Use `.transaction()` to get full transaction
-- Useful for offline signing or batching
+- Build the instruction object standalone for offline signing or batching
+- Compose multiple program instructions into one `client.sendTransaction([...])` call
 
 **Error Handling Helper:**
 
-- Parse Anchor-specific errors:
-  - Extract error code and message
+- Parse program-specific errors:
+  - Extract error code and message (Codama `{PROGRAM}_ERROR__{NAME}` constants / Anchor error codes)
   - Log and return structured error object
 - Handle unknown errors with fallback messaging
 
@@ -145,9 +140,9 @@ Learning outcomes for this week include:
 
 **Key Concepts:**
 
-- `methods` namespace usage
+- Codama instruction builders vs `@anchor-lang/core` program instances
 - Account resolution and PDA generation
-- Transaction options
+- Transaction sending via kit wallet clients
 - Error handling patterns
 
 ---
@@ -166,26 +161,27 @@ Learning outcomes for this week include:
 
 1. **Type Extraction Setup:**
 
-- Use Anchor utilities:
-  - `IdlTypes`, `IdlAccounts`, `IdlEvents`
-- Create program-specific aliases
+- Derive types from the generated client:
+  - Codama: decoded account and args types from the generated client's codecs
+  - `@anchor-lang/core`: IDL types exported at the package root
+- Create program-specific type aliases
 
 2. **TypeSafeProgramClient Class:**
 
 - **Constructor:**
-  - Accept typed `Program` instance
+  - Accept a typed program client (Codama Kit client or `@anchor-lang/core` program instance)
 - **createUserProfile():**
   - Strongly typed parameters and return value
   - Use TypeScript for argument/account validation
 - **getAllProfiles():**
   - Return array of typed profile accounts
-  - Use `account.all()` with memcmp filter
+  - Use generated `fetchAll{Account}()` fetchers with a discriminator/memcmp filter
 - **subscribeToEvents():**
-  - Register typed event listener using IDL events
+- Register a typed event/account listener via the kit RPC plugin subscriptions
 - **parseError():**
-  - Extract known Anchor errors or fallback
+  - Extract known program errors (`isProgramError` / coded error constants) or fallback
 - **derivePDA():**
-  - Reusable PDA helper returning `PublicKey`
+  - Reusable PDA helper returning a Kit `Address`
 
 3. **Usage Component:**
 
@@ -196,9 +192,9 @@ Learning outcomes for this week include:
 
 **Key Concepts:**
 
-- IDL type extraction
+- Type extraction from generated clients
 - Client wrapper pattern
-- Type-safe method execution
+- Type-safe instruction execution
 - Event typing and subscription
 - Strongly typed error objects
 

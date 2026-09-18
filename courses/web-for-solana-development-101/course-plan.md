@@ -96,7 +96,7 @@ The course will cover the following key areas, culminating in the final project:
 
 - Setting up the Anchor 1.x TypeScript client (`@anchor-lang/core`) and Codama-generated Kit clients.
 
-- Creating typed `Program` instances and calling program methods.
+- Creating typed program clients (Codama Kit clients or `@anchor-lang/core` instances) and calling program instructions.
 
 - Fetching and deserializing account data.
 
@@ -157,7 +157,7 @@ It's perfect for those with JavaScript/React experience who want to build produc
 
 1. **IDL Explorer:** Parse and display Anchor program structure.
 
-2. **Program Interactions:** Call various Anchor program methods.
+2. **Program Interactions:** Call various Anchor program instructions via generated clients.
 
 3. **Account Monitor:** Real-time program account updates.
 
