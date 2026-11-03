@@ -2,7 +2,7 @@
 
 ## Overview
 
-This week explores wallet interactions beyond basic connection. Topics include message signing for authentication, transaction signing patterns, and building secure approval flows. The `wallet-ui` examples demonstrate real-world signing scenarios.
+This week explores wallet interactions beyond basic connection. Topics include message signing for authentication, transaction signing patterns, and building secure approval flows. The kit wallet hooks (`@solana/kit-plugin-wallet/react`) demonstrate real-world signing scenarios.
 
 ## Learning Objectives
 
@@ -30,7 +30,7 @@ Learning outcomes for this week include:
 
 Create a `SignInWithSolana` component that:
 
-- Uses `wallet-ui` hooks to access public key and sign message functionality
+- Uses `useConnectedWallet(client)` and `useSignIn(client)` from `@solana/kit-plugin-wallet/react` to access the wallet account and Sign-In-With-Solana signing
 - Manages authentication state and loading state
 - Constructs a secure message for signing that includes:
   - Application name
@@ -71,7 +71,7 @@ Create a `SignInWithSolana` component that:
 Build a `TransactionPreview` component that:
 
 - Accepts props for transaction instructions and approval/rejection callbacks
-- Uses `wallet-ui` hooks to access client and public key
+- Uses `useClient<AppClient>()` and `useConnectedWallet(client)` to access the typed client and connected wallet account
 - Manages simulation state and loading state
 - Automatically simulates transaction when instructions change
 - Implements transaction simulation that:
@@ -116,7 +116,7 @@ Implement wallet data hooks and dashboard:
 
 1. **`useWalletBalance` Hook**
 
-   - Use React Query with `wallet-ui` hooks
+   - Use React Query (or the `@solana/react/query` adapter) with the typed `useClient<AppClient>()` hook
    - Set query key including public key for proper caching
    - Fetch balance using RPC client
    - Transform response to include both lamports and SOL values
@@ -182,7 +182,7 @@ Create a complete transaction approval flow that includes:
 
 **Requirements:**
 
-- Use `wallet-ui` patterns
+- Use the `ClientProvider` + kit wallet hooks patterns from this week
 - Implement proper error boundaries
 - Add comprehensive loading states
 - Include mobile responsiveness
@@ -208,7 +208,6 @@ Create a complete transaction approval flow that includes:
 
 ### Supplementary Materials
 
-- [Building Secure Web3 Authentication](https://www.quicknode.com/guides/ethereum-development/dapps/how-to-build-a-web3-login)
 - [Transaction UX Best Practices](https://solana.com/developers/guides/advanced/introduction-to-durable-nonces)
 
 ### Practice Exercises
@@ -285,11 +284,11 @@ Create a transaction builder with these features:
 
 ## Looking Ahead
 
-Next week covers framework-kit's RPC methods in depth, including:
+Next week covers RPC operations via kit plugins in depth, including:
 
 - Advanced RPC operations
 - Token account queries
 - WebSocket subscriptions with Kit watchers
 - Performance optimization techniques
 
-> **Prerequisite:** Review the [framework-kit documentation](https://github.com/solana-foundation/framework-kit).
+> **Prerequisite:** Review the [kit plugin patterns](https://github.com/solana-foundation/solana-dev-skill/tree/main/skills/solana-dev).

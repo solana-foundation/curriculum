@@ -46,15 +46,28 @@
 
 ### Installation and Configuration
 
-<!-- UPDATE: version alignment – updated dependency versions to Anchor 0.31.1 and Solana SDK 2.1.0 for October 2025 baseline -->
+<!-- UPDATE: version alignment – updated dependency versions to Anchor 1.2.0, LiteSVM 0.16, and Solana Agave 3.0 baseline; TypeScript-side tests use @solana/kit-plugin-litesvm -->
 
 ```toml
 # Cargo.toml
 [dev-dependencies]
-litesvm = "0.2"
-anchor-lang = { version = "0.31.1", features = ["dev"] }
-solana-sdk = "2.1"
+litesvm = "0.16"
+anchor-lang = "1.2"
+solana-sdk = "3.0"
 tokio = { version = "1.0", features = ["macros"] }
+```
+
+For TypeScript-side tests, use `@solana/kit-plugin-litesvm` with a kit plugin client:
+
+```ts
+import { createClient, lamports } from '@solana/kit';
+import { litesvm } from '@solana/kit-plugin-litesvm';
+import { airdropSigner, generatedSigner } from '@solana/kit-plugin-signer';
+
+const client = await createClient()
+  .use(generatedSigner())
+  .use(litesvm())
+  .use(airdropSigner(lamports(1_000_000_000n)));
 ```
 
 ### Basic Test Structure

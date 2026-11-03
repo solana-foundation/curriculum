@@ -2,14 +2,14 @@
 
 ## Overview
 
-This week introduces integrating Anchor programs in web applications. Topics include working with Anchor IDLs, generating TypeScript types, and building type-safe interactions with on-chain programs using the `@coral-xyz/anchor` client library alongside framework-kit.
+This week introduces integrating Anchor programs in web applications. Topics include working with Anchor IDLs, generating TypeScript types, and building type-safe interactions with on-chain programs using the Anchor 1.x TypeScript client (`@anchor-lang/core`, renamed from `@coral-xyz/anchor`) alongside kit plugin clients.
 
 ## Learning Objectives
 
 Learning outcomes for this week include:
 
 1. Understand Anchor IDL structure and purpose
-2. Set up Anchor client with framework-kit
+2. Set up Anchor client with kit plugin clients
 3. Generate and use TypeScript types from IDLs
 4. Call program instructions with type safety
 5. Handle program errors gracefully
@@ -42,15 +42,45 @@ Learning outcomes for this week include:
 
 2. **useAnchorProgram Hook Implementation:**
 
-   - Use `@solana/react-hooks` to get wallet functions
-   - Create Solana client using `createClient()` for RPC connection
-   - Implement `useMemo` for program instance that:
-     - Returns null if no wallet connected
-     - Creates `Connection` from client endpoint
-     - Constructs wallet object with signing functions
-     - Initializes `AnchorProvider` with connection and wallet
-     - Sets provider globally with `setProvider`
-     - Creates and returns `Program` instance with IDL and address
+   Choose the integration path based on the program's client tooling:
+
+   **Preferred — Codama-generated Kit client (no AnchorProvider):**
+   - Generate a Codama client from the program IDL (Codama-first codegen)
+   - Consume it with the app's kit plugin client — instructions (`get{Name}InstructionAsync()`), account fetchers (`fetch{Account}()`), and PDA helpers (`find{Name}Pda()`) compose directly with `useClient<AppClient>()`
+   - Returns null-safe hooks when no wallet is connected
+
+   Example of the full flow with a kit plugin client:
+
+   ```ts
+   import { useClient } from '@solana/react';
+   import type { AppClient } from '@/app/providers';
+   import {
+     getInitializeInstructionAsync,
+     findDataAccountPda,
+     fetchDataAccount,
+   } from '@project/clients'; // Codama-generated
+
+   const client = useClient<AppClient>();
+
+   const [dataAccount] = await findDataAccountPda({
+     owner, // PDA seed fields come from the IDL, passed as named fields
+   });
+   const instruction = await getInitializeInstructionAsync({
+     dataAccount,
+     owner,
+     value,
+   });
+   // The kit wallet client plans, signs, and sends — no legacy provider needed
+   const signature = await client.sendTransaction([instruction]);
+   const account = await fetchDataAccount(client.rpc, dataAccount);
+   ```
+
+   **Alternative — `@anchor-lang/core` (Anchor 1.x TypeScript client):**
+   - Anchor 1.x renamed the TS package from `@coral-xyz/anchor` to `@anchor-lang/core`; install `@anchor-lang/core`
+   - The 1.x client (exports `Program`, `Idl`, `BN` at the package root) is designed to work alongside Kit code — do not reach for the legacy `AnchorProvider` + web3.js `Connection` wiring from 0.3x-era `@coral-xyz/anchor` examples
+   - Boundary note: `@solana/web3-compat` converts instructions/addresses and offers a Kit-backed `Connection`, but provides no kit-wallet-to-`AnchorProvider` bridge — mixing legacy `AnchorProvider` with the kit wallet client is not supported
+   - Construct the IDL-typed program instance from the IDL and program address, memoized with `useMemo`, build instructions from it, and send them through the same kit wallet client shown above (`client.sendTransaction([...])`)
+   - Returns null when no wallet is connected
 
 3. **IDLExplorer Component:**
    - Build visual IDL explorer that displays:
@@ -68,7 +98,7 @@ Learning outcomes for this week include:
 
 - IDL as contract ABI
 - Type generation benefits
-- Provider setup with wallet
+- Codama clients vs the Anchor/web3.js compat boundary
 - Program instantiation
 - Version compatibility
 
@@ -78,57 +108,52 @@ Learning outcomes for this week include:
 
 **Topics Covered:**
 
-- Using program methods namespace
-- Account resolution patterns
-- Passing instruction arguments
-- Transaction options and configuration
-- Handling responses
+- Calling instructions through Codama-generated Kit clients (`get{Name}InstructionAsync()`, `find{Name}Pda()`, `fetch{Account}()`)
+- Calling instructions through `@anchor-lang/core` program instances (IDL-typed)
+- Account resolution and PDA derivation patterns
+- Sending and confirming transactions with the kit wallet client
+- Handling responses and program errors
 
 **Lab Exercise: Program Interaction Implementation**
 
 **Component Setup:**
 
-- Use custom Anchor program hook
+- Use the program client hook from Lesson 1 (Codama client preferred, `@anchor-lang/core` alternative)
 - Manage loading and data states
 - Create input interface for user data
 
 **Initialize Account Function:**
 
-- Check program availability before proceeding
+- Check program client availability before proceeding
 - Set loading state appropriately
-- Generate PDA using:
-  - Seed array with `'data-account'` and user public key
-  - Program ID for derivation
-- Call program instruction using:
-  - `methods` namespace with instruction name
-  - Pass required arguments
-  - Provide `accounts` object
-  - Execute with `.rpc()` method
+- Derive the PDA using the generated helper (named seed fields from the IDL):
+  - `findDataAccountPda({ owner: ownerAddress })` (Codama) or the equivalent PDA derivation from the program instance
+- Build and send the instruction with the kit wallet client:
+  - `getInitializeInstructionAsync({ dataAccount, owner, value }, { programAddress })` (Codama)
+  - `await client.sendTransaction([instruction])`
 - After transaction:
   - Log transaction signature
-  - Fetch created account data
+  - Fetch created account data with `fetchDataAccount(client.rpc, dataAccount)` (Codama — fetchers take the RPC client first) or the program instance getter
 - Handle errors with:
-  - Anchor error parsing
+  - Codama/Anchor error parsing (`isProgramError` / coded errors)
   - User-friendly messages
   - Cleanup in `finally` block
 
 **Update Data Function:**
 
-- Derive PDA same as initialization
-- Use program methods with RPC options:
-  - `skipPreflight`, `commitment`, `maxRetries`
+- Derive the PDA the same as initialization
+- Build the update instruction and send with the kit wallet client, configuring priority fees/commitment via the RPC plugin rather than legacy RPC options
 - Handle errors with a dedicated error handler
 
 **Build Transaction Alternative:**
 
-- Use `.instruction()` to get raw instruction
-- Use `.transaction()` to get full transaction
-- Useful for offline signing or batching
+- Build the instruction object standalone for offline signing or batching
+- Compose multiple program instructions into one `client.sendTransaction([...])` call
 
 **Error Handling Helper:**
 
-- Parse Anchor-specific errors:
-  - Extract error code and message
+- Parse program-specific errors:
+  - Extract error code and message (Codama `{PROGRAM}_ERROR__{NAME}` constants / Anchor error codes)
   - Log and return structured error object
 - Handle unknown errors with fallback messaging
 
@@ -141,9 +166,9 @@ Learning outcomes for this week include:
 
 **Key Concepts:**
 
-- `methods` namespace usage
+- Codama instruction builders vs `@anchor-lang/core` program instances
 - Account resolution and PDA generation
-- Transaction options
+- Transaction sending via kit wallet clients
 - Error handling patterns
 
 ---
@@ -162,26 +187,27 @@ Learning outcomes for this week include:
 
 1. **Type Extraction Setup:**
 
-- Use Anchor utilities:
-  - `IdlTypes`, `IdlAccounts`, `IdlEvents`
-- Create program-specific aliases
+- Derive types from the generated client:
+  - Codama: decoded account and args types from the generated client's codecs
+  - `@anchor-lang/core`: IDL types exported at the package root
+- Create program-specific type aliases
 
 2. **TypeSafeProgramClient Class:**
 
 - **Constructor:**
-  - Accept typed `Program` instance
+  - Accept a typed program client (Codama Kit client or `@anchor-lang/core` program instance)
 - **createUserProfile():**
   - Strongly typed parameters and return value
   - Use TypeScript for argument/account validation
 - **getAllProfiles():**
   - Return array of typed profile accounts
-  - Use `account.all()` with memcmp filter
+  - Use generated `fetchAll{Account}()` fetchers with a discriminator/memcmp filter
 - **subscribeToEvents():**
-  - Register typed event listener using IDL events
+- Register a typed event/account listener via the kit RPC plugin subscriptions
 - **parseError():**
-  - Extract known Anchor errors or fallback
+  - Extract known program errors (`isProgramError` / coded error constants) or fallback
 - **derivePDA():**
-  - Reusable PDA helper returning `PublicKey`
+  - Reusable PDA helper returning a Kit `Address`
 
 3. **Usage Component:**
 
@@ -192,9 +218,9 @@ Learning outcomes for this week include:
 
 **Key Concepts:**
 
-- IDL type extraction
+- Type extraction from generated clients
 - Client wrapper pattern
-- Type-safe method execution
+- Type-safe instruction execution
 - Event typing and subscription
 - Strongly typed error objects
 
@@ -247,7 +273,7 @@ Learning outcomes for this week include:
 
 - [Anchor Book - TypeScript Client](https://www.anchor-lang.com/docs/clients/typescript)
 - [IDL Specification](https://docs.rs/anchor-lang-idl-spec)
-- [Anchor Errors Reference](https://docs.rs/anchor-lang/latest/anchor_lang/error/enum.ErrorCode.html)
+- [Anchor Errors Reference](https://docs.rs/anchor-lang)
 
 ### Practice Exercises
 
@@ -291,7 +317,7 @@ Learning outcomes for this week include:
 
 1. What information does an Anchor IDL contain?
 2. How does type generation improve developer experience?
-3. What’s the difference between `.rpc()` and `.transaction()`?
+3. What’s the difference between sending an instruction directly and building a standalone transaction?
 4. How should custom program errors be handled?
 5. Why is PDA derivation consistency important?
 

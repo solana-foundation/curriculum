@@ -10,6 +10,8 @@ This guide defines how the Solana Foundation curriculum is kept accurate, discov
 
 **Owners:** Curriculum Maintainers (@guibibeau @resourcefulmind)
 
+**Stack source of truth:** the public [`solana-foundation/solana-dev-skill`](https://github.com/solana-foundation/solana-dev-skill) repo (skill `solana-dev`) — kit plugin clients (`@solana/kit` + `@solana/kit-plugin-*`), Anchor/Pinocchio programs, Codama codegen, Surfpool/LiteSVM testing. Internally maintained in `solana-foundation/ai-skills` (private; reference only — never link it from learner-facing content). Align course tooling versions and client patterns with these skills each quarter before tagging a release.
+
 **Checklist**
 - [ ] **Tooling sanity:** `rustc --version`, `solana --version`, `anchor --version`
 - [ ] **Run demos/workshops:** each course’s canonical demo builds, deploys (devnet or local), tests pass

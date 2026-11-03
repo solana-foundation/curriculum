@@ -1,14 +1,14 @@
-# Week 4: RPC Operations with Framework-Kit
+# Week 4: RPC Operations with Kit Plugins
 
 ## Overview
 
-This week provides a comprehensive exploration of framework-kit's RPC capabilities. Topics include querying blockchain data, working with token accounts, and implementing real-time subscriptions. Practical examples demonstrate efficient data fetching patterns using `@solana/client` and `@solana/react-hooks`.
+This week provides a comprehensive exploration of RPC operations via kit plugins. Topics include querying blockchain data, working with token accounts, and implementing real-time subscriptions. Practical examples demonstrate efficient data fetching patterns using `@solana/kit` and `@solana/kit-plugin-rpc`.
 
 ## Learning Objectives
 
 Learning outcomes for this week include:
 
-1. Master framework-kit's RPC client for data queries
+1. Master the RPC plugin (`@solana/kit-plugin-rpc`) for data queries
 2. Implement efficient token account operations
 3. Set up WebSocket subscriptions with Kit watchers for real-time updates
 4. Optimize RPC usage for performance
@@ -16,11 +16,11 @@ Learning outcomes for this week include:
 
 ## Lessons
 
-### Lesson 1: Core RPC Methods with Framework-Kit
+### Lesson 1: Core RPC Methods with Kit Plugins
 
 **Topics Covered:**
 
-- Framework-kit RPC client architecture
+- RPC plugin client architecture (`createClient().use(solanaDevnetRpc())`)
 - Essential RPC methods for dApp development
 - Understanding commitment levels
 - Batch operations and performance
@@ -62,7 +62,7 @@ Build an RPC Explorer component that:
 
 ---
 
-### Lesson 2: Token Operations with Framework-Kit
+### Lesson 2: Token Operations with Kit Plugins
 
 **Topics Covered:**
 
@@ -210,7 +210,7 @@ Create a mini blockchain explorer that demonstrates advanced RPC usage:
 
 **Requirements:**
 
-- Use framework-kit for all RPC operations
+- Use the RPC plugin for all RPC operations
 - Implement proper error handling
 - Add loading and empty states
 - Cache data appropriately
@@ -229,8 +229,8 @@ Create a mini blockchain explorer that demonstrates advanced RPC usage:
 
 ### Required Reading
 
-- [Framework-Kit Repository](https://github.com/solana-foundation/framework-kit)
-- [@solana/kit RPC Documentation](https://solana.com/docs/clients/kit)
+- [Solana Dev Skill — solana-foundation/solana-dev-skill](https://github.com/solana-foundation/solana-dev-skill/tree/main/skills/solana-dev)
+- [@solana/kit RPC Documentation](https://solana.com/docs/clients/official/javascript)
 - [Solana RPC API Reference](https://docs.solana.com/api/http)
 - [WebSocket API Guide](https://docs.solana.com/api/websocket)
 

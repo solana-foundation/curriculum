@@ -9,7 +9,7 @@ _Compiled for university-level Token-2022 and Extensions courses_
   Comprehensive introduction to Token-2022 with step-by-step tutorials. Perfect for students' first exposure to token extensions with practical examples.
 
 - **[Solana Program Library Repository](https://github.com/solana-program/token-2022)**  
-  Source code and examples for Token-2022 program. Critical for understanding implementation details and advanced patterns. Includes extensive test cases. Note that this includes clients that are compatible with both @solana/web3.js & @solana/kit. Kit is newer but not entirely adopted within the ecosystem.
+  Source code and examples for Token-2022 program. Critical for understanding implementation details and advanced patterns. Includes extensive test cases. Clients are available for `@solana/kit` (`@solana-program/token-2022`) and legacy `@solana/web3.js`; prefer `@solana/kit` as the standard.
 
 - **[Token Extensions Extension Guide](https://www.solana-program.com/docs/token-2022/extensions#:~:text=Token%2D2022-,Extension%20Guide,-Explanation%20of%20all)**  
   Detailed documentation for each of the 16 extensions. Explains use cases, implementation patterns, and compatibility considerations.
@@ -62,10 +62,10 @@ _Compiled for university-level Token-2022 and Extensions courses_
   `TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb`  
   Essential configuration for all Token-2022 programs. Different from original token program. Must be imported correctly in all implementations.
 
-- **[@solana/spl-token Package Setup](https://www.npmjs.com/package/@solana/spl-token)**  
+- **[@solana-program/token-2022 Package Setup](https://www.npmjs.com/package/@solana-program/token-2022)**  
 
-  `npm install --save @solana/spl-token @solana/web3.js@1`  
-  Includes Token-2022 support in latest versions. Check version compatibility for extension support. Version `0.4.0+` recommended.
+  `npm install --save @solana-program/token-2022 @solana/kit @solana/kit-plugin-rpc @solana/kit-plugin-signer`  
+  Use with kit plugin clients (`createClient().use(...)`). `@solana-program/token-2022` 0.18+ recommended; legacy alternative is `@solana/spl-token` with `@solana/web3.js@1`.
 
 - **Solana CLI Token Extensions Support**  
   Built into Solana CLI `v1.17+`. Native support for all extension commands. No additional installation required. Includes helpful error messages for extension conflicts.
@@ -126,7 +126,7 @@ _Compiled for university-level Token-2022 and Extensions courses_
   - Metadata for event information  
   - Time-based features for expiration
 
-- **[DeFi Protocol Integration – Raydium Docs](https://docs.raydium.io/raydium/updates/token-2022-support)**  
+- **[DeFi Protocol Integration – Raydium Docs](https://docs.raydium.io/)**  
   AMM considerations for extended tokens. Liquidity pool compatibility patterns.
 
 - **Cross-Program Invocation with Extensions**  

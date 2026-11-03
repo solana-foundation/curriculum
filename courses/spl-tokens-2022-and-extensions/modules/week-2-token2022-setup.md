@@ -5,12 +5,12 @@
 - Configure development environment specifically for Token-2022
 - Understand Token-2022 program ID and its usage
 - Create first Token-2022 mint without extensions
-- Master the @solana/spl-token SDK for Token-2022
+- Master the @solana-program/token-2022 SDK for Token-2022
 
 ## Topics Covered
 
 - Token-2022 Program ID: `TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb`
-- Setting up @solana/spl-token package (v0.4.0+)
+- Setting up @solana-program/token-2022 (v0.18+) with @solana/kit and kit plugins
 - Differences in account sizes with extensions
 - Basic mint creation with Token-2022
 - Using the correct program ID in all operations
@@ -26,7 +26,7 @@
 
 - [Getting Started with Token Extensions](https://solana.com/developers/guides/token-extensions/getting-started)
 - [SPL Token CLI Reference](https://spl.solana.com/token#reference-guide)
-- @solana/spl-token documentation for Token-2022
+- @solana-program/token-2022 documentation for Token-2022
 
 ## Homework
 

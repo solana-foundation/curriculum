@@ -70,7 +70,7 @@ Learning outcomes for this week include:
 3. **Project Setup Steps:**
    - Initialize Next.js with TypeScript and Tailwind
    - Configure app directory structure
-   - Install Solana dependencies (@solana/client, @solana/react-hooks, @coral-xyz/anchor)
+   - Install Solana dependencies (@solana/kit, @solana/kit-plugin-rpc, @solana/kit-plugin-signer, @anchor-lang/core)
    - Add UI libraries (tiptap, react-query, react-hook-form)
    - Set up state management (zustand)
    - Configure validation (zod)
@@ -205,7 +205,7 @@ Learning outcomes for this week include:
 
 **Integration Points:**
 
-- Connect wallet-ui hooks for wallet state
+- Connect kit wallet hooks (`@solana/kit-plugin-wallet/react`) for wallet state
 - Use Anchor program hook
 - Access auth store actions
 
@@ -271,7 +271,7 @@ Complete the following tasks to establish your note-taking dApp foundation:
 1. **Project Setup**
 
    - Initialize the project with Next.js and TypeScript
-   - Configure @solana/client and @solana/react-hooks
+   - Configure kit plugin clients (@solana/kit + plugins)
    - Set up Tailwind CSS with custom theme
    - Create the folder structure
 

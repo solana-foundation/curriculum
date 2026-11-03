@@ -2,13 +2,13 @@
 
 ## Overview
 
-This week covers integrating Solana wallets into web applications using the `wallet-ui` library and modern wallet adapter patterns. Topics include building robust wallet connection interfaces, handling multiple wallet types, and implementing wallet-based authentication.
+This week covers integrating Solana wallets into web applications using kit plugin wallet hooks (`@solana/kit-plugin-wallet/react`) and Kit React bindings (`@solana/react`). Topics include building robust wallet connection interfaces, handling multiple wallet types via Wallet Standard discovery, and implementing wallet-based authentication.
 
 ## Learning Objectives
 
 Learning outcomes for this week include:
 
-1. Set up wallet providers using `@wallet-ui/react`
+1. Set up a wallet-enabled plugin client with `walletSigner` from `@solana/kit-plugin-wallet` and provide it via `ClientProvider` from `@solana/react`
 2. Build custom wallet connection UI components
 3. Handle wallet connection states and errors gracefully
 4. Support multiple wallet adapters (Phantom, Solflare, Backpack)
@@ -20,21 +20,21 @@ Learning outcomes for this week include:
 
 **Topics Covered:**
 
-- Understanding the wallet adapter architecture  
-- Configuring `WalletUi` provider  
-- Cluster management with wallet-ui  
+- Understanding the wallet plugin architecture (`@solana/kit-plugin-wallet`)  
+- Creating one wallet-enabled client with `createClient().use(walletSigner({ chain: 'solana:devnet' })).use(solanaRpc(...))`
+- Providing the client app-wide with `ClientProvider` and the typed `useClient<AppClient>()` hook
 - Storage patterns for wallet preferences  
 - Provider composition in React  
 
-**Lab Exercise: Setting Up Wallet Providers**  
+**Lab Exercise: Setting Up the Wallet Client Provider**  
 Implement an app providers component that:
 
-- Imports necessary wallet-ui components and utilities
-- Creates cluster storage for persisting user's cluster selection
-- Configures wallet UI with all Solana clusters (devnet, localnet, testnet, mainnet)
-- Sets up provider hierarchy with WalletUi wrapping other providers
-- Enables auto-detection of installed wallets
-- Integrates with React Query for data fetching
+- Imports `createClient` from `@solana/kit`, `solanaRpc` from `@solana/kit-plugin-rpc`, `walletSigner` from `@solana/kit-plugin-wallet`, and `ClientProvider` from `@solana/react`
+- Configures `walletSigner` with the target chain (devnet, localnet, testnet, mainnet)
+- Exports the client type (`AppClient`) so every `useClient<AppClient>()` call is fully typed
+- Wraps the app with `ClientProvider`
+- Enables automatic Wallet Standard discovery of installed wallets
+- Integrates with React Query or SWR for data fetching (optional adapters from `@solana/react/query` / `@solana/react/swr`)
 
 **Key Concepts:**
 
@@ -47,7 +47,7 @@ Implement an app providers component that:
 
 **Topics Covered:**
 
-- Using wallet-ui hooks: `useWallets`, `useWalletUi`  
+- Using wallet hooks from `@solana/kit-plugin-wallet/react`: `useWallets(client)`, `useConnectedWallet(client)`, `useWalletStatus(client)`, `useConnect(client)`, `useDisconnect(client)`
 - Creating wallet selection modal  
 - Responsive wallet button design  
 - Handling connection loading states  
@@ -56,7 +56,7 @@ Implement an app providers component that:
 **Lab Exercise: Building Wallet Connection UI**  
 Create a WalletButton component that:
 
-- Uses wallet-ui hooks to access wallet state and functions  
+- Uses `useWallets(client)` for Wallet Standard discovery and `useWalletStatus(client)` to access connection state and actions  
 - Displays different UI based on connection status:  
   - When connected: Shows truncated public key with disconnect option  
   - When disconnected: Shows "Connect Wallet" button  
@@ -131,7 +131,7 @@ Create a wallet integration feature that includes:
 
 **Requirements:**
 
-- Use wallet-ui patterns from examples  
+- Use the `@solana/kit-plugin-wallet/react` hooks and `ClientProvider` patterns from this week  
 - Implement proper error handling  
 - Add loading states for all async operations  
 - Ensure mobile responsiveness  
@@ -140,7 +140,7 @@ Create a wallet integration feature that includes:
 **Implementation Guidelines:**
 
 1. **WalletProvider Component**
-   - Configure wallet-ui with appropriate settings  
+   - Create the wallet-enabled plugin client with `walletSigner` and provide it via `ClientProvider`  
    - Add error boundary for graceful error handling  
    - Implement auto-connect functionality  
    - Set up proper provider hierarchy  
@@ -162,7 +162,7 @@ Create a wallet integration feature that includes:
 
 ### Required Reading
 
-- [Wallet Adapter Documentation](https://github.com/anza-xyz/wallet-adapter)  
+- [Kit React + Wallet Hooks Reference (solana-dev-skill)](https://github.com/solana-foundation/solana-dev-skill/blob/main/skills/solana-dev/references/kit/react.md)  
 - [Wallet Standard](https://github.com/wallet-standard/wallet-standard)  
 
 ### Practice Exercises
