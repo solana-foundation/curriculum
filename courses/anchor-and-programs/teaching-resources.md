@@ -158,6 +158,10 @@ Security patterns for ticket validation. Explains rotating codes and offline ver
 
 Current job listings requiring Anchor skills. Useful for showing career relevance and salary ranges.
 
+### [**Maneki Web3 Jobs**](https://www.maneki.work/)
+
+Aggregated job board tracking 2,500+ live openings from 500+ crypto companies' career pages, Solana teams included. Useful for showing the breadth of ecosystem hiring, with disclosed salaries where available.
+
 ### [**Developer Ecosystem Report**](https://unchainedcrypto.com/a-big-2024-crypto-trend-solana-attracts-more-new-developers-than-ethereum/)
 
 Industry statistics showing Solana growth. Helps motivate students with market opportunity data.
